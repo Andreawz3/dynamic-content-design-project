@@ -1,18 +1,18 @@
-# Project Name
+# Description
+YORI is an online game of recipes and its nutritional facts.
 
 ## Members
-* Lance Malaga
-* Juliet Kim
-* Andrea Wu Zheng
+- Lance Malaga
+- Juliet Kim
+- Andrea Wu Zheng
 
+## Coding Language
+- Next.js
 
-## Tools / Technology
+## Command Lines:
 
-### Git commands:
+### Next.js
 ```
-git status
-git add
-git commit
-git pull
-git push
+npx create-next-app
+npm run dev
 ```
