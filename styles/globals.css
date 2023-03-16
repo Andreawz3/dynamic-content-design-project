@@ -1,28 +1,24 @@
 :root {
-  /* colours */
-  --emerald: #26594D;
-  --black: #282828;
-  --white: #F4F4F5;
-  --tan: #E2D6C9;
-  --yellow: #ECC64F;
-  --orange: #E5A755;
-  --red: #CC5140;
-  --light-blue: #BACDD1;
-
+	/* colours */
+	--emerald: #26594D;
+	--black: #282828;
+	--white: #F4F4F5;
+	--tan: #E2D6C9;
+	--yellow: #ECC64F;
+	--orange: #E5A755;
+	--red: #CC5140;
+	--light-blue: #BACDD1;
 }
-
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
-
 html,
 body {
+	
 }
-
-
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
