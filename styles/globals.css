@@ -1,14 +1,27 @@
 :root {
 	/* colours */
 	--emerald: #26594D;
+	--light-green: #A0BE52;
+	--avocado: #5A8C32;
 	--black: #282828;
 	--white: #F4F4F5;
 	--tan: #E2D6C9;
 	--yellow: #ECC64F;
 	--orange: #E5A755;
-	--red: #CC5140;
-	--light-blue: #BACDD1;
+	--red: #E5645C;
+	--light-blue: #8EBDBD;
+
+	/* Fonts */
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Capuche', sans-serif;
+    --body-weight: 300;
 }
+
+@font-face {
+    font-family: 'Capuche';
+    src: url(../public/fonts/Capuche\ Trial.otf);
+}
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -16,7 +29,7 @@
 }
 html,
 body {
-	
+	scroll-behavior: smooth;
 }
 a {
 	color: inherit;
