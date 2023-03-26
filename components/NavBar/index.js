@@ -1,5 +1,5 @@
 import styles from './NavBar.module.css'
-import Image from '../../public/assets/navbar-icons'
+import Image from "next/image";
 
 export default function NavBar() {
     return (
