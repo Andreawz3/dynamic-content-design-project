@@ -44,6 +44,109 @@ export const inventory = {
             "ingredientList":"",
             "directions":"",
             "review":""
+        },
+        {
+            dishName: "Miso Pasta",
+            prepTime: "5 mins",
+            cookTime: "20mins",
+            cuisineCategory:"Lunch",
+            difficulty: "Medium",
+            ingredients: [
+                "1-2 tablespoons white miso paste",
+                "1 tablespoon peanut butter",
+                "1 teaspoon low-sodium soy sauce",
+                "1 tablespoon sesame oil",
+                "2 teaspoons rice vinegar",
+                "1 teaspoon minced garlic",
+                "¼ cup reserved pasta water",
+                "2 teaspoons olive oil",
+                "16 ounce frozen vegetable",
+                "8 ounces pasta of choice"
+            ],
+            direction:[
+                "Bring a large pot of water to a boil. Add the pasta and cook according to package instructions. Be sure to reserve ¾ cup of pasta water.",
+                "While the pasta is cooking, make the sauce - Add all the ingredients in a bowl and combine. It will be thick and lumpy.",
+                "In a large skillet, heat 1 teaspoons of oil over medium-high heat. Add the frozen vegetables and edamame. Stir for about 2-3 minutes then add a splash of water. Cover and cook for 5-8 minutes, or until softened.",
+                "Add ¼ cup of the slightly cooled starchy pasta water to the miso sauce. Stir until the miso is well dissolved.",
+                "Once the vegetables are done, add the cooked pasta to the skillet. Pour the sauce over and toss to coat."
+            ],
+            review: 4.5,
+            calories: "366kcal",
+            carb: "60g",
+            protein: "13g",
+            fat: "9g",
+            fiber: "278mg",
+            calcium: "7g",
+            iron: "2mg"
+        },
+        {
+            dishName: "Carrot and Lentil Soup",
+            prepTime: "10 mins",
+            cookTime: "20 mins",
+            cuisineCategory:"Dinner",
+            difficulty: "Medium",
+            ingredients: [
+                "1 tablespoon olive oil",
+                "1 small yellow onion, diced",
+                "3 garlic cloves, minced",
+                "1 pound carrots, diced",
+                "4 stalks celery, diced",
+                "1 teaspoon cumin",
+                "1 teaspoon turmeric",
+                "½ teaspoon smoked paprika",
+                "1 ½ cups red lentils (300g)",
+                "4 cups low-sodium vegetable broth",
+                "15 ounce can full-fat coconut milk"
+            ],
+            direction:[
+                "Heat oil in a large Dutch oven or pot over medium heat. Saute the onion until soft, about 2 minutes. Add garlic, carrots, celery, and all the spices. Cook for an additional 6-8 minutes.",
+                "Add the lentils, broth, and coconut milk. Stir to combine and bring to a boil. Reduce heat to low, cover, and simmer for 20 minutes, or until lentils and vegetables are tender. Be sure to stir occasionally.",
+                "Enjoy the soup as is or add to a high speed blender and blend until smooth. You can also blend half and keep the rest chunky.",
+                "Serve with fresh herbs like cilantro or parsley and some yogurt or cheese."
+            ],
+            review: "4",
+            calories: "371kcal",
+            carb: "41g",
+            protein: "14g",
+            fat: "18g",
+            fiber: "17g",
+            calcium: "83mg",
+            iron: "6mg"
+        },
+        {
+            dishName: "Pumpkin Risotto",
+            prepTime: "10 mins",
+            cookTime: "30 mins",
+            cuisineCategory:"dinner",
+            difficulty: "Hard",
+            ingredients: [
+                "4 cups vegetable stock",
+                "1 cup water",
+                "3 tablespoons butter",
+                "1 cup finely diced yellow onion",
+                "1 cup finely chopped celery",
+                "2-3 garlic cloves, minced",
+                "1 ½ cups arborio rice",
+                "½-3/4 cup parmesan cheese",
+                "¼ teaspoon nutmeg",
+                "¼ teaspoon smoked paprika",
+                "15 ounce can pumpkin puree"
+            ],
+            direction:[
+                "Combine stock and water in a medium saucepan and bring to a low simmer.",
+                "In a large Dutch oven, heat the butter over medium heat. Once it starts to bubble, add the onion and celery, and cook until softened, about 6-8 minutes. Add the garlic and cook for 30 seconds to 1 minute.",
+                "Add the rice and toast, stirring constantly for 2-3 minutes.  Add the hot liquid to the pot (reserve 1 cup) and bring to a boil. Reduce heat, simmer, cover, and cook for 15-18 minutes. Stir once or twice during the cooking process. It’s important to maintain a low simmer.",
+                "Once the risotto has finished, give everything a good stir, making sure to scrape the bottom of the pan.",
+                "Stir in in pumpkin, parmesan, nutmeg, paprika, remaining broth, and cheese. Remove from the heat, cover, and let it sit for 5 minutes. Stir in any of the optional ingredients."   
+            ],
+            review: "4",
+            calories: "311kcal",
+            carb: "52g",
+            protein: "7g",
+            fat: "9g",
+            fiber: "",
+            calcium: "",
+            iron: "3mg"
         }
     ]
 }
