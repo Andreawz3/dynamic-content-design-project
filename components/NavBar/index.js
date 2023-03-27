@@ -6,7 +6,12 @@ export default function NavBar() {
         <>
             <nav className={styles.navbar}>
                 <div className={styles.home__icon}>
-                    <Image src=''></Image>
+                    <Image 
+                        src={"/assets/navbar-icons/home-primary.png"}
+                        alt={"site-logo"}
+                        height={50}
+                        width={50}
+                    />
                 </div>
             </nav>
         </>

@@ -1,0 +1,7 @@
+.button {
+    margin: 1em;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
