@@ -28,12 +28,14 @@
 .landing_page p {
     font-weight: 300;
 }
+.link__home {
+    margin-top: 50px;
+    margin-left: auto;
+}
 .landing_page button {
     background-color: var(--color-white);
     border-radius: 13px;
     padding: 22px;
-    margin-top: 50px;
-    margin-left: auto;
 }
 
 @media (min-width: 700px) {

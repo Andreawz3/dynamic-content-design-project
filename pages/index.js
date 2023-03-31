@@ -26,16 +26,16 @@ export default function Landing() {
 						<p>Fuel your body and soul with our deliciously easy and healthy recipes.</p>
 					</div>
 				</div>
-				<button>
-					<Link href={'/home'}>
+				<Link href={'/home'} className={styles.link__home}>
+					<button>
 						<Image 
 							src={"/icons/home-arrow.svg"}
 							alt={"home page - arrow"}
 							width={22}
 							height={20}
 						/>
-					</Link>
-				</button>
+					</button>
+				</Link>
 			</main>
 		</>
 	)
