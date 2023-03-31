@@ -1,8 +1,8 @@
 import Head from "next/head"
 
 export default function Header({
-    title = "Yori",
-    metaTitle = "Yori",
+    title = process.env.NEXT_PUBLIC_TITLE,
+    metaTitle = process.env.NEXT_PUBLIC_TITLE,
     metaDescription = "YORI is a mobile web application cook book that promotes a variety of healthy, affordable meals, with an additional interactive game feature.",
 }) {
     return (
