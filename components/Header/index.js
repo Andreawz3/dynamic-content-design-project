@@ -2,8 +2,8 @@ import Head from "next/head"
 
 export default function Header({
     title = "Yori",
-    metaTitle = "",
-    metaDescription = "",
+    metaTitle = "Yori",
+    metaDescription = "YORI is a mobile web application cook book that promotes a variety of healthy, affordable meals, with an additional interactive game feature.",
 }) {
     return (
         <Head>
@@ -13,7 +13,7 @@ export default function Header({
             <meta property="description"  content={metaDescription} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"></link>
-            <link rel="icon" href="/site-logo.png" />
+            <link rel="icon" href="/logos/tab-logo.svg" />
         </Head>
     )
 }
