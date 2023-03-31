@@ -44,10 +44,10 @@
         gap: 30px;
         flex-direction: row;
         justify-content: space-between;
-        margin: 0;
     }
     .landing_page__content {
         margin-right: 0;
+        margin-top: 0;
     }
 }
 @media (min-width: 880px) {
