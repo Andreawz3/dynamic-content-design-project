@@ -1,20 +1,24 @@
 :root {
 	/* colours */
-	--emerald: #26594D;
-	--light-green: #A0BE52;
-	--avocado: #5A8C32;
-	--black: #282828;
-	--white: #F4F4F5;
-	--tan: #E2D6C9;
-	--yellow: #ECC64F;
-	--orange: #E5A755;
-	--red: #E5645C;
-	--light-blue: #8EBDBD;
+	--color-emerald: #26594D;
+	--color-black: #282828;
+	--color-white: #F4F4F5;
+	--color-tan: #E2D6C9;
+	--color-yellow: #ECC64F;
+	--color-orange: #E5A755;
+	--color-red: #E5645C;
+	--color-teal: #8EBDBD;
+	--color-light-green: #A0BE52;
+	--color-avocado: #5A8C32;
 
 	/* Fonts */
     --primary-font: 'Lato', sans-serif;
     --secondary-font: 'Capuche', sans-serif;
-    --body-weight: 300;
+    --body-font-size-desktop: 16px;
+    --body-font-size-mobile: 14px;
+
+	/* sizes */
+	--min-width-tablet: 768px;
 }
 
 @font-face {
@@ -30,8 +34,19 @@
 html,
 body {
 	scroll-behavior: smooth;
+	max-width: 900px;
+	margin: 0 auto;
+	font-family: var(--primary-font);
+	font-weight: var(--body-font-size-desktop);
+	color: var(--color-black);
 }
 a {
 	color: inherit;
 	text-decoration: none;
+	cursor: pointer;
+}
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }
