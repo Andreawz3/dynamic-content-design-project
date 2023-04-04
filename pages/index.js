@@ -9,8 +9,8 @@ export default function Landing() {
 	return (
 		<>
 			<Header 
-				title='Yori - Landing Page'
-				metaTitle='Yori - Landing Page'
+				title='Landing Page'
+				metaTitle='Landing Page'
 			/>
 			<main className={styles.landing_page}>
 				<div className={styles.landing_page__container}>
