@@ -120,6 +120,11 @@ export const inventory = {
             cuisineCategory:"dinner",
             difficulty: "Hard",
             ingredients: [
+                {
+                    ingredient: '',
+                    measurement: ''
+                },
+
                 "4 cups vegetable stock",
                 "1 cup water",
                 "3 tablespoons butter",
