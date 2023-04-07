@@ -37,6 +37,17 @@ export function FilterIcon() {
         </>
     )
 }
+export function BackArrowIcon() {
+    return (
+        <>
+            <svg width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="7.86469" y1="1.40233" x2="1.40232" y2="6.37339" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="1" y1="-1" x2="9.15314" y2="-1" transform="matrix(-0.792624 -0.609711 -0.609711 0.792624 8.04761 13)" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </>
+    )
+}
+
 
 // NavBar Icons
 export function FaveOutlineIcon() {
