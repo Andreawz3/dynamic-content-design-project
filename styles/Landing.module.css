@@ -32,11 +32,6 @@
     margin-top: 50px;
     margin-left: auto;
 }
-.landing_page button {
-    background-color: var(--color-white);
-    border-radius: 13px;
-    padding: 22px;
-}
 
 @media (min-width: 700px) {
 	.landing_page {
