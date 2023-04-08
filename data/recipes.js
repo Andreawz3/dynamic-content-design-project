@@ -9,33 +9,49 @@ export const inventory = {
             difficulty:"Medium",
             ingredientList: [ 
                 {
-                    ingredientName: [
-                        "lean ground pork",
-                        "chopped cabbage",
-                        "chopped scallions",
-                        "chopped onion",
-                        "chopped carrot",
-                        "minced garlic",
-                        "soy sauce",
-                        "sesame oil",
-                        "black pepper",
-                        "salt",
-                        "of round mandu wrappers (or you can make your own)"
-                    ],
-                    measurementType:[
-                        "1 cup ",
-                        "1 cup ",
-                        "1/2 cup ",
-                        "1/2 cup ",
-                        "1/2 cup ",
-                        "1 tablespoon ",
-                        "1 tablespoon ",
-                        "1 tablespoon ",
-                        "1/4 teaspoon ",
-                        "1/4 teaspoon ",
-                        "1 package "
-                    ]
-                }
+                    ingredientName: "lean ground pork",
+                    measurementType:"1 cup"                      
+                },
+                {
+                    ingredientName: "chopped cabbage",
+                    measurementType:"1 cup"                      
+                },
+                {
+                    ingredientName: "chopped scallions",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "chopped onion",
+                    measurementType:"1/2 cup"                      
+                },
+                {
+                    ingredientName: "chopped carrot",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "minced garlic",
+                    measurementType:"1 tablespoon"                       
+                },
+                {
+                    ingredientName: "soy sauce",
+                    measurementType:"1 tablespoon"                       
+                },
+                {
+                    ingredientName: "sesame oil",
+                    measurementType:"1 tablespoon"                       
+                },
+                {
+                    ingredientName: "black pepper",
+                    measurementType:"1/4 teaspoon"                       
+                },
+                {
+                    ingredientName: "salt",
+                    measurementType:"1/4 teaspoon"                       
+                },
+                {
+                    ingredientName: "round mandu wrappers (or you can make your own)",
+                    measurementType:"1 package"                       
+                },
             ],
             directions:[
                 "1. In a large mixing bowl, combine the ground pork, cabbage, scallions, onion, carrot, garlic, soy sauce, sesame oil, black pepper, and salt. Mix well until all the ingredients are evenly distributed.",
@@ -62,29 +78,45 @@ export const inventory = {
             difficulty:"Hard",
             ingredientList:[
                 {
-                    ingredientName:[
-                        "cooked brown rice",
-                        "spinach, blanched and squeezed dry",
-                        "bean sprouts, blanched and squeezed dry",
-                        "carrots, julienned and sautéed",
-                        "shiitake mushrooms, sautéed",
-                        "ground beef, sautéed with soy sauce and garlic",
-                        "egg fried or poached",
-                        "Sesame oil",
-                        "Soy sauce",
-                        "Gochujang (Korean chili paste)",
-                        "Toasted sesame seeds"
-                    ],
-                    measurementType:[
-                        "1 cup",
-                        "1/2 cup",
-                        "1/2 cup",
-                        "1/2 cup",
-                        "1/2 cup",
-                        "1/2 cup",
-                        "1"
-                    ]
-                }              
+                    ingredientName: "cooked brown rice",
+                    measurementType:"1 cup"                       
+                },
+                {
+                    ingredientName: "spinach, blanched and squeezed dry",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "bean sprouts, blanched and squeezed dry",
+                    measurementType:"1/2 cup"                      
+                },
+                {
+                    ingredientName: "carrots, julienned and sautéed",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "shiitake mushrooms, sautéed",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "ground beef, sautéed with soy sauce and garlic",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "egg fried or poached",
+                    measurementType:"1"                      
+                },
+                {
+                    ingredientName: "Soy sauce",                       
+                },
+                {
+                    ingredientName: "Sesame oil",                       
+                },
+                {
+                    ingredientName: "Gochujang (Korean chili paste)",                       
+                },
+                {
+                    ingredientName: "Toasted sesame seeds"
+                }         
             ],   
             directions:[
                 "1. Prepare all the ingredients as directed and set them aside.", 
@@ -101,27 +133,80 @@ export const inventory = {
             iron:""
         },
         {
-            dishName: "",
-            prepTime:"",
-            cookTime:"",
-            cuisineCategory:"",
-            category:"",
-            difficulty:"",
+            dishName: "Tofu Veggie Scramble",
+            prepTime:"5 mins",
+            cookTime:"15 mins",
+            cuisineCategory:"Breakfast",
+            category:"Italian",
+            difficulty:"Easy",
             ingredientList:[
                 {
-                    ingredientName:[],
-                    measurementType:[]
+                    ingredientName: "extra-firm tofu, pressed and crumbled with a fork",
+                    measurementType: "1 14 oz",                       
+                }, 
+                {
+                    ingredientName: "oil",
+                    measurementType: "1 tablespoon"                       
+                }, 
+                {
+                    ingredientName: "medium yellow or red onion, diced",
+                    measurementType: "½"                       
+                }, 
+                {
+                    ingredientName: "diced vegetables of choice",
+                    measurementType: "2 cups"                       
+                }, 
+                {
+                    ingredientName: "canned black",
+                    measurementType: "1 cup"                       
+                }, 
+                {
+                    ingredientName: "cheese",
+                    measurementType: "¼ cup"                     
+                }, 
+                {
+                    sauce: [
+                        {
+                            ingredientName: "cumin",
+                            measurementType: "½ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "coriander",
+                            measurementType: "¼ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "garlic powder",
+                            measurementType: "½ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "turmeric",
+                            measurementType: "¼ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "black pepper",
+                            measurementType: "¼ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "water",
+                            measurementType: "2 teaspoon"                      
+                        }, 
+                    ]
                 }
+ 
             ],
-            directions:"",
-            review:"",
-            calories: "",
-            carb: "",
-            protein: "",
-            fat: "",
-            fiber: "",
-            calcium: "",
-            iron:""
+            directions:[
+                "Heat oil in a large pan over medium-high heat. Add onion and cook for 2-3 minutes, until it begins to soften. Turn down the heat to medium and cook the other vegetables until softened - depends on the vegetables used.",
+                "In the meanwhile, combine the sauce ingredients in a small bowl and set aside.",
+                "Push veggies to the side and make a well in the center of the pan. Add tofu and cook for 2 minutes, stirring to combine.",
+                "Add the sauce and beans. Stir immediately to ensure the sauce gets evenly distributed. Cook for 5-8 minutes. Tip: Spread the mixture into an even layer and don't stir too much. This will help the tofu to get slightly crispy and browned.",
+                "Stir in cheese or nutritional yeast. Serve with toast, potatoes, tortilla, salsa, ketchup, cilantro...basically whatever you wish!"
+            ],
+            review:"5",
+            calories: "161kcal",
+            carb: "11g",
+            protein: "12g",
+            fat: "8g",
+            iron:"2.5mg"
         },
         {
             dishName: "Miso Pasta",
@@ -132,32 +217,45 @@ export const inventory = {
             difficulty: "Medium",
             ingredients: [
                 {
-                    ingredientName:[
-                        "white miso paste",
-                        "peanut butter",
-                        "low-sodium soy sauce",
-                        "sesame oil",
-                        "rice vinegar",
-                        "minced garlic",
-                        "reserved pasta water",
-                        "olive oil",
-                        "frozen vegetable",
-                        "pasta of choice"
-                    ],
-                    measurementType:[
-                        "1-2 tablespoons",
-                        "1 tablespoon",
-                        "1 teaspoon",
-                        "1 tablespoon",
-                        "teaspoons",
-                        "1 teaspoon",
-                        "¼ cup",
-                        "2 teaspoons",
-                        "16 ounce",
-                        "8 ounces"
-                    ]
-                }
-                
+                    ingredientName: "white miso paste",
+                    measurementType:"1-2 tablespoons"                      
+                }, 
+                {
+                    ingredientName: "peanut butter",
+                    measurementType:"1 tablespoon"                      
+                },
+                {
+                    ingredientName: "low-sodium soy sauce",
+                    measurementType:"1 teaspoon"                       
+                },
+                {
+                    ingredientName: "sesame oil",
+                    measurementType:"1 tablespoon"                       
+                },
+                {
+                    ingredientName: "rice vinegar",
+                    measurementType:"2 teaspoons"                       
+                },
+                {
+                    ingredientName: "minced garlic",
+                    measurementType:"1 teaspoon"                       
+                },
+                {
+                    ingredientName: "reserved pasta water",
+                    measurementType:"¼ cup"                      
+                },
+                {
+                    ingredientName: "olive oil",
+                    measurementType:"2 teaspoons"                      
+                },
+                {
+                    ingredientName: "frozen vegetable",
+                    measurementType:"16 ounce"                       
+                },
+                {
+                    ingredientName: "pasta of choice",
+                    measurementType:"8 ounces"                       
+                },
             ],
             direction:[
                 "Bring a large pot of water to a boil. Add the pasta and cook according to package instructions. Be sure to reserve ¾ cup of pasta water.",
@@ -184,34 +282,49 @@ export const inventory = {
             difficulty: "Medium",
             ingredients: [
                 {
-                    ingredientName:[
-                        "olive oil",
-                        "yellow onion, diced",
-                        "garlic cloves, minced",
-                        "pound carrots, diced",
-                        "stalks celery, diced",
-                        "cumin",
-                        "turmeric",
-                        "smoked paprika",
-                        "red lentils",
-                        "low-sodium vegetable broth",
-                        "can full-fat coconut milk",
-                        ""
-                    ],
-                    measurementType:[
-                        "1 tablespoon",
-                        "1 small",
-                        "3",
-                        "1",
-                        "4",
-                        "1 teaspoon",
-                        "1 teaspoon",
-                        "½ teaspoon",
-                        "1 ½ cups",
-                        "4 cups",
-                        "15 ounce"
-                    ]
-                }             
+                    ingredientName: "olive oil",
+                    measurementType:"1 tablespoon"                       
+                }, 
+                {
+                    ingredientName: "yellow onion, diced",
+                    measurementType:"1 small"                       
+                },
+                {
+                    ingredientName: "garlic cloves, minced",
+                    measurementType:"3"                      
+                },
+                {
+                    ingredientName: "carrots, diced",
+                    measurementType:"1 pound"                      
+                },
+                {
+                    ingredientName: "celery, diced",
+                    measurementType:"4 stalks"                       
+                },
+                {
+                    ingredientName: "cumin",
+                    measurementType:"1 teaspoon"                       
+                },
+                {
+                    ingredientName: "turmeric",
+                    measurementType:"1 teaspoon"                       
+                },
+                {
+                    ingredientName: "smoked paprika",
+                    measurementType:"½ teaspoon"                       
+                },
+                {
+                    ingredientName: "red lentils",
+                    measurementType:"1 ½ cups"                       
+                },
+                {
+                    ingredientName: "low-sodium vegetable broth",
+                    measurementType:"4 cups"                       
+                },
+                {
+                    ingredientName: "can full-fat coconut milk",
+                    measurementType:"15 ounce"                       
+                },
             ],
             direction:[
                 "Heat oil in a large Dutch oven or pot over medium heat. Saute the onion until soft, about 2 minutes. Add garlic, carrots, celery, and all the spices. Cook for an additional 6-8 minutes.",
@@ -237,32 +350,48 @@ export const inventory = {
             difficulty: "Hard",
             ingredients: [
                 {
-                    ingredientName: [
-                        "vegetable stock",
-                        "water",
-                        "butter",
-                        "finely diced yellow onion",
-                        "finely chopped celery",
-                        "garlic cloves, minced",
-                        "arborio rice",
-                        "parmesan cheese",
-                        "nutmeg",
-                        "smoked paprika",
-                        "can pumpkin puree"
-                    ],
-                    measurementType: [
-                        "4 cups",
-                        "1 cup",
-                        "3 tablespoons",
-                        "1 cup",
-                        "1 cup",
-                        "2-3 pieces",
-                        "1 ½ cups",
-                        "½-3/4 cup",
-                        "¼ teaspoon",
-                        "¼ teaspoon",
-                        "15 ounce"                      
-                    ]
+                    ingredientName: "vegetable stock",
+                    measurementType:"4 cups"                       
+                }, 
+                {
+                    ingredientName: "water",
+                    measurementType:"1 cup",                       
+                },
+                {
+                    ingredientName: "butter",
+                    measurementType:"3 tablespoons"                       
+                },
+                {
+                    ingredientName: "finely diced yellow onion",
+                    measurementType:"1 cup"                       
+                },
+                {
+                    ingredientName: "finely chopped celery",
+                    measurementType:"1 cup"                       
+                },
+                {
+                    ingredientName: "garlic cloves, minced",
+                    measurementType:"2-3"                      
+                },
+                {
+                    ingredientName: "arborio rice",
+                    measurementType:"1 ½ cups"                      
+                },
+                {
+                    ingredientName: "parmesan cheese",
+                    measurementType:"½-3/4 cup"                       
+                },
+                {
+                    ingredientName: "nutmeg",
+                    measurementType:"¼ teaspoon"                       
+                },
+                {
+                    ingredientName: "smoked paprika",
+                    measurementType:"¼ teaspoon"                      
+                },
+                {
+                    ingredientName: "can pumpkin puree",
+                    measurementType:"15 ounce"                     
                 },
             ],
             direction:[
@@ -290,16 +419,32 @@ export const inventory = {
             difficulty: "easy",
             ingredients: [
                 {
-                    ingredientName:[
-                        "bunch sweet plantain (15-20)",
-                        "brown sugar",
-                        "oil for frying"
-                    ],
-                    measurementType:[
-                        "1 large",
-                        "1 cup",
-                    ]
-                }
+                    ingredientName: "large eggplants",
+                    measurementType:"2"                       
+                }, 
+                {
+                    ingredientName: "oil",
+                    measurementType:"2 tablespoons"                       
+                }, 
+                {
+                    ingredientName: "small onion, peeled and sliced thinly",
+                    measurementType:"1"                       
+                }, 
+                {
+                    ingredientName: "cloves garlic",
+                    measurementType:"2"                       
+                }, 
+                {
+                    ingredientName: "large Roma tomatoes, chopped",
+                    measurementType:"2"                       
+                }, 
+                {
+                    ingredientName: "eggs, beaten",
+                    measurementType:"4"                       
+                }, 
+                {
+                    ingredientName: "salt and pepper to taste"                     
+                }, 
             ],
             direction:[
                 "Heat the oil over medium low heat. Add the brown sugar and wait until the sugar starts to caramelize.",
@@ -324,31 +469,45 @@ export const inventory = {
             difficulty: "medium",
             ingredients: [
                 {
-                    ingredientName:[
-                        "pork belly",
-                        "spinach",
-                        "fish sauce",
-                        "string beans, cut in 2 inch length",
-                        "tomato quartered",
-                        "chili or banana pepper",
-                        "cooking oil",
-                        "water",
-                        "onion sliced",
-                        "taro, quartered"
-                    ],
-                    measurementType:[
-                        "2 lbs",
-                        "1 bunch",
-                        "3 tablespoons",
-                        "12 pieces",
-                        "2 pieces",
-                        "3 pieces",
-                        "1 tablespoons",
-                        "2 quarts",
-                        "1 piece",
-                        "2 pieces"
-                    ]
-                }               
+                    ingredientName: "pork belly",
+                    measurementType:"2 lbs"                       
+                }, 
+                {
+                    ingredientName: "spinach",
+                    measurementType:"1 bunch"                       
+                }, 
+                {
+                    ingredientName: "fish sauce",
+                    measurementType:"3 tablespoons"                       
+                }, 
+                {
+                    ingredientName: "string beans, cut in 2 inch length",
+                    measurementType:"12 pieces"                       
+                }, 
+                {
+                    ingredientName: "tomato quartered",
+                    measurementType:"2 pieces"                       
+                }, 
+                {
+                    ingredientName: "chili or banana pepper",
+                    measurementType:"3 pieces"                       
+                }, 
+                {
+                    ingredientName: "cooking oil",
+                    measurementType:"1 tablespoons"                       
+                }, 
+                {
+                    ingredientName: "water",
+                    measurementType:"2 quarts"                       
+                }, 
+                {
+                    ingredientName: "onion sliced",
+                    measurementType:"1 piece"                       
+                }, 
+                {
+                    ingredientName: "taro, quartered",
+                    measurementType:"2 pieces"                       
+                }, 
             ],
             direction:[
                 "Heat the pot and put-in the cooking oil",
