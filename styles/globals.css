@@ -46,6 +46,7 @@ a {
 	cursor: pointer;
 }
 button {
+	font-family: var(--primary-font);
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
