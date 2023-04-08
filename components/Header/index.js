@@ -14,7 +14,6 @@ export default function Header({
             <meta property="title"  content={`${envTitle} ${metaTitle ? `- ${metaTitle}` : ''}`} />
             <meta property="description"  content={metaDescription} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"></link>
             <link rel="icon" href="/logos/tab-logo.svg" />
         </Head>
     )
