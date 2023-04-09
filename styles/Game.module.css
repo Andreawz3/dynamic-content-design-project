@@ -1,0 +1,52 @@
+.game__page {
+    padding: 40px 30px;
+}
+
+/* Selected Ingredients */
+.selectIngredients {
+    margin-top: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ingredientsTypes {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Pick Ingredients */
+.containerPickIngredients {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.ingredientsList {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+}
+
+.ingredientsSections {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Next Button */
+.next__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
