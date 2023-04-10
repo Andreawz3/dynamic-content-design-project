@@ -11,6 +11,7 @@ import FilterMenu from '@/components/FilterMenu';
 
 // data
 import { inventory } from '@/data/recipes';
+import NavBar from '@/components/NavBar';
 
 export default function Home() {
     const [recipeData, setRecipeData] = useState(inventory.recipe);
@@ -34,7 +35,7 @@ export default function Home() {
             <Header
                 title={'Home'}
                 metaTitle={'Home'}
-            />
+                />
             <main className={styles.home_page}>
                 <TopNav/>
                 <div className={styles.home_page__greeting}>
@@ -89,6 +90,7 @@ export default function Home() {
                     children='Play Now'
                 />
             </main>
+            <NavBar/>
         </>
     )
 }
