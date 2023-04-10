@@ -63,7 +63,6 @@ export default function Landing() {
 					</div>
 					<div className={styles.link__home} onClick={() => showSplashScreen()}>
 						<Button
-							href=""
 							backgroundColour='var(--color-black)'
 							colour='var(--color-white)'
 							children='Get Started'
