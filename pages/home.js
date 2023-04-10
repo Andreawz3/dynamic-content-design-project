@@ -3,6 +3,9 @@ import styles from '@/styles/Home.module.css'
 // components
 import TopNav from "@/components/TopNav";
 import Header from '@/components/Header';
+import Button from '@/components/Button';
+// pages
+
 
 export default function Home() {
     return (
@@ -17,10 +20,10 @@ export default function Home() {
                     <h1>Hello, Jane</h1>
                     <p>Want to eat some healthy meals?</p>
                 </div>
-                <div className={styles.home_page__filter}>
-
+                <div className={styles.home_page__search}>
+                    
                 </div>
-                <div className={styles.filter__slider}>
+                <div className={styles.home_page__filter}>
 
                 </div>
                 <div className={styles.home_page__carousel}>
@@ -29,6 +32,12 @@ export default function Home() {
                 <div className={styles.home_page__categories}>
 
                 </div>
+                <Button
+                    href='/game'
+                    backgroundColour='var(--color-emerald)'
+                    colour='var(--color-white)'
+                    children='Play Now'
+                />
             </main>
         </>
     )
