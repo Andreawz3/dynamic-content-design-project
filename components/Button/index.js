@@ -3,11 +3,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Button({
-    border,
-    backgroundColour,
-    colour,
-    href, 
-    children, imgBefore, imgAfter, imgAlt, imgWidth, imgHeight
+    href = "", 
+    fontSize = "16px",
+    fontWeight = "300",
+    padding = "20px 50px",
+    border, colour, backgroundColour, children, imgBefore, imgAfter, imgAlt, imgWidth, imgHeight
 }) {
     return (
         <>
@@ -26,6 +26,9 @@ export default function Button({
                         backgroundColor: backgroundColour,
                         color: colour,
                         border: border,
+                        fontSize: fontSize,
+                        fontWeight: fontWeight,
+                        padding: padding,
                     }}>
                     {children}
                 </button>
