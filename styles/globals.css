@@ -2,6 +2,7 @@
 	/* colours */
 	--color-emerald: #26594D;
 	--color-black: #282828;
+	--color-lightgray: #b9b9b9;
 	--color-white: #F4F4F5;
 	--color-tan: #E2D6C9;
 	--color-yellow: #ECC64F;
@@ -14,6 +15,7 @@
 	/* Fonts */
     --primary-font: 'Lato', sans-serif;
     --secondary-font: 'Capuche', sans-serif;
+	--main-headline-font-size-desktop: 36px;
     --body-font-size-desktop: 16px;
     --body-font-size-mobile: 14px;
 
@@ -46,6 +48,7 @@ a {
 	cursor: pointer;
 }
 button {
+	font-family: var(--primary-font);
 	border: none;
 	background-color: transparent;
 	cursor: pointer;

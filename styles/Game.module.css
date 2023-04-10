@@ -1,0 +1,93 @@
+.game__page {
+    padding: 40px 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Modal Box */
+.game__tutotial {
+    position: absolute;
+    z-index: 1;
+    background-color: #36363661;
+    width: 100%;
+    height: 95vh;
+}
+
+.game__tutotial_option {
+    position: absolute;
+    bottom: 25%;
+    left: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.skipTutorials__link {
+    cursor: pointer;
+}
+
+.skipTutorials__link:hover {
+    opacity: 0.8;
+}
+
+/* Main Game Lauout */
+.game__layout {
+    position: absolute;
+}
+
+/* Selected Ingredients */
+.selectIngredients {
+    margin-top: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ingredientsTypes {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Pick Ingredients */
+.containerPickIngredients {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.ingredientsList {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+}
+
+.ingredientsSections {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Next Button */
+.next__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Watch Tutorial */
+.watch_tutorial {
+    color: var(--color-red);
+    text-align: end;
+}

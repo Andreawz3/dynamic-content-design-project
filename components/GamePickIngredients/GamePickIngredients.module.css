@@ -1,0 +1,10 @@
+.ingredientImages {
+    border: 2px solid var(--color-lightgray);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.ingredientImages:hover {
+    transform: scale(1.1);
+}

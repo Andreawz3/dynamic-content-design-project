@@ -1,0 +1,97 @@
+.home_page {
+    padding: 40px 0;
+}
+.home_page > * {
+    padding: 0 30px;
+}
+
+/* greeting section */
+.home_page__greeting {
+    margin: 35px 0 30px;
+}
+.home_page__greeting h1 {
+    font-family: var(--secondary-font);
+    font-size: 32px;
+}
+.home_page__greeting p {
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+/* filter section */
+.home_page__filter {
+    margin: 25px 0;
+    padding: 0 30px 0;
+    overflow: scroll;
+    display: flex;
+    gap: 7px;
+}
+
+/* featured meal section */
+.featured_meal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 60px;
+    cursor: pointer;
+}
+.featured_meal__details {
+    width: 250px;
+    padding: 20px;
+    background-color: var(--color-white);
+    text-align: center;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0;
+}
+.featured_meal__details h2 {
+    font-size: 20px;
+}
+.featured_meal__details p {
+    font-weight: 300;
+    font-size: 14px;
+    margin: 10px 0 30px;
+}
+.info {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+.info div {
+    height: 30px;
+    border-left: 1px solid var(--color-lightgray);
+}
+.featured_meal__dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+.featured_meal__dots div {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    background-color: var(--color-white);
+}
+
+/* categories section */
+.home_page__categories {
+    margin: 40px 0 50px;
+}
+.home_page__categories h2 {
+    font-size: 20px;
+}
+.meal_categories {
+    margin-top: 25px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+.meal_categories img {
+    border-radius: 15px;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
