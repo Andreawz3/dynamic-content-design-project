@@ -1,5 +1,40 @@
 .game__page {
     padding: 40px 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Modal Box */
+.game__tutotial {
+    position: absolute;
+    z-index: 1;
+    background-color: #36363661;
+    width: 100%;
+    height: 95vh;
+}
+
+.game__tutotial_option {
+    position: absolute;
+    bottom: 25%;
+    left: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.skipTutorials__link {
+    cursor: pointer;
+}
+
+.skipTutorials__link:hover {
+    opacity: 0.8;
+}
+
+/* Main Game Lauout */
+.game__layout {
+    position: absolute;
 }
 
 /* Selected Ingredients */
@@ -49,4 +84,10 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
+}
+
+/* Watch Tutorial */
+.watch_tutorial {
+    color: var(--color-red);
+    text-align: end;
 }
