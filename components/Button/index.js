@@ -3,10 +3,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Button({
-    border = "none",
-    backgroundColour = "var(--avocado)",
-    colour = "var(--white)",
-    href = "", 
+    border,
+    backgroundColour,
+    colour,
+    href, 
     children, imgBefore, imgAfter, imgAlt, imgWidth, imgHeight
 }) {
     return (
