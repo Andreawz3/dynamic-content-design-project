@@ -1,10 +1,11 @@
+import Image from 'next/image';
 import styles from '@/styles/Home.module.css'
 
 // components
 import TopNav from "@/components/TopNav";
 import Header from '@/components/Header';
 import Button from '@/components/Button';
-// pages
+import { FilterIcon, SearchIcon } from '@/public/icons/icons';
 
 
 export default function Home() {
@@ -21,10 +22,25 @@ export default function Home() {
                     <p>Want to eat some healthy meals?</p>
                 </div>
                 <div className={styles.home_page__search}>
-                    
+                    <div className={styles.search__container}>
+                        <div className={styles.search__icon}>
+                            <SearchIcon />
+                        </div>
+                        <input
+                            className={styles.search__input}
+                            placeholder="Search"
+                            type="text"
+                            // onChange={onChange}
+                            // onFocus={onFocus}
+                            // value={query}
+                        />
+                        <div className={styles.filter__icon}>
+                            <FilterIcon/>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.home_page__filter}>
-
+                    
                 </div>
                 <div className={styles.home_page__carousel}>
 
