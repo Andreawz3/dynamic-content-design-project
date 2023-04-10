@@ -4,64 +4,258 @@ export const inventory = {
             dishName: "Homemade Mandu",
             prepTime:"30 min",
             cookTime:"7 min",
-            cuisineCategory:"Snack",
+            cuisineCategory:"Dinner",
+            category: "Korean",
             difficulty:"Medium",
-            ingredientList: ["1 cup lean ground pork",
-            "1 cup chopped cabbage",
-            "1/2 cup chopped scallions",
-            "1/2 cup chopped onion",
-            "1/2 cup chopped carrot",
-            "1 tablespoon minced garlic",
-            "1 tablespoon soy sauce",
-            "1 tablespoon sesame oil",
-            "1/4 teaspoon black pepper",
-            "1/4 teaspoon salt",
-            "1 package of round mandu wrappers (or you can make your own)"],
-            directions:["1. In a large mixing bowl, combine the ground pork, cabbage, scallions, onion, carrot, garlic, soy sauce, sesame oil, black pepper, and salt. Mix well until all the ingredients are evenly distributed.",
-            "2. Take one mandu wrapper and place about 1 tablespoon of filling in the center. Fold the wrapper in half to create a half-moon shape, and then press the edges together to seal. You can also crimp the edges with a fork for a decorative touch.",
-            "3. Repeat the process with the remaining wrappers and filling until all the filling is used up.",
-            "4. Heat a large non-stick pan over medium-high heat. Once the pan is hot, add the mandu in a single layer and cook for about 2-3 minutes, or until the bottoms are golden brown.",
-            "5. Pour in 1/4 cup of water into the pan, then quickly cover with a lid to create steam. Cook for an additional 2-3 minutes or until the mandu are cooked through.",
-            "6. Serve hot with a side of dipping sauce made with soy sauce, rice vinegar, and a little bit of sugar."],
-            review:"4"
+            ingredientList: [ 
+                {
+                    ingredientName: "lean ground pork",
+                    measurementType:"1 cup"                      
+                },
+                {
+                    ingredientName: "chopped cabbage",
+                    measurementType:"1 cup"                      
+                },
+                {
+                    ingredientName: "chopped scallions",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "chopped onion",
+                    measurementType:"1/2 cup"                      
+                },
+                {
+                    ingredientName: "chopped carrot",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "minced garlic",
+                    measurementType:"1 tablespoon"                       
+                },
+                {
+                    ingredientName: "soy sauce",
+                    measurementType:"1 tablespoon"                       
+                },
+                {
+                    ingredientName: "sesame oil",
+                    measurementType:"1 tablespoon"                       
+                },
+                {
+                    ingredientName: "black pepper",
+                    measurementType:"1/4 teaspoon"                       
+                },
+                {
+                    ingredientName: "salt",
+                    measurementType:"1/4 teaspoon"                       
+                },
+                {
+                    ingredientName: "round mandu wrappers (or you can make your own)",
+                    measurementType:"1 package"                       
+                },
+            ],
+            directions:[
+                "1. In a large mixing bowl, combine the ground pork, cabbage, scallions, onion, carrot, garlic, soy sauce, sesame oil, black pepper, and salt. Mix well until all the ingredients are evenly distributed.",
+                "2. Take one mandu wrapper and place about 1 tablespoon of filling in the center. Fold the wrapper in half to create a half-moon shape, and then press the edges together to seal. You can also crimp the edges with a fork for a decorative touch.",
+                "3. Repeat the process with the remaining wrappers and filling until all the filling is used up.",
+                "4. Heat a large non-stick pan over medium-high heat. Once the pan is hot, add the mandu in a single layer and cook for about 2-3 minutes, or until the bottoms are golden brown.",
+                "5. Pour in 1/4 cup of water into the pan, then quickly cover with a lid to create steam. Cook for an additional 2-3 minutes or until the mandu are cooked through.",
+                "6. Serve hot with a side of dipping sauce made with soy sauce, rice vinegar, and a little bit of sugar."],
+            review:"4",
+            calories: "",
+            carb: "",
+            protein: "",
+            fat: "",
+            fiber: "",
+            calcium: "",
+            iron:""
         },
         {
             dishName: "Korean Bibimbap (Mixed Rice Bowl)",
             prepTime:"45 min",
             cookTime:"15 min",
-            cuisineCategory:"Lunch",
+            cuisineCategory:"Snack",
+            category: "Korean",
             difficulty:"Hard",
-            ingredientList:["1 cup cooked brown rice","1/2 cup spinach, blanched and squeezed dry","1/2 cup bean sprouts, blanched and squeezed dry","1/2 cup carrots, julienned and sautéed","1/2 cup shiitake mushrooms, sautéed","1/2 cup ground beef, sautéed with soy sauce and garlic","1 egg fried or poached","Sesame oil","Soy sauce","Gochujang (Korean chili paste)","Toasted sesame seeds"],
-            directions:["1. Prepare all the ingredients as directed and set them aside.", "2. In a small bowl, mix together 1 tablespoon of sesame oil and 1 tablespoon of soy sauce. Drizzle the mixture over the cooked brown rice and mix well.","3. Arrange the prepared vegetables and beef on top of the rice in a circular pattern. Top with the fried or poached egg in the center.","5. Drizzle a little bit of gochujang on top of the egg and sprinkle with toasted sesame seeds.","Serve immediately and mix everything together before eating."],
-            "review":"5"
+            ingredientList:[
+                {
+                    ingredientName: "cooked brown rice",
+                    measurementType:"1 cup"                       
+                },
+                {
+                    ingredientName: "spinach, blanched and squeezed dry",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "bean sprouts, blanched and squeezed dry",
+                    measurementType:"1/2 cup"                      
+                },
+                {
+                    ingredientName: "carrots, julienned and sautéed",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "shiitake mushrooms, sautéed",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "ground beef, sautéed with soy sauce and garlic",
+                    measurementType:"1/2 cup"                       
+                },
+                {
+                    ingredientName: "egg fried or poached",
+                    measurementType:"1"                      
+                },
+                {
+                    ingredientName: "Soy sauce",                       
+                },
+                {
+                    ingredientName: "Sesame oil",                       
+                },
+                {
+                    ingredientName: "Gochujang (Korean chili paste)",                       
+                },
+                {
+                    ingredientName: "Toasted sesame seeds"
+                }         
+            ],   
+            directions:[
+                "1. Prepare all the ingredients as directed and set them aside.", 
+                "2. In a small bowl, mix together 1 tablespoon of sesame oil and 1 tablespoon of soy sauce. Drizzle the mixture over the cooked brown rice and mix well.",
+                "3. Arrange the prepared vegetables and beef on top of the rice in a circular pattern. Top with the fried or poached egg in the center.",
+                "5. Drizzle a little bit of gochujang on top of the egg and sprinkle with toasted sesame seeds.","Serve immediately and mix everything together before eating."],
+            review:"5",
+            calories: "",
+            carb: "",
+            protein: "",
+            fat: "",
+            fiber: "",
+            calcium: "",
+            iron:""
         },
         {
-            dishName: "Kimchi Fried Rice",
-            prepTime:"10 min",
-            cookTime:"15 min",
+            dishName: "Tofu Veggie Scramble",
+            prepTime:"5 mins",
+            cookTime:"15 mins",
             cuisineCategory:"Breakfast",
-            difficulty:"Medium",
-            ingredientList:["1 cup of cooked rice","1/4 cup of kimchi, chopped","1/4 cup of chopped vegetables (onions, carrots, and/or bell peppers)", "1 egg", "1 tbsp vegetable oil", "salt and pepper to taste", "soy sauce or goschujang (korean red pepper paste) for seasoning"],
-            directions:["1. In a large skillet or wok, heat vegetable oil over medium-high heat.","2. Add chopped vegetables and sauté until they are softened.","3. Add chopped kimchi and cook for an additional 1-2 minutes.","4. Add the cooked rice to the skillet or wok and stir to combine with the vegetables and kimchi.","5. Crack the egg into the skillet or wok and stir until it is scrambled and cooked.","6. Season the kimchi fried rice with salt and pepper to taste and garnish with sesame seeds (optional).","7. Serve hot with soy sauce or gochujang for additional flavor. Enjoy as a fast and delicious Korean breakfast!"],
-            review:"4"
+            category:"Italian",
+            difficulty:"Easy",
+            ingredientList:[
+                {
+                    ingredientName: "extra-firm tofu, pressed and crumbled with a fork",
+                    measurementType: "1 14 oz",                       
+                }, 
+                {
+                    ingredientName: "oil",
+                    measurementType: "1 tablespoon"                       
+                }, 
+                {
+                    ingredientName: "medium yellow or red onion, diced",
+                    measurementType: "½"                       
+                }, 
+                {
+                    ingredientName: "diced vegetables of choice",
+                    measurementType: "2 cups"                       
+                }, 
+                {
+                    ingredientName: "canned black",
+                    measurementType: "1 cup"                       
+                }, 
+                {
+                    ingredientName: "cheese",
+                    measurementType: "¼ cup"                     
+                }, 
+                {
+                    sauce: [
+                        {
+                            ingredientName: "cumin",
+                            measurementType: "½ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "coriander",
+                            measurementType: "¼ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "garlic powder",
+                            measurementType: "½ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "turmeric",
+                            measurementType: "¼ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "black pepper",
+                            measurementType: "¼ teaspoon"                      
+                        }, 
+                        {
+                            ingredientName: "water",
+                            measurementType: "2 teaspoon"                      
+                        }, 
+                    ]
+                }
+ 
+            ],
+            directions:[
+                "Heat oil in a large pan over medium-high heat. Add onion and cook for 2-3 minutes, until it begins to soften. Turn down the heat to medium and cook the other vegetables until softened - depends on the vegetables used.",
+                "In the meanwhile, combine the sauce ingredients in a small bowl and set aside.",
+                "Push veggies to the side and make a well in the center of the pan. Add tofu and cook for 2 minutes, stirring to combine.",
+                "Add the sauce and beans. Stir immediately to ensure the sauce gets evenly distributed. Cook for 5-8 minutes. Tip: Spread the mixture into an even layer and don't stir too much. This will help the tofu to get slightly crispy and browned.",
+                "Stir in cheese or nutritional yeast. Serve with toast, potatoes, tortilla, salsa, ketchup, cilantro...basically whatever you wish!"
+            ],
+            review:"5",
+            calories: "161kcal",
+            carb: "11g",
+            protein: "12g",
+            fat: "8g",
+            iron:"2.5mg"
         },
         {
             dishName: "Miso Pasta",
             prepTime: "5 mins",
             cookTime: "20mins",
             cuisineCategory:"Lunch",
+            category: "Japanese",
             difficulty: "Medium",
             ingredients: [
-                "1-2 tablespoons white miso paste",
-                "1 tablespoon peanut butter",
-                "1 teaspoon low-sodium soy sauce",
-                "1 tablespoon sesame oil",
-                "2 teaspoons rice vinegar",
-                "1 teaspoon minced garlic",
-                "¼ cup reserved pasta water",
-                "2 teaspoons olive oil",
-                "16 ounce frozen vegetable",
-                "8 ounces pasta of choice"
+                {
+                    ingredientName: "white miso paste",
+                    measurementType:"1-2 tablespoons"                      
+                }, 
+                {
+                    ingredientName: "peanut butter",
+                    measurementType:"1 tablespoon"                      
+                },
+                {
+                    ingredientName: "low-sodium soy sauce",
+                    measurementType:"1 teaspoon"                       
+                },
+                {
+                    ingredientName: "sesame oil",
+                    measurementType:"1 tablespoon"                       
+                },
+                {
+                    ingredientName: "rice vinegar",
+                    measurementType:"2 teaspoons"                       
+                },
+                {
+                    ingredientName: "minced garlic",
+                    measurementType:"1 teaspoon"                       
+                },
+                {
+                    ingredientName: "reserved pasta water",
+                    measurementType:"¼ cup"                      
+                },
+                {
+                    ingredientName: "olive oil",
+                    measurementType:"2 teaspoons"                      
+                },
+                {
+                    ingredientName: "frozen vegetable",
+                    measurementType:"16 ounce"                       
+                },
+                {
+                    ingredientName: "pasta of choice",
+                    measurementType:"8 ounces"                       
+                },
             ],
             direction:[
                 "Bring a large pot of water to a boil. Add the pasta and cook according to package instructions. Be sure to reserve ¾ cup of pasta water.",
@@ -84,19 +278,53 @@ export const inventory = {
             prepTime: "10 mins",
             cookTime: "20 mins",
             cuisineCategory:"Dinner",
+            category: "Italian",
             difficulty: "Medium",
             ingredients: [
-                "1 tablespoon olive oil",
-                "1 small yellow onion, diced",
-                "3 garlic cloves, minced",
-                "1 pound carrots, diced",
-                "4 stalks celery, diced",
-                "1 teaspoon cumin",
-                "1 teaspoon turmeric",
-                "½ teaspoon smoked paprika",
-                "1 ½ cups red lentils (300g)",
-                "4 cups low-sodium vegetable broth",
-                "15 ounce can full-fat coconut milk"
+                {
+                    ingredientName: "olive oil",
+                    measurementType:"1 tablespoon"                       
+                }, 
+                {
+                    ingredientName: "yellow onion, diced",
+                    measurementType:"1 small"                       
+                },
+                {
+                    ingredientName: "garlic cloves, minced",
+                    measurementType:"3"                      
+                },
+                {
+                    ingredientName: "carrots, diced",
+                    measurementType:"1 pound"                      
+                },
+                {
+                    ingredientName: "celery, diced",
+                    measurementType:"4 stalks"                       
+                },
+                {
+                    ingredientName: "cumin",
+                    measurementType:"1 teaspoon"                       
+                },
+                {
+                    ingredientName: "turmeric",
+                    measurementType:"1 teaspoon"                       
+                },
+                {
+                    ingredientName: "smoked paprika",
+                    measurementType:"½ teaspoon"                       
+                },
+                {
+                    ingredientName: "red lentils",
+                    measurementType:"1 ½ cups"                       
+                },
+                {
+                    ingredientName: "low-sodium vegetable broth",
+                    measurementType:"4 cups"                       
+                },
+                {
+                    ingredientName: "can full-fat coconut milk",
+                    measurementType:"15 ounce"                       
+                },
             ],
             direction:[
                 "Heat oil in a large Dutch oven or pot over medium heat. Saute the onion until soft, about 2 minutes. Add garlic, carrots, celery, and all the spices. Cook for an additional 6-8 minutes.",
@@ -118,19 +346,53 @@ export const inventory = {
             prepTime: "10 mins",
             cookTime: "30 mins",
             cuisineCategory:"dinner",
+            category: "Italian",
             difficulty: "Hard",
             ingredients: [
-                "4 cups vegetable stock",
-                "1 cup water",
-                "3 tablespoons butter",
-                "1 cup finely diced yellow onion",
-                "1 cup finely chopped celery",
-                "2-3 garlic cloves, minced",
-                "1 ½ cups arborio rice",
-                "½-3/4 cup parmesan cheese",
-                "¼ teaspoon nutmeg",
-                "¼ teaspoon smoked paprika",
-                "15 ounce can pumpkin puree"
+                {
+                    ingredientName: "vegetable stock",
+                    measurementType:"4 cups"                       
+                }, 
+                {
+                    ingredientName: "water",
+                    measurementType:"1 cup",                       
+                },
+                {
+                    ingredientName: "butter",
+                    measurementType:"3 tablespoons"                       
+                },
+                {
+                    ingredientName: "finely diced yellow onion",
+                    measurementType:"1 cup"                       
+                },
+                {
+                    ingredientName: "finely chopped celery",
+                    measurementType:"1 cup"                       
+                },
+                {
+                    ingredientName: "garlic cloves, minced",
+                    measurementType:"2-3"                      
+                },
+                {
+                    ingredientName: "arborio rice",
+                    measurementType:"1 ½ cups"                      
+                },
+                {
+                    ingredientName: "parmesan cheese",
+                    measurementType:"½-3/4 cup"                       
+                },
+                {
+                    ingredientName: "nutmeg",
+                    measurementType:"¼ teaspoon"                       
+                },
+                {
+                    ingredientName: "smoked paprika",
+                    measurementType:"¼ teaspoon"                      
+                },
+                {
+                    ingredientName: "can pumpkin puree",
+                    measurementType:"15 ounce"                     
+                },
             ],
             direction:[
                 "Combine stock and water in a medium saucepan and bring to a low simmer.",
@@ -152,13 +414,37 @@ export const inventory = {
             dishName: "Banana Cue",
             prepTime: "5 mins",
             cookTime: "15 mins",
-            cuisine: "snack",
+            cuisineCategory: "Snack",
             category: "Filipino",
             difficulty: "easy",
             ingredients: [
-                "1 large bunch sweet plantain (15-20)",
-                "1 cup brown sugar",
-                "oil for frying",
+                {
+                    ingredientName: "large eggplants",
+                    measurementType:"2"                       
+                }, 
+                {
+                    ingredientName: "oil",
+                    measurementType:"2 tablespoons"                       
+                }, 
+                {
+                    ingredientName: "small onion, peeled and sliced thinly",
+                    measurementType:"1"                       
+                }, 
+                {
+                    ingredientName: "cloves garlic",
+                    measurementType:"2"                       
+                }, 
+                {
+                    ingredientName: "large Roma tomatoes, chopped",
+                    measurementType:"2"                       
+                }, 
+                {
+                    ingredientName: "eggs, beaten",
+                    measurementType:"4"                       
+                }, 
+                {
+                    ingredientName: "salt and pepper to taste"                     
+                }, 
             ],
             direction:[
                 "Heat the oil over medium low heat. Add the brown sugar and wait until the sugar starts to caramelize.",
@@ -166,32 +452,62 @@ export const inventory = {
                 "Drain on paper towels and serve on individual skewers.",
             ],
             review: "4",
-            serving: "15",
             calories: "141kcal",
             carb: "28g",
             protein: "0.9g",
             fat: "3.9g",
             fiber: "2.1g",
+            calcium: "",
             iron: "0.3mg"
         },
         {
             dishName: "Sinigang",
             prepTime: "15 mins",
             cookTime: "1 hr 10 mins",
-            cuisine: "lunch",
+            cuisineCategory: "Lunch",
             category: "Filipino",
             difficulty: "medium",
             ingredients: [
-                "2 lbs pork belly",
-                "1 bunch spinach",
-                "3 tablespoons fish sauce",
-                "12 pieces string beans, cut in 2 inch length",
-                "2 pieces tomato quartered",
-                "3 pieces chili or banana pepper",
-                "1 tablespoons cooking oil",
-                "2 quarts water",
-                "1 piece onion sliced",
-                "2 pieces taro, quartered",
+                {
+                    ingredientName: "pork belly",
+                    measurementType:"2 lbs"                       
+                }, 
+                {
+                    ingredientName: "spinach",
+                    measurementType:"1 bunch"                       
+                }, 
+                {
+                    ingredientName: "fish sauce",
+                    measurementType:"3 tablespoons"                       
+                }, 
+                {
+                    ingredientName: "string beans, cut in 2 inch length",
+                    measurementType:"12 pieces"                       
+                }, 
+                {
+                    ingredientName: "tomato quartered",
+                    measurementType:"2 pieces"                       
+                }, 
+                {
+                    ingredientName: "chili or banana pepper",
+                    measurementType:"3 pieces"                       
+                }, 
+                {
+                    ingredientName: "cooking oil",
+                    measurementType:"1 tablespoons"                       
+                }, 
+                {
+                    ingredientName: "water",
+                    measurementType:"2 quarts"                       
+                }, 
+                {
+                    ingredientName: "onion sliced",
+                    measurementType:"1 piece"                       
+                }, 
+                {
+                    ingredientName: "taro, quartered",
+                    measurementType:"2 pieces"                       
+                }, 
             ],
             direction:[
                 "Heat the pot and put-in the cooking oil",
@@ -205,7 +521,6 @@ export const inventory = {
                 "Put-in the spinach, turn off the heat, and cover the pot. Let the spinach cook using the remaining heat in the pot.",
             ],
             review: "4",
-            serving: "6g",
             calories: "892kcal",
             carb: "18g",
             protein: "20g",
