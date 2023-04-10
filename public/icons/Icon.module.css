@@ -1,4 +1,4 @@
-.menu__icon:hover {
+.icon:hover {
     color: var(--color-emerald);
     cursor: pointer;
 }
