@@ -1,0 +1,16 @@
+.navbar {
+    background-color: var(--color-lightgray);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 60px;
+    position: absolute;
+    bottom: 0;
+    max-width: 900px;
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        justify-content: space-between;
+    }
+}

@@ -6,6 +6,7 @@ import Button from '@/components/Button'
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
+
 export default function Landing() {
 	const [loading, setLoading] = useState(false);
 	const [showLanding, setShowLanding] = useState(true);
