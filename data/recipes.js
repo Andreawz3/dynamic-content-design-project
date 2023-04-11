@@ -54,12 +54,12 @@ export const inventory = {
                 },
             ],
             directions:[
-                "1. In a large mixing bowl, combine the ground pork, cabbage, scallions, onion, carrot, garlic, soy sauce, sesame oil, black pepper, and salt. Mix well until all the ingredients are evenly distributed.",
-                "2. Take one mandu wrapper and place about 1 tablespoon of filling in the center. Fold the wrapper in half to create a half-moon shape, and then press the edges together to seal. You can also crimp the edges with a fork for a decorative touch.",
-                "3. Repeat the process with the remaining wrappers and filling until all the filling is used up.",
-                "4. Heat a large non-stick pan over medium-high heat. Once the pan is hot, add the mandu in a single layer and cook for about 2-3 minutes, or until the bottoms are golden brown.",
-                "5. Pour in 1/4 cup of water into the pan, then quickly cover with a lid to create steam. Cook for an additional 2-3 minutes or until the mandu are cooked through.",
-                "6. Serve hot with a side of dipping sauce made with soy sauce, rice vinegar, and a little bit of sugar."],
+                "In a large mixing bowl, combine the ground pork, cabbage, scallions, onion, carrot, garlic, soy sauce, sesame oil, black pepper, and salt. Mix well until all the ingredients are evenly distributed.",
+                "Take one mandu wrapper and place about 1 tablespoon of filling in the center. Fold the wrapper in half to create a half-moon shape, and then press the edges together to seal. You can also crimp the edges with a fork for a decorative touch.",
+                "Repeat the process with the remaining wrappers and filling until all the filling is used up.",
+                "Heat a large non-stick pan over medium-high heat. Once the pan is hot, add the mandu in a single layer and cook for about 2-3 minutes, or until the bottoms are golden brown.",
+                "Pour in 1/4 cup of water into the pan, then quickly cover with a lid to create steam. Cook for an additional 2-3 minutes or until the mandu are cooked through.",
+                "Serve hot with a side of dipping sauce made with soy sauce, rice vinegar, and a little bit of sugar."],
             review:"4",
             calories: "",
             carb: "",
@@ -67,7 +67,9 @@ export const inventory = {
             fat: "",
             fiber: "",
             calcium: "",
-            iron:""
+            iron:"",
+            servingSize: "Serving: 2",
+            price: "$0.67 per serving"
         },
         {
             dishName: "Korean Bibimbap (Mixed Rice Bowl)",
@@ -119,10 +121,10 @@ export const inventory = {
                 }         
             ],   
             directions:[
-                "1. Prepare all the ingredients as directed and set them aside.", 
-                "2. In a small bowl, mix together 1 tablespoon of sesame oil and 1 tablespoon of soy sauce. Drizzle the mixture over the cooked brown rice and mix well.",
-                "3. Arrange the prepared vegetables and beef on top of the rice in a circular pattern. Top with the fried or poached egg in the center.",
-                "5. Drizzle a little bit of gochujang on top of the egg and sprinkle with toasted sesame seeds.","Serve immediately and mix everything together before eating."],
+                "Prepare all the ingredients as directed and set them aside.", 
+                "In a small bowl, mix together 1 tablespoon of sesame oil and 1 tablespoon of soy sauce. Drizzle the mixture over the cooked brown rice and mix well.",
+                "Arrange the prepared vegetables and beef on top of the rice in a circular pattern. Top with the fried or poached egg in the center.",
+                "Drizzle a little bit of gochujang on top of the egg and sprinkle with toasted sesame seeds.","Serve immediately and mix everything together before eating."],
             review:"5",
             calories: "",
             carb: "",
@@ -130,7 +132,9 @@ export const inventory = {
             fat: "",
             fiber: "",
             calcium: "",
-            iron:""
+            iron:"",
+            servingSize: "Serving: 1",
+            price: "$4.31 per serving"
         },
         {
             dishName: "Tofu Veggie Scramble",
@@ -206,7 +210,9 @@ export const inventory = {
             carb: "11g",
             protein: "12g",
             fat: "8g",
-            iron:"2.5mg"
+            iron:"2.5mg",
+            servingSize: "Serving: 2",
+            price: "$3.24 per serving"
         },
         {
             dishName: "Miso Pasta",
@@ -271,7 +277,9 @@ export const inventory = {
             fat: "9g",
             fiber: "278mg",
             calcium: "7g",
-            iron: "2mg"
+            iron: "2mg",
+            servingSize: "Serving: 2",
+            price: "$2.65 per serving"
         },
         {
             dishName: "Carrot and Lentil Soup",
@@ -339,7 +347,9 @@ export const inventory = {
             fat: "18g",
             fiber: "17g",
             calcium: "83mg",
-            iron: "6mg"
+            iron: "6mg",
+            servingSize: "Serving: 2",
+            price: "$1.98 per serving"
         },
         {
             dishName: "Pumpkin Risotto",
@@ -408,7 +418,9 @@ export const inventory = {
             fat: "9g",
             fiber: "",
             calcium: "",
-            iron: "3mg"
+            iron: "3mg",
+            servingSize: "Serving: 3",
+            price: "$2.17 per serving"
         },
         {
             dishName: "Banana Cue",
@@ -458,7 +470,9 @@ export const inventory = {
             fat: "3.9g",
             fiber: "2.1g",
             calcium: "",
-            iron: "0.3mg"
+            iron: "0.3mg",
+            servingSize: "Serving: 4",
+            price: "$0.75 per serving"
         },
         {
             dishName: "Sinigang",
@@ -527,7 +541,9 @@ export const inventory = {
             fat: "83g",
             fiber: "6g",
             calcium: "157mg",
-            iron: "4.5mg"
+            iron: "4.5mg",
+            servingSize: "Serving: 4",
+            price: "$1.17 per serving"
         },
         
     ]
