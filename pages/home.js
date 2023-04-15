@@ -8,16 +8,21 @@ import TopNav from "@/components/TopNav";
 import Header from '@/components/Header';
 import Button from '@/components/Button';
 import FilterMenu from '@/components/FilterMenu';
-
-// data
-import { inventory } from '@/data/recipes';
 import NavBar from '@/components/NavBar';
 import FeaturedMeal from '@/components/FeaturedMeal';
 import MealCategory from '@/components/MealCategory';
+import NavMenu from '@/components/NavMenu';
+
+// hooks
+import useNavMenu from '@/hooks/navmenu';
+
+// data
+import { inventory } from '@/data/recipes';
 
 export default function Home() {
     const [recipeData, setRecipeData] = useState(inventory.recipe);
     const [currentFilter, setCurrentFilter] = useState("");
+    const {showMenu, setShowMenu} = useNavMenu();
     const filteredCategory = [];
     const mealCategories = ['Breakfast', 'Lunch', 'Dinner', 'Snacks'];
     
@@ -33,6 +38,7 @@ export default function Home() {
         }
     })
 
+
     return (
         <>
             <Header
@@ -40,7 +46,7 @@ export default function Home() {
                 metaTitle={'Home'}
             />
             <main className={styles.home_page}>
-                <TopNav/>
+                <TopNav openMenu={() => setShowMenu(true)} />
                 <div className={styles.home_page__greeting}>
                     <h1>Hello, Jane</h1>
                     <p>Want to eat some healthy meals?</p>
@@ -67,14 +73,11 @@ export default function Home() {
                         )}
                     </div>
                 </div>
-                {/* <Button
-                    href='/game'
-                    backgroundColour='var(--color-emerald)'
-                    colour='var(--color-white)'
-                    children='Play Now'
-                /> */}
             </main>
             <NavBar/>
+            {showMenu && 
+                <NavMenu closeMenu={() => setShowMenu(false)}/>
+            }
         </>
     )
 }
