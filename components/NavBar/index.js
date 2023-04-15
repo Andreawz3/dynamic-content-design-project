@@ -16,14 +16,14 @@ export default function NavBar() {
 
     return (
         <nav className={styles.navbar}>
-            <Link href={'/favorites'}>
-                {router.pathname == '/favorites' ? 
-                    <FaveSolidIcon/> : <FaveOutlineIcon/>
-                }
-            </Link>
             <Link href={'/home'}>
                 {router.pathname == '/home' ? 
                     <HomeSolidIcon/> : <HomeOutlineIcon/>
+                }
+            </Link>
+            <Link href={'/favorites'}>
+                {router.pathname == '/favorites' ? 
+                    <FaveSolidIcon/> : <FaveOutlineIcon/>
                 }
             </Link>
             <Link href={'/shopping-list'}>

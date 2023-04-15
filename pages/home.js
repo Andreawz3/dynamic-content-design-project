@@ -12,11 +12,14 @@ import FilterMenu from '@/components/FilterMenu';
 // data
 import { inventory } from '@/data/recipes';
 import NavBar from '@/components/NavBar';
+import FeaturedMeal from '@/components/FeaturedMeal';
+import MealCategory from '@/components/MealCategory';
 
 export default function Home() {
     const [recipeData, setRecipeData] = useState(inventory.recipe);
     const [currentFilter, setCurrentFilter] = useState("");
     const filteredCategory = [];
+    const mealCategories = ['Breakfast', 'Lunch', 'Dinner', 'Snacks'];
     
     recipeData.forEach((value) => {
         if (!filteredCategory.includes(value.category)) {
@@ -49,23 +52,7 @@ export default function Home() {
                     <FilterMenu filterMenu={filterMenu} />
                 </div>
                 <div className={styles.home_page__carousel}>
-                    <div className={styles.featured_meal}>
-                        <Image
-                            src={'/images/featured-meal-placeholder.png'}
-                            alt={'featured-meal-placeholder'}
-                            width={330}
-                            height={250}
-                        />
-                        <div className={styles.featured_meal__details}>
-                            <h2>Meal Name</h2>
-                            <p>Torem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <div className={styles.info}>
-                                <span>25 MIN</span>
-                                <div/>
-                                <span>EASY</span>
-                            </div>
-                        </div>
-                    </div>
+                    <FeaturedMeal/>
                     <div className={styles.featured_meal__dots}>
                         <div/>
                         <div/>
@@ -75,20 +62,17 @@ export default function Home() {
                 <div className={styles.home_page__categories}>
                     <h2>Meal Categories</h2>
                     <div className={styles.meal_categories}>
-                        <Image
-                            src={'/images/meal-category-placeholder.png'}
-                            alt={'meal-category-placeholder.png'}
-                            width={155}
-                            height={170}
-                        />
+                        {mealCategories.map((category, index) => 
+                            <MealCategory key={index} category={category}/>
+                        )}
                     </div>
                 </div>
-                <Button
+                {/* <Button
                     href='/game'
                     backgroundColour='var(--color-emerald)'
                     colour='var(--color-white)'
                     children='Play Now'
-                />
+                /> */}
             </main>
             <NavBar/>
         </>

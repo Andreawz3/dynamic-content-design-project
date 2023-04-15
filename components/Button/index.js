@@ -7,7 +7,7 @@ export default function Button({
     fontSize = "16px",
     fontWeight = "300",
     padding = "20px 50px",
-    border, colour, backgroundColour, children, imgBefore, imgAfter, imgAlt, imgWidth, imgHeight
+    border, colour, backgroundColour, children, imgBefore, imgAfter, imgAlt, imgWidth, imgHeight, boxShadow
 }) {
     return (
         <>
@@ -29,6 +29,7 @@ export default function Button({
                         fontSize: fontSize,
                         fontWeight: fontWeight,
                         padding: padding,
+                        filter: boxShadow && "drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.1))"
                     }}>
                     {children}
                 </button>
