@@ -22,7 +22,7 @@ export default function Landing() {
 			setTimeout(() => {
 				setLoading(false);
 				router.push('/home');
-			}, 5000)
+			}, 2500)
 		};
 		router.events.on('routeChangeComplete', handleComplete);
 
