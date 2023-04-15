@@ -4,6 +4,7 @@
 	--color-black: #282828;
 	--color-lightgray: #b9b9b9;
 	--color-white: #F4F4F5;
+	--color-pure-white: #FFFFFF;
 	--color-tan: #E2D6C9;
 	--color-yellow: #ECC64F;
 	--color-orange: #E5A755;
@@ -39,7 +40,7 @@ body {
 	max-width: 900px;
 	margin: 0 auto;
 	font-family: var(--primary-font);
-	font-weight: var(--body-font-size-desktop);
+	font-size: var(--body-font-size-desktop);
 	color: var(--color-black);
 }
 a {

@@ -2,6 +2,9 @@
     color: var(--color-emerald);
     cursor: pointer;
 }
+.nav_icon {
+    color: var(--color-white);
+}
 .nav_icon:hover {
     color: var(--color-white);
     cursor: pointer;

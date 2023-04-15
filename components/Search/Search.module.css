@@ -5,6 +5,7 @@
     padding: 10px 20px;
     border-radius: 8px;
     background-color: var(--color-white);
+    border: 1px solid var(--color-black);
 }
 .search__input {
     width: 100%;
@@ -18,5 +19,5 @@
 }
 .filter__icon {
     padding: 3px 0 0 15px;
-    border-left: 1px solid var(--color-black);
+    border-left: 1px solid var(--color-lightgray);
 }
