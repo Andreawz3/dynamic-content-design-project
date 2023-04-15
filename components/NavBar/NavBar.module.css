@@ -1,5 +1,5 @@
 .navbar {
-    background-color: var(--color-lightgray);
+    background-color: var(--color-red);
     width: 100%;
     display: flex;
     justify-content: space-around;
