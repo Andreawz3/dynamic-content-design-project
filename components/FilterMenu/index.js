@@ -6,22 +6,24 @@ export default function FilterMenu({filterMenu}) {
     return (
         <>
             <Button
-                backgroundColour='var(--color-white)'
+                backgroundColour='var(--color-pure-white)'
                 colour='var(--color-black)'
                 children='All'
                 fontSize='14px'
                 fontWeight='400'
                 padding='15px 20px'
+                boxShadow
             />
             {filterMenu.map((data, index) => 
                 <Button
                     key={index}
                     children={data.country}
-                    backgroundColour='var(--color-white)'
+                    backgroundColour='var(--color-pure-white)'
                     colour='var(--color-black)'
                     fontSize='14px'
                     fontWeight='400'
                     padding='15px 40px'
+                    boxShadow
                 />
             )}
         </>
