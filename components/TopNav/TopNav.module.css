@@ -2,7 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 .top__nav img {
     cursor: pointer;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.5px solid var(--color-black);
 }
