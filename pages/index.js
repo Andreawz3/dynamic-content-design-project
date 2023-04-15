@@ -34,8 +34,8 @@ export default function Landing() {
 	return (
 		<>
 			<Header 
-				title='Landing Page'
-				metaTitle='Landing Page'
+				title='Landing'
+				metaTitle='Landing'
 			/>
 			{loading &&
 				<div className={styles.splash_screen}>
