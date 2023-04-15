@@ -20,19 +20,19 @@ export default function NavMenu({
                         <h1>yori</h1>
                     </div>
                     <div className={styles.nav_menu__links}>
-                        <Link href={''}>
+                        <Link href={'/home'} onClick={closeMenu}>
                             <Image/>
                             <span>HOME</span>
                         </Link>
-                        <Link href={''}>
+                        <Link href={'/shopping-list'}>
                             <Image/>
                             <span>SHOPPING LIST</span>
                         </Link>
-                        <Link href={''}>
+                        <Link href={'/profile'}>
                             <Image/>
                             <span>PROFILE</span>
                         </Link>
-                        <Link href={''}>
+                        <Link href={'/about'}>
                             <Image/>
                             <span>ABOUT</span>
                         </Link>
