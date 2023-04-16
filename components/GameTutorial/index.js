@@ -29,13 +29,14 @@ export default function GameTutorial(){
                             <div className={styles.gameToturial}>
                                 <p>At Yori, we get to play with our food!</p>
                                 <h1 className={styles.headline}>Let's Play</h1>
-                                <Image
-                                    src = "/images/game/mascot.png"
-                                    alt="cooking-wok"
-                                    width="250"
-                                    height="250"
-                                />
                             </div>
+                            <Image
+                                className={styles.mascot}
+                                src = "/images/game/mascot.png"
+                                alt="cooking-wok"
+                                width="250"
+                                height="250"
+                                />
                             <div className={styles.lets_play_next_button} onClick={() => Next("findMatch")}>
                                 <Button                    
                                     href=""
@@ -127,7 +128,7 @@ export default function GameTutorial(){
                             </div> 
                         </div>
                     </div>
-                      {/* Time to Mix */}
+                    {/* Time to Mix */}
                     <div id="timeToMix" class="step" style={{display:"none"}}>
                         <div className={styles.tutorialDisplay}>
                             <div className={styles.timeToMix}>
