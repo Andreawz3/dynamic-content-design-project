@@ -69,7 +69,9 @@ export default function Home() {
                     <h2>Meal Categories</h2>
                     <div className={styles.meal_categories}>
                         {mealCategories.map((data, index) => 
-                            <MealCategory key={index} props={data}/>
+                            <Link key={index} href={`/categories/${data.category.toLocaleLowerCase()}`}>
+                                <MealCategory props={data}/>
+                            </Link>
                         )}
                     </div>
                 </div>
