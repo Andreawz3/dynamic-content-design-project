@@ -9,13 +9,42 @@
     align-items: center;
 }
 
-.tutorial_display {
+.tutorialDisplay {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
     padding-bottom: 25%;
+}
+
+@keyframes lefttoRight {
+    0%{
+        left: 0%;
+        opacity: 0;
+    } 
+    25%{
+        left: 0%;
+        opacity: 0;
+    }
+    50%{
+        left: 0%;
+        opacity: 0;
+    }
+    100% {
+        left: 36%;
+        opacity: 1;
+    }
+}
+
+.skipTutorials__link {
+    position: absolute;
+    bottom: 6%;
+    left: 36%;
+    cursor: pointer;
+    animation-name: lefttoRight;
+    animation-duration: 2s;
+}
+
+.skipTutorials__link:hover {
+    opacity: 0.8;
 }
 
 /* Tutorial 1 - Let's Play */
@@ -53,7 +82,7 @@
     left: 31%;
     bottom: 13%;
     animation-name: bottomToTop;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 
@@ -117,6 +146,28 @@
     left: 31%;
     bottom: 13%;
     animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+/* Tutotrial 3 - Time to Mix */
+.timeToMix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.timeToMix > p {
+    width: 225px;
+}
+
+.time_to_mix_next_button {
+    position: absolute;
+    left: 19%;
+    bottom: 13%;
+    animation-name: fadeIn;
     animation-duration: 2s;
 }
+
+
 

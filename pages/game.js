@@ -1,5 +1,6 @@
 import styles from '@/styles/Game.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Components
 import Header from '@/components/Header';
@@ -7,6 +8,7 @@ import Button from '@/components/Button';
 import GameTutorial from '@/components/GameTutorial';
 import SelectedIngredients from '@/components/GameSelectedIngredients';
 import PickIngredients from '@/components/GamePickIngredients';
+import NavBar from '@/components/NavBar';
 
 export default function Game() {
 
@@ -15,9 +17,15 @@ export default function Game() {
         tutorial.style.display = 'contents';
     }
 
-    const closeButton = () => {
+    const skipTutorial = () => {
         const tutorial = document.getElementById('game-tutorial');
-        tutorial.style.display = 'none';   
+        tutorial.style.display = 'none';          
+    }
+
+    const pickIngredient = () => {
+        const ingredient = document.getElementsByClassName("ingredient");
+        // ingredient.style.background ='blue'; 
+        console.log(ingredient.style); 
     }
 
     return (
@@ -28,18 +36,20 @@ export default function Game() {
             />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <main className={styles.game__page}>
-                <div id='game-tutorial' className={styles.game_tutorial}>
+                <div id='game-tutorial' className={styles.game_tutorial}
+                    // style={{display:"none"}}
+                    >
                     <GameTutorial/>
-                    <div className={styles.skipTutorials__link} onClick={() => closeButton()}>
+                    {/* <div className={styles.skipTutorials__link} onClick={() => skipTutorial()}>
                         Skip tutorial 
                         <i class="fa fa-angle-double-right"></i>
-                    </div>   
+                    </div>    */}
                 </div>
                 <div className={styles.game_container}>
                     <div className={styles.game_layout}>
                         <div className={styles.navBar}>
                             <div className={styles.navBarOption}>
-                                <Link href='/home'><i class="fa fa-angle-left"></i> Back</Link>
+                                <Link href='/home'><i class="fa fa-angle-left"></i>Back</Link>
                                 <div className={styles.navbar_icons}>
                                     <div>
                                         <Link 
@@ -86,46 +96,65 @@ export default function Game() {
                         <div className={styles.containerPickIngredients}>
                             <div className={styles.ingredientsList}>
                                 <div className={styles.ingredientsSections}>
-                                    <PickIngredients
-                                            src="/images/game/ingredients/apple.png"
-                                            alt="apple-img"
-                                    />
-                                    <PickIngredients
-                                            src="/images/game/ingredients/sunny-egg.png"
-                                            alt="egg-img"
-                                    />
-                                    <PickIngredients
-                                            src="/images/game/ingredients/bowl-of-rice.jpeg"
-                                            alt="bowlOfRice-img"
-                                    />
+                                    <div onClick={() => pickIngredient()} class='ingredient'>
+                                        <PickIngredients
+                                                class="egg"
+                                                src="/images/game/ingredients/apple.png"
+                                                alt="apple"
+                                        />
+                                    </div>
+                                    <div onClick={() => pickIngredient()} class='ingredient' id='egg'>
+                                        <PickIngredients
+                                                src="/images/game/ingredients/sunny-egg.png"
+                                                alt="egg"
+                                        />
+                                    </div>    
+                                    <div onClick={() => pickIngredient()} class='ingredient'>
+                                        <PickIngredients
+                                                src="/images/game/ingredients/bowl-of-rice.jpeg"
+                                                alt="bowlOfRice"
+                                        />
+                                    </div>    
                                 </div>
                                 <div className={styles.ingredientsSections}>
-                                    <PickIngredients
-                                            src="/images/game/ingredients/ham.jpeg"
-                                            alt="ham-img"
-                                    />
-                                    <PickIngredients
-                                            src="/images/game/ingredients/chocolate.jpeg"
-                                            alt="chocolateBar-img"
-                                    />
-                                    <PickIngredients
-                                            src="/images/game/ingredients/cheese.jpeg"
-                                            alt="cheese-img"
-                                    />
+                                    <div onClick={() => pickIngredient()} class='ingredient'>
+                                        <PickIngredients
+                                                src="/images/game/ingredients/ham.jpeg"
+                                                alt="ham"
+                                        />
+                                    </div>    
+                                    <div onClick={() => pickIngredient()} class='ingredient'>
+                                        <PickIngredients
+                                                src="/images/game/ingredients/chocolate.jpeg"
+                                                alt="chocolateBar"
+                                        />
+                                    </div>
+                                    <div onClick={() => pickIngredient()} class='ingredient'>
+                                        <PickIngredients
+                                                src="/images/game/ingredients/cheese.jpeg"
+                                                alt="cheese"
+                                        />
+                                    </div>    
                                 </div>
                                 <div className={styles.ingredientsSections}>
-                                    <PickIngredients
-                                            src="/images/game/ingredients/drumstick.jpeg"
-                                            alt="drumstick-img"
-                                    />
-                                    <PickIngredients
-                                            src="/images/game/ingredients/bread.jpeg"
-                                            alt="bread-img"
-                                    />
-                                    <PickIngredients
-                                            src="/images/game/ingredients/orange.jpeg"
-                                            alt="orange-img"
-                                    />
+                                    <div onClick={() => pickIngredient()} class='ingredient'>
+                                        <PickIngredients
+                                                src="/images/game/ingredients/drumstick.jpeg"
+                                                alt="drumstick"
+                                        />
+                                    </div>    
+                                    <div onClick={() => pickIngredient()} class='ingredient'>
+                                        <PickIngredients
+                                                src="/images/game/ingredients/bread.jpeg"
+                                                alt="bread"
+                                        />
+                                    </div>    
+                                    <div onClick={() => pickIngredient()} class='ingredient'>
+                                        <PickIngredients
+                                                src="/images/game/ingredients/orange.jpeg"
+                                                alt="orange"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -137,6 +166,9 @@ export default function Game() {
                                 children="Next"
                             />      
                         </div>
+                        <div>
+                            <NavBar style={{position:"inherit"}}/>
+                        </div>                       
                     </div>
                 </div>                       
             </main>       

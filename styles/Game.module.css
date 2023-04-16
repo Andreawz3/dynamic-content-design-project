@@ -9,45 +9,13 @@
     display: contents;
 }
 
-@keyframes lefttoRight {
-    0%{
-        left: 30.5%;
-        opacity: 0;
-    } 
-    25%{
-        left: 30.5%;
-        opacity: 0;
-    }
-    50%{
-        left: 30.5%;
-        opacity: 0;
-    }
-    100% {
-        left: 45%;
-        opacity: 1;
-    }
-}
-
-.skipTutorials__link {
-    position: absolute;
-    bottom: 20%;
-    left: 45%;
-    z-index: 1;
-    cursor: pointer;
-    animation-name: lefttoRight;
-    animation-duration: 3s;
-}
-
-.skipTutorials__link:hover {
-    opacity: 0.8;
-}
-
 /* HeadLine */
 .navBar {
     max-width: 900px;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 30px 30px 0 30px;
 }
 
 .navBarOption {
@@ -102,7 +70,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px;
 }
 
 /* Selected Ingredients */
@@ -149,6 +116,7 @@
 .next__button {
     display: flex;
     justify-content: center;
+    padding-bottom: 60px;
 }
 
 /* Watch Tutorial */
@@ -161,5 +129,23 @@
 @media (max-width: 500px) {
     .navBar {
         max-width: 415px;
+    }
+    @keyframes lefttoRight {
+        0%{
+            left: 8%;
+            opacity: 0;
+        } 
+        25%{
+            left: 8%;
+            opacity: 0;
+        }
+        50%{
+            left: 8%;
+            opacity: 0;
+        }
+        100% {
+            left: 38%;
+            opacity: 1;
+        }
     }
 }
