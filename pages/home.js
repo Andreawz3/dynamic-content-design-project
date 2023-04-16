@@ -52,7 +52,10 @@ export default function Home() {
                 <Greeting/>
                 <Search/>
                 <div className={styles.home_page__filter}>
-                    <FilterMenu filterMenu={filterMenu} />
+                    <FilterMenu 
+                        filterMenu={filterMenu}
+                        currentPage={'home'}
+                    />
                 </div>
                 <div className={styles.home_page__carousel}>
                     <FeaturedMeal/>

@@ -7,7 +7,7 @@ export default function FilterMenu({filterMenu, currentCategory, currentPage}) {
     return (
         <>
             <Button
-                href={`/${currentPage}`}
+                href={currentPage == 'home' ? '' : `/${currentPage}`}
                 backgroundColour={currentCategory == 'all' ? 'var(--color-red)' : 'var(--color-pure-white)'}
                 colour={currentCategory == 'all' ? 'var(--color-white)' : 'var(--color-black)'}
                 children='All'
@@ -19,7 +19,8 @@ export default function FilterMenu({filterMenu, currentCategory, currentPage}) {
             {filterMenu.map((data, index) => 
                 <Button
                     href={
-                        currentPage == 'categories' ?  `/categories/${data.toLowerCase()}` : ''
+                        currentPage == 'categories' ?  `/categories/${data.toLowerCase()}` :
+                        currentPage == 'home' ? '' : ''
                     }
                     key={index}
                     children={data}
