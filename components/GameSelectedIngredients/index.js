@@ -11,8 +11,8 @@ export default function SelectedIngredients({
                 <Image
                     src={src}
                     alt="selectCircle-img"
-                    width="50"
-                    height="50"
+                    width="30"
+                    height="30"
                 />
                 <p>{children}</p>
             </div>

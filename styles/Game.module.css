@@ -1,45 +1,112 @@
 .game__page {
-    padding: 40px 30px;
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-/* Modal Box */
-.game__tutotial {
-    position: absolute;
-    z-index: 1;
-    background-color: #36363661;
-    width: 100%;
-    height: 95vh;
+/* Tutorial */
+.game_tutorial {
+    display: contents;
 }
 
-.game__tutotial_option {
-    position: absolute;
-    bottom: 25%;
-    left: 45%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+@keyframes lefttoRight {
+    0%{
+        left: 30.5%;
+        opacity: 0;
+    } 
+    25%{
+        left: 30.5%;
+        opacity: 0;
+    }
+    50%{
+        left: 30.5%;
+        opacity: 0;
+    }
+    100% {
+        left: 45%;
+        opacity: 1;
+    }
 }
 
 .skipTutorials__link {
+    position: absolute;
+    bottom: 20%;
+    left: 45%;
+    z-index: 1;
     cursor: pointer;
+    animation-name: lefttoRight;
+    animation-duration: 3s;
 }
 
 .skipTutorials__link:hover {
     opacity: 0.8;
 }
 
+/* HeadLine */
+.navBar {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navBarOption {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_icons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: end;
+}
+
+.musicIcon {
+    font-size: 18px;
+    color: var(--color-emerald);
+}
+
+.headlines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.subHealine {
+    font-size: var(--body-font-size-desktop);
+    font-family: var(--primary-font);
+}
+
+.mainHeadline {
+    font-size: var(--main-headline-font-size-desktop);
+    font-family: var(--secondary-font);
+    letter-spacing: 1px;
+    color: var(--color-red);
+}
+
 /* Main Game Lauout */
-.game__layout {
-    position: absolute;
+.game_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.game_layout {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
 }
 
 /* Selected Ingredients */
 .selectIngredients {
-    margin-top: 35px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -63,11 +130,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 35px;
 }
 
 .ingredientsList {
-    max-width: 350px;
+    max-width: 300px;
     width: 100%;
     display: flex;
     gap: 25px;
@@ -83,11 +149,17 @@
 .next__button {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
 }
 
 /* Watch Tutorial */
 .watch_tutorial {
-    color: var(--color-red);
+    color: var(--color-orange);
     text-align: end;
+}
+
+/* Mobile Size */
+@media (max-width: 500px) {
+    .navBar {
+        max-width: 415px;
+    }
 }
