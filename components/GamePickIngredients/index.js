@@ -11,8 +11,8 @@ export default function PickIngredients({
                 className={styles.ingredientImages}
                 src={src}
                 alt={alt}
-                width="100"
-                height="100"
+                width="80"
+                height="80"
             />
         </>
     )

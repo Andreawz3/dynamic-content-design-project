@@ -1,49 +1,75 @@
 .modalBox {
-    width: 100%; 
     display: flex;
     justify-content: center;
-    padding-top: 150px;
+    position: absolute;
+    z-index: 1;
+    background-color: #034806bf;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
 }
 
+.tutorial_display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 25%;
+}
 
-/* index.js */
+/* Tutorial 1 - Let's Play */
 .gameToturialDisplay {
     width: 100%;
-    max-width: 450px;
-    height: 58vh;
-    padding-top: 45px;
+    max-width: 350px;
+    height: 600px;
+    position: relative;
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
     background-color: var(--color-white);
     border-radius: 20px;
 }
 
-.gameTutorialReview {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-}
-
 .headline {
     font-family: var(--secondary-font);
+    margin: 20px 0;
+}
+
+@keyframes bottomToTop {
+    0%{
+        bottom: 0%;
+        opacity: 0;
+    } 
+    100% {
+        bottom: 13%;
+        opacity: 1;
+    }
+}
+
+.lets_play_next_button {
+    position: absolute;
+    left: 31%;
+    bottom: 13%;
+    animation-name: bottomToTop;
+    animation-duration: 2s;
 }
 
 
-/* FindMatch.js */
+/* Tutorial 2 - Find Match */
+.find_match_display {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 .findMatchView {
     width: 100%;
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
-}
-
-.findMatchPara {
-    margin-top: 40px;
 }
 
 .findIngredientSample {
@@ -77,6 +103,20 @@
     font-size: 40px;
 }
 
-.nextButton {
-    margin-top: 30px;
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
 }
+
+.find_match_next_button {
+    position: absolute;
+    left: 31%;
+    bottom: 13%;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+

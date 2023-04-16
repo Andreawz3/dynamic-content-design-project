@@ -69,7 +69,8 @@ export const inventory = {
             calcium: "",
             iron:"",
             servingSize: "Serving: 2",
-            price: "$0.67 per serving"
+            price: "$0.67 per serving",
+            image: "/images/recipe-images/"
         },
         {
             dishName: "Korean Bibimbap (Mixed Rice Bowl)",
@@ -134,7 +135,8 @@ export const inventory = {
             calcium: "",
             iron:"",
             servingSize: "Serving: 1",
-            price: "$4.31 per serving"
+            price: "$4.31 per serving",
+            image: "/images/recipe-images/bibimbap.jpeg"
         },
         {
             dishName: "Tofu Veggie Scramble",
@@ -212,7 +214,8 @@ export const inventory = {
             fat: "8g",
             iron:"2.5mg",
             servingSize: "Serving: 2",
-            price: "$3.24 per serving"
+            price: "$3.24 per serving",
+            image: "/images/recipe-images/toffu-veggie-scramble.jpeg"
         },
         {
             dishName: "Miso Pasta",
@@ -279,7 +282,8 @@ export const inventory = {
             calcium: "7g",
             iron: "2mg",
             servingSize: "Serving: 2",
-            price: "$2.65 per serving"
+            price: "$2.65 per serving",
+            image: "/images/recipe-images/miso-pasta.jpeg"
         },
         {
             dishName: "Carrot and Lentil Soup",
@@ -349,7 +353,8 @@ export const inventory = {
             calcium: "83mg",
             iron: "6mg",
             servingSize: "Serving: 2",
-            price: "$1.98 per serving"
+            price: "$1.98 per serving",
+            image: "/images/recipe-images/carrot-lentil-soup-.jpeg"
         },
         {
             dishName: "Pumpkin Risotto",
@@ -420,7 +425,8 @@ export const inventory = {
             calcium: "",
             iron: "3mg",
             servingSize: "Serving: 3",
-            price: "$2.17 per serving"
+            price: "$2.17 per serving",
+            image: "/images/recipe-images/pumpkin-risotto.jpeg"
         },
         {
             dishName: "Banana Cue",
@@ -472,7 +478,8 @@ export const inventory = {
             calcium: "",
             iron: "0.3mg",
             servingSize: "Serving: 4",
-            price: "$0.75 per serving"
+            price: "$0.75 per serving",
+            image: "/images/recipe-images/"
         },
         {
             dishName: "Sinigang",
@@ -543,7 +550,8 @@ export const inventory = {
             calcium: "157mg",
             iron: "4.5mg",
             servingSize: "Serving: 4",
-            price: "$1.17 per serving"
+            price: "$1.17 per serving",
+            image: "/images/recipe-images/"
         },
         
     ]
