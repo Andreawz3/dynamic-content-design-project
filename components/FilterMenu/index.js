@@ -17,7 +17,7 @@ export default function FilterMenu({filterMenu}) {
             {filterMenu.map((data, index) => 
                 <Button
                     key={index}
-                    children={data.country}
+                    children={data}
                     backgroundColour='var(--color-pure-white)'
                     colour='var(--color-black)'
                     fontSize='14px'
