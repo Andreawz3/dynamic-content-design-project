@@ -24,7 +24,6 @@ export default function Game() {
         // document.getElementsByClassName("ingredient")[0].style.border = "2px solid #5A8C32"; // it works
 
         // let ingredients = document.getElementsByClassName("ingredient")
-
         // for(let i = 0; i <ingredients.length; i++){
         //     ingredients[i].style.border = "2px solid #5A8C32";
         // }
