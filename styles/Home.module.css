@@ -9,19 +9,6 @@
     padding: 0 30px;
 }
 
-/* greeting section */
-.home_page__greeting {
-    margin: 35px 0 30px;
-}
-.home_page__greeting h1 {
-    font-family: var(--secondary-font);
-    font-size: 32px;
-}
-.home_page__greeting p {
-    margin-top: 5px;
-    font-weight: 300;
-}
-
 /* filter section */
 .home_page__filter {
     padding: 25px 30px;

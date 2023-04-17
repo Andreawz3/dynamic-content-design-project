@@ -1,0 +1,18 @@
+.category_page {
+    padding: 0 0 90px;
+    height: 100vh;
+    overflow: scroll;
+    position: relative;
+    background-color: var(--color-white);
+}
+.category_page > * {
+    padding: 0 30px;
+}
+
+/* filter section */
+.category_page__filter {
+    padding: 25px 30px;
+    overflow: scroll;
+    display: flex;
+    gap: 7px;
+}
