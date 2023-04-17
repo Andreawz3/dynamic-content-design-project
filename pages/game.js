@@ -212,7 +212,7 @@ export default function Game() {
                     <div id="stageTwo" class="game" style={{display:"none"}}>
                         <div className={`${styles.gameLayout} ${styles.gameLayoutSecondStage}`}>
                             <div className={styles.headlines}>
-                                <p className={styles.subHealine}>Let's made a:</p>
+                                <p className={styles.subHealine}>Let's made:</p>
                                 <h1 className={styles.mainHeadline}>Bibimbap</h1>
                             </div>
                             <div>
@@ -280,14 +280,14 @@ export default function Game() {
                     <div  id="stageThree" class="game" style={{display:"none"}}>
                         <div className={`${styles.gameLayout} ${styles.gameLayoutThirdStage}`}>
                             <div className={styles.headlines}>
-                                <p className={styles.subHealine}>Well done! You made a:</p>
+                                <p className={styles.subHealine}>Well done! You made:</p>
                                 <h1 className={styles.mainHeadline}>Bibimbap</h1>
                             </div>
                             <Image
                                 src="/images/game/bibimbap.png"
                                 alt="bibimbap"
-                                width="400"
-                                height="400"
+                                width="320"
+                                height="270"
                             />
                             <div className={styles.thirdStageOptions}>
                                 <Link href="#" className={styles.thirdStageOptionDisplay} onClick={() => goBackGameStageOne()}> 
