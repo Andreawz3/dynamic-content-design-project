@@ -1,27 +1,33 @@
+import Link from 'next/link';
 import styles from './FilterMenu.module.css'
 
 import Button from '@/components/Button';
 
-export default function FilterMenu({filterMenu}) {
+export default function FilterMenu({filterMenu, currentCategory, currentPage}) {
     return (
         <>
             <Button
-                backgroundColour='var(--color-pure-white)'
-                colour='var(--color-black)'
+                href={currentPage == 'home' ? '' : `/${currentPage}`}
+                backgroundColour={currentCategory == 'all' ? 'var(--color-red)' : 'var(--color-pure-white)'}
+                colour={currentCategory == 'all' ? 'var(--color-white)' : 'var(--color-black)'}
                 children='All'
                 fontSize='14px'
-                fontWeight='400'
+                fontWeight={currentCategory == 'all' ? 600 : 400}
                 padding='15px 20px'
                 boxShadow
             />
             {filterMenu.map((data, index) => 
                 <Button
+                    href={
+                        currentPage == 'categories' ?  `/categories/${data.toLowerCase()}` :
+                        currentPage == 'home' ? '' : ''
+                    }
                     key={index}
-                    children={data.country}
-                    backgroundColour='var(--color-pure-white)'
-                    colour='var(--color-black)'
+                    children={data}
+                    backgroundColour= {data == currentCategory ? 'var(--color-red)' : 'var(--color-pure-white)'}
+                    colour={data == currentCategory ? 'var(--color-white)' : 'var(--color-black)'}
                     fontSize='14px'
-                    fontWeight='400'
+                    fontWeight={data == currentCategory ? 600 : 400}
                     padding='15px 40px'
                     boxShadow
                 />
