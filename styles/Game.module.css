@@ -132,6 +132,18 @@
     border-radius: 5px;
 }
 
+.stageTwoImagesRice {
+    top: 210px;
+    left: 32%;
+}
+
+.stageTwoImagesRiceAnimated {
+    top: 635px;
+    left: 50%;
+    opacity: 0;
+    animation-name: addRice;
+    animation-duration: 1.5s;
+}
 @keyframes addRice {
     0%{
         top: 210px;
@@ -152,23 +164,36 @@
     }
 }
 
-
-.stageTwoImagesRiceAnimated {
-    top: 635px;
-    left: 50%;
-    opacity: 0;
-    animation-name: addRice;
-    animation-duration: 3s;
-}
-
-.stageTwoImagesRice {
-    top: 210px;
-    left: 32%;
-}
-
 .stageTwoImagesBeef {
     top: 210px;
     right: 32%;
+}
+
+.stageTwoImagesBeefAnimated {
+    top: 700px;
+    right: 50%;
+    opacity: 0;
+    animation-name: addBeef;
+    animation-duration: 1.5s;
+}
+@keyframes addBeef {
+    0%{
+        top: 210px;
+        right: 32%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        right: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
 }
 
 .stageTwoImagesVeggies {
@@ -176,11 +201,71 @@
     left: 32%;
 }
 
+.stageTwoImagesVeggiesAnimated {
+    top: 700px;
+    left: 50%;
+    opacity: 0;
+    animation-name: addVeggies;
+    animation-duration: 1.5s;
+}
+
+@keyframes addVeggies {
+    0%{
+        top: 385px;
+        left: 32%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
 .stageTwoImagesEgg {
     top: 385px;
     right: 32%;
 }
 
+.stageTwoImagesEggAnimated {
+    top: 700px;
+    right: 50%;
+    opacity: 0;
+    animation-name: addEgg;
+    animation-duration: 1.5s;
+}
+@keyframes addEgg {
+    0%{
+        top: 385px;
+        right: 32%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        right: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.letsCookButton {
+    padding-top: 340px;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
 @keyframes fadeIn {
     0%{
         opacity: 0;
@@ -190,26 +275,19 @@
     }
 }
 
-.letsCookButton {
-    padding-top: 340px;
-    animation-name: fadeIn;
-    animation-duration: 1.5s;
-}
-
 /* Mobile Size */
 @media (max-width: 500px) {
     .navBar {
         max-width: 415px;
     }
+    .stageTwoImages {
+        width: 120px;
+        height: 120px;
+    }
+    .stageTwoImagesRice, .stageTwoImagesVeggies {
+        left: 18%;
+    }
+    .stageTwoImagesBeef, .stageTwoImagesEgg {
+        right: 18%;
+    }
 }
-
-
-
-/* rice & veggies
-    top: 635px;
-    left: 42%;
-*/
-/* beef & egg
-    top: 635px;
-    right: 42%;
-*/

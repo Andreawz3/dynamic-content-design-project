@@ -42,9 +42,10 @@ export default function Game() {
     // Stage 2
 
     const mixIngredients = () => {
-        console.log("mix ingredient");
         document.getElementById("rice").classList.add("Game_stageTwoImagesRiceAnimated___Sjv_");   
-        // var rice = document.getElementById("rice");
+        document.getElementById("beef").classList.add("Game_stageTwoImagesBeefAnimated__7i0th"); 
+        document.getElementById("vegetables").classList.add("Game_stageTwoImagesVeggiesAnimated__JnJ9y");
+        document.getElementById("egg").classList.add("Game_stageTwoImagesEggAnimated__SPSlG"); 
     }
 
     return (
@@ -56,12 +57,13 @@ export default function Game() {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <main className={styles.game__page}>
                 <div id='game-tutorial' className={styles.game_tutorial}
-                    style={{display:"none"}}>
-                    {/* > */}
+                    // style={{display:"none"}}>
+                    >
                     <GameTutorial/>
                 </div>
                 <div className={styles.game_container}>
-                    <div id="stageOne" class="game" style={{display:"none"}}>
+                    {/* Stage 1 */}
+                    <div id="stageOne" class="game" style={{display:"block"}}>
                         <div className={styles.gameLayout}>
                             <div className={styles.navBar}>
                                 <div className={styles.navBarOption}>
@@ -79,8 +81,7 @@ export default function Game() {
                                         href="#" 
                                         onClick={() => showModalBox()}
                                         >SEE TUTORIAL</Link>
-                                    </div>
-                                    {/* <button className={styles.musicIcon}><i  class="fa fa-music"></i></button> */}                                   
+                                    </div>                                
                                 </div>                   
                             </div>
                             <div className={styles.headlines}>
@@ -205,7 +206,7 @@ export default function Game() {
                             </div>                       
                         </div>
                     </div>
-                    <div id="stageTwo" class="game" style={{display:"block"}}>
+                    <div id="stageTwo" class="game" style={{display:"none"}}>
                         <div className={`${styles.gameLayout} ${styles.gameLayoutSecondStage}`}>
                             <div className={styles.headlines}>
                                 <p className={styles.subHealine}>Let's made a:</p>
@@ -222,6 +223,7 @@ export default function Game() {
                                         height="150"
                                     />
                                     <Image
+                                        id="beef"
                                         className={`${styles.stageTwoImages} ${styles.stageTwoImagesBeef}`}
                                         src="/images/game/ingredients/ground_beef.png"
                                         alt="beef"
@@ -231,6 +233,7 @@ export default function Game() {
                                 </div>
                                 <div>
                                     <Image
+                                        id="vegetables"
                                         className={`${styles.stageTwoImages} ${styles.stageTwoImagesVeggies}`}
                                         src="/images/game/ingredients/veggies.png"
                                         alt="veggies"
@@ -238,6 +241,7 @@ export default function Game() {
                                         height="150"
                                     />
                                     <Image
+                                        id="egg"
                                         className={`${styles.stageTwoImages} ${styles.stageTwoImagesEgg}`}
                                         src="/images/game/ingredients/sunny-egg.png"
                                         alt="egg"
@@ -246,8 +250,8 @@ export default function Game() {
                                     />
                                 </div>
                             </div>
-                            <div className={styles.letsCookButton} onClick={() => mixIngredients()}>
-                            <Button                      
+                            <div id="letsCook" className={styles.letsCookButton} onClick={() => mixIngredients()}>
+                                <Button                      
                                     href="#"
                                     backgroundColour='var(--color-emerald)'
                                     colour='var(--color-white)'
