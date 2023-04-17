@@ -1,7 +1,6 @@
 import styles from '@/styles/Game.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect } from 'react';
 
 // Components
 import Header from '@/components/Header';
@@ -30,7 +29,6 @@ export default function Game() {
         //     ingredients[i].style.border = "2px solid #5A8C32";
         // }
     }
-
     const Next = (stages) => {
         let steps = document.getElementsByClassName("game");
         for (let i = 0; i < steps.length; i++) {
@@ -40,12 +38,17 @@ export default function Game() {
     }
 
     // Stage 2
-
     const mixIngredients = () => {
         document.getElementById("rice").classList.add("Game_stageTwoImagesRiceAnimated___Sjv_");   
         document.getElementById("beef").classList.add("Game_stageTwoImagesBeefAnimated__7i0th"); 
         document.getElementById("vegetables").classList.add("Game_stageTwoImagesVeggiesAnimated__JnJ9y");
         document.getElementById("egg").classList.add("Game_stageTwoImagesEggAnimated__SPSlG"); 
+    }
+
+    // Stage 3
+    const goBackGameStageOne = () => {
+        document.getElementById("stageOne").style.display = "block";
+        document.getElementById("stageThree").style.display = "none";
     }
 
     return (
@@ -206,6 +209,7 @@ export default function Game() {
                             </div>                       
                         </div>
                     </div>
+                    {/* stage 2 */}
                     <div id="stageTwo" class="game" style={{display:"none"}}>
                         <div className={`${styles.gameLayout} ${styles.gameLayoutSecondStage}`}>
                             <div className={styles.headlines}>
@@ -267,10 +271,51 @@ export default function Game() {
                                 />
                             </div>
                         </div>
+                        <div style={{position:"absolute", bottom:"100px", cursor:"pointer"}}>
+                            <p onClick={() => Next("stageThree")}>
+                                Stage 3
+                            </p>
+                        </div>
+                    </div>
+                    {/* Stage 3 */}
+                    <div  id="stageThree" class="game" style={{display:"none"}}>
+                        <div className={`${styles.gameLayout} ${styles.gameLayoutThirdStage}`}>
+                            <div className={styles.headlines}>
+                                <p className={styles.subHealine}>Well done! You made a:</p>
+                                <h1 className={styles.mainHeadline}>Bibimbap</h1>
+                            </div>
+                            <Image
+                                src="/images/game/bibimbap.png"
+                                alt="bibimbap"
+                                width="400"
+                                height="400"
+                            />
+                            <div className={styles.thirdStageOptions}>
+                                <Link href="#" className={styles.thirdStageOptionDisplay} onClick={() => goBackGameStageOne()}> 
+                                    <Image
+                                        src="/images/game/chef-hat.png"
+                                        alt="chef-hat"
+                                        width="80"
+                                        height="80"
+                                    />
+                                    <p>Play again</p>
+                                </Link>
+                                <Link href="/mealRecipe" className={styles.thirdStageOptionDisplay}> 
+                                    <Image
+                                        src="/images/game/cutlery.png"
+                                        alt="cutlery"
+                                        width="80"
+                                        height="80"
+                                    />
+                                    <p>Back to Recipe</p>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <NavBar style={{position:"inherit"}}/>
                     </div>
+                    
                 </div>                       
             </main>       
         </>

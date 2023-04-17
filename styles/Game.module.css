@@ -123,7 +123,7 @@
 
 /* Stage 2 */
 .gameLayoutSecondStage {
-    padding-top: 108px;
+    padding-top: 110px;
 }
 .stageTwoImages {
     position: absolute;
@@ -273,6 +273,24 @@
     100% {
         opacity: 1;
     }
+}
+
+/* Stage 3 */
+.gameLayoutThirdStage {
+    padding-top: 110px;
+    padding-bottom: 180px;
+}
+
+.thirdStageOptions {
+    display: flex;
+    gap: 50px;
+} 
+
+.thirdStageOptionDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 /* Mobile Size */

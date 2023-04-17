@@ -73,7 +73,7 @@ export const inventory = {
             image: "/images/recipe-images/"
         },
         {
-            dishName: "Korean Bibimbap (Mixed Rice Bowl)",
+            dishName: "Korean Bibimbap",
             prepTime:"45 min",
             cookTime:"15 min",
             cuisineCategory:"Snack",
@@ -86,23 +86,23 @@ export const inventory = {
                 },
                 {
                     ingredientName: "spinach, blanched and squeezed dry",
-                    measurementType:"1/2 cup"                       
+                    measurementType:"½ cup"                       
                 },
                 {
                     ingredientName: "bean sprouts, blanched and squeezed dry",
-                    measurementType:"1/2 cup"                      
+                    measurementType:"½ cup"                      
                 },
                 {
                     ingredientName: "carrots, julienned and sautéed",
-                    measurementType:"1/2 cup"                       
+                    measurementType:"½ cup"                       
                 },
                 {
                     ingredientName: "shiitake mushrooms, sautéed",
-                    measurementType:"1/2 cup"                       
+                    measurementType:"½ cup"                       
                 },
                 {
                     ingredientName: "ground beef, sautéed with soy sauce and garlic",
-                    measurementType:"1/2 cup"                       
+                    measurementType:"½ cup"                       
                 },
                 {
                     ingredientName: "egg fried or poached",
