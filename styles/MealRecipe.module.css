@@ -1,7 +1,10 @@
-.main_content{
+.main__meal_recipe_content{
   display: flex;
   flex-direction: column;
   margin: 0 1.875rem;
+  padding-top: 2.5rem;
+  /* overflow: scroll;
+  height: 100vh; */
 }
 
 
@@ -36,6 +39,11 @@ align-items: center;
 
 
 /** Recipe Preview Information **/
+
+.scroll__container{
+  overflow: scroll;
+  height: 81vh;
+}
 
 .meal__image_container img{
   object-fit: cover;
@@ -90,7 +98,7 @@ align-items: center;
 }
 
 .level__h4 > h4{
-  margin-top: .35rem;
+  margin-top: .15rem;
   text-transform: uppercase;
   font-size: .85rem;
 }
@@ -122,6 +130,8 @@ align-items: center;
 .recipe__container{
   display: flex;
   flex-direction: column;
+  gap: .75rem;
+  padding-top: 1rem;
 }
 .recipe__header_container > h1{
 font-family: var(--secondary-font);
@@ -129,6 +139,12 @@ text-decoration: underline;
 }
 
 /* Ingredients List container */
+
+.ingredients__save_to_list > a{
+  display: flex;
+  justify-content: flex-end;
+  gap: .5rem;
+}
 
 .recipe__button_container {
   display: flex;
@@ -188,7 +204,7 @@ text-decoration: underline;
 }
 .switch__button_checkbox + .switch__button_label:before {
   content: "";
-  background: #fff;
+  background: var(--color-light-green);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -203,6 +219,32 @@ text-decoration: underline;
   position: relative;
 }
 
+.ingredients__list{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.ingredients{
+display: flex;
+gap: .15rem;
+align-items: baseline;
+margin-top: -.1rem;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem;
+}
+
+.measurement{
+color: var(--color-lightgray);
+}
+
+.checkbox{
+  accent-color: var(--color-light-green);
+}
 
 /* .container {
     display: block;
