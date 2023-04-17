@@ -9,45 +9,13 @@
     display: contents;
 }
 
-@keyframes lefttoRight {
-    0%{
-        left: 30.5%;
-        opacity: 0;
-    } 
-    25%{
-        left: 30.5%;
-        opacity: 0;
-    }
-    50%{
-        left: 30.5%;
-        opacity: 0;
-    }
-    100% {
-        left: 45%;
-        opacity: 1;
-    }
-}
-
-.skipTutorials__link {
-    position: absolute;
-    bottom: 20%;
-    left: 45%;
-    z-index: 1;
-    cursor: pointer;
-    animation-name: lefttoRight;
-    animation-duration: 3s;
-}
-
-.skipTutorials__link:hover {
-    opacity: 0.8;
-}
-
 /* HeadLine */
 .navBar {
     max-width: 900px;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 30px 30px 0 30px;
 }
 
 .navBarOption {
@@ -55,18 +23,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    color: var(--color-black);
 }
 
-.navbar_icons {
+.seeTutorial {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: end;
-}
-
-.musicIcon {
-    font-size: 18px;
-    color: var(--color-emerald);
+    align-items: center;
 }
 
 .headlines {
@@ -91,21 +53,20 @@
 /* Main Game Lauout */
 .game_container {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
 }
 
-.game_layout {
+.gameLayout {
     width: 100%;
     height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px;
+    align-items: center;
+    padding-bottom: 120px;
 }
 
-/* Selected Ingredients */
+/* Stage 1 */
 .selectIngredients {
     width: 100%;
     display: flex;
@@ -125,7 +86,6 @@
     gap: 15px;
 }
 
-/* Pick Ingredients */
 .containerPickIngredients {
     width: 100%;
     display: flex;
@@ -145,21 +105,189 @@
     gap: 15px;
 }
 
-/* Next Button */
+.ingredientImages {
+    border: 2px solid var(--color-lightgray);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.ingredientImages:hover {
+    transform: scale(1.1);
+}
+
 .next__button {
     display: flex;
     justify-content: center;
 }
 
-/* Watch Tutorial */
-.watch_tutorial {
-    color: var(--color-orange);
-    text-align: end;
+/* Stage 2 */
+.gameLayoutSecondStage {
+    padding-top: 108px;
+}
+.stageTwoImages {
+    position: absolute;
+    z-index: -1;
+    border: 2px solid var(--color-lightgray);
+    border-radius: 5px;
+}
+
+.stageTwoImagesRice {
+    top: 210px;
+    left: 32%;
+}
+
+.stageTwoImagesRiceAnimated {
+    top: 635px;
+    left: 50%;
+    opacity: 0;
+    animation-name: addRice;
+    animation-duration: 1.5s;
+}
+@keyframes addRice {
+    0%{
+        top: 210px;
+        left: 32%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.stageTwoImagesBeef {
+    top: 210px;
+    right: 32%;
+}
+
+.stageTwoImagesBeefAnimated {
+    top: 700px;
+    right: 50%;
+    opacity: 0;
+    animation-name: addBeef;
+    animation-duration: 1.5s;
+}
+@keyframes addBeef {
+    0%{
+        top: 210px;
+        right: 32%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        right: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.stageTwoImagesVeggies {
+    top: 385px;
+    left: 32%;
+}
+
+.stageTwoImagesVeggiesAnimated {
+    top: 700px;
+    left: 50%;
+    opacity: 0;
+    animation-name: addVeggies;
+    animation-duration: 1.5s;
+}
+
+@keyframes addVeggies {
+    0%{
+        top: 385px;
+        left: 32%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.stageTwoImagesEgg {
+    top: 385px;
+    right: 32%;
+}
+
+.stageTwoImagesEggAnimated {
+    top: 700px;
+    right: 50%;
+    opacity: 0;
+    animation-name: addEgg;
+    animation-duration: 1.5s;
+}
+@keyframes addEgg {
+    0%{
+        top: 385px;
+        right: 32%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        right: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.letsCookButton {
+    padding-top: 340px;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
 }
 
 /* Mobile Size */
 @media (max-width: 500px) {
     .navBar {
         max-width: 415px;
+    }
+    .stageTwoImages {
+        width: 120px;
+        height: 120px;
+    }
+    .stageTwoImagesRice, .stageTwoImagesVeggies {
+        left: 18%;
+    }
+    .stageTwoImagesBeef, .stageTwoImagesEgg {
+        right: 18%;
     }
 }
