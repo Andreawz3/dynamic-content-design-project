@@ -1,29 +1,28 @@
 import styles from '@/styles/Game.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
+import { gameIngredientsList } from "@/data/game-ingredients"
 
 // Components
 import Header from '@/components/Header';
 import Button from '@/components/Button';
 import GameTutorial from '@/components/GameTutorial';
 import SelectedIngredients from '@/components/GameSelectedIngredients';
-import PickIngredients from '@/components/GamePickIngredients';
 import NavBar from '@/components/NavBar';
 
 export default function Game() {
     const correctAnswer = ["Rice", "Veggies", "Egg", "Ground Beef"]
-
-    // Tutotial (modal box)
-    const showModalBox = () =>  {
-        const tutorial = document.getElementById('game-tutorial');
-        tutorial.style.display = 'contents';
-    }
+    const [showTutorial, setShowTutorial] = useState(false);
 
     // Stage 1
+
+    const [data, setData] = useState([...gameIngredientsList]);
     const pickIngredient = () => {
         // document.getElementsByClassName("ingredient")[0].style.border = "2px solid #5A8C32"; // it works
 
-        // let ingredients = document.getElementsByClassName("ingredient")
+        let ingredients = document.getElementsByClassName("ingredient")
+        console.log(ingredients);
         // for(let i = 0; i <ingredients.length; i++){
         //     ingredients[i].style.border = "2px solid #5A8C32";
         // }
@@ -81,7 +80,7 @@ export default function Game() {
                                         className={styles.seeTutorialText}
                                         id='watch__tutorial' 
                                         href="#" 
-                                        onClick={() => showModalBox()}
+                                        onClick={() => setShowTutorial(true)}
                                         >SEE TUTORIAL</Link>
                                     </div>                                
                                 </div>                   
@@ -116,84 +115,19 @@ export default function Game() {
                             </div>
                             <div className={styles.containerPickIngredients}>
                                 <div className={styles.ingredientsList}>
-                                    <div className={styles.ingredientsSections}>
-                                        <div id='apple' class='ingredient' onClick={() => pickIngredient()}>
-                                            <div className={styles.ingredientImages}>
-                                                <PickIngredients
-                                                    src="/images/game/ingredients/apple.png"
-                                                    alt="apple"
+                                    {data && data.map((info, index) => {
+                                        return (
+                                            <div className={styles.ingredientsSections}>
+                                                <Image
+                                                    className={styles.ingredientImages}
+                                                    src={info.image}
+                                                    alt={info.alt}
+                                                    width={80}
+                                                    height={80}
                                                 />
                                             </div>
-                                        </div>
-                                        <div id="veggies" class='ingredient' onClick={() => pickIngredient()}>
-                                            <div className={styles.ingredientImages}>
-                                                <PickIngredients
-                                                        src="/images/game/ingredients/veggies.png"
-                                                        alt="veggies"
-                                                />
-                                            </div>
-                                        </div>    
-                                        <div id="cheese" class='ingredient' onClick={() => pickIngredient()}>
-                                            <div className={styles.ingredientImages}>
-                                                <PickIngredients
-                                                    src="/images/game/ingredients/cheese.jpeg"
-                                                    alt="cheese"
-                                                />
-                                            </div>
-                                        </div>    
-                                    </div>
-                                    <div className={styles.ingredientsSections}>
-                                        <div class='ingredient' onClick={() => pickIngredient()}>
-                                            <div className={styles.ingredientImages}>
-                                                <PickIngredients
-                                                    src="/images/game/ingredients/sunny-egg.png"
-                                                    alt="ham"
-                                                />
-                                            </div>
-                                        </div>    
-                                        <div class='ingredient' onClick={() => pickIngredient()}>
-                                            <div className={styles.ingredientImages}>
-                                                <PickIngredients
-                                                    src="/images/game/ingredients/drumstick.jpeg"
-                                                    alt="chocolateBar"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div class='ingredient' onClick={() => pickIngredient()}>
-                                            <div className={styles.ingredientImages}>
-                                                <PickIngredients
-                                                    src="/images/game/ingredients/ground_beef.png"
-                                                    alt="cheese"
-                                                />
-                                            </div>
-                                        </div>    
-                                    </div>
-                                    <div className={styles.ingredientsSections}>
-                                        <div class='ingredient' onClick={() => pickIngredient()}>
-                                            <div className={styles.ingredientImages}>
-                                                <PickIngredients
-                                                    src="/images/game/ingredients/chocolate.jpeg"
-                                                    alt="drumstick"
-                                                />
-                                            </div>
-                                        </div>    
-                                        <div class='ingredient' onClick={() => pickIngredient()}>
-                                            <div className={styles.ingredientImages}>
-                                                <PickIngredients
-                                                    src="/images/game/ingredients/rice.png"
-                                                    alt="bread"
-                                                />
-                                            </div>
-                                        </div>    
-                                        <div class='ingredient' onClick={() => pickIngredient()}>
-                                            <div className={styles.ingredientImages}>
-                                                <PickIngredients
-                                                    src="/images/game/ingredients/orange.jpeg"
-                                                    alt="orange"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
+                                        )
+                                    })}
                                 </div>
                             </div>
                             <div className={styles.next__button} onClick={() => Next("stageTwo")}
@@ -315,7 +249,10 @@ export default function Game() {
                         <NavBar style={{position:"inherit"}}/>
                     </div>
                     
-                </div>                       
+                </div>  
+                {showTutorial &&
+                    <GameTutorial/>
+                }                     
             </main>       
         </>
     )
