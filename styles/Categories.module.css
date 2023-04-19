@@ -16,3 +16,21 @@
     display: flex;
     gap: 7px;
 }
+
+/* meal card */
+.meal_card__container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.meal_card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.2));
+}
+.meal_card__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}

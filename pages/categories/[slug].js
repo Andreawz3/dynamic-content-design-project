@@ -12,6 +12,8 @@ import { inventory } from '@/data/recipes'
 import useNavMenu from '@/hooks/navmenu'
 
 import styles from '@/styles/Categories.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export async function getServerSideProps(context) {
 	const { params } = context;
@@ -48,11 +50,34 @@ export default function SlugCategory({meals, capitalizedSlug}) {
 						currentPage={'categories'}
 					/>
                 </div>
-				{meals.map((data, index) => 
-					<div key={index}>
-						{data.dishName}
-					</div>
-				)}
+                <div className={styles.meal_card__container}>
+                    {meals.map((data, index) => 
+                        <div className={styles.meal_card} key={index} >
+                            <Link href={data.dishName === 'Korean Bibimbap' ? '/meal-recipe' : '#'} >
+                                <Image
+                                    src={'/images/bibimbap.svg'}
+                                    alt={'bibimbap'}
+                                    width={290}
+                                    height={170}
+                                    className={styles.meal_card__img}
+                                />
+                                <div>
+                                    <h3>{data.dishName}</h3>
+                                    <div>
+                                        <div></div>
+                                        <span>{data.difficulty}</span>
+                                        {/* <Image/> */}
+                                    </div>
+                                    <div className={styles.meal_card__buttons}>
+                                        <span>View Details</span>
+                                        <button>Start Cooking</button>
+                                    </div>
+                                </div>
+                            </Link>
+
+                        </div>
+                    )}
+                </div>
             </main>
             <NavBar/>
             {showMenu && 
