@@ -1,6 +1,5 @@
 .home_page {
-    padding: 0 0 90px;
-    height: 100vh;
+    height: calc(100vh - 5.53125em);
     overflow: scroll;
     position: relative;
     background-color: var(--color-white);
