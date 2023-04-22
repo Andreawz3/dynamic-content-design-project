@@ -164,16 +164,16 @@
     animation-duration: 1s;
 }
 
-/* Tutotrial 3 - Time to Mix */
-.timeToMix {
+/* Tutotrial 3 Life & 4 Time to Mix */
+.life, .timeToMix {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-.timeToMix > p {
+.tutorialParagraph{
     width: 225px;
+    padding-bottom: 10px;
 }
 
 .time_to_mix_next_button {
