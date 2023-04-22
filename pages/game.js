@@ -1,8 +1,6 @@
 import styles from '@/styles/Game.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
-import { gameIngredientsList } from "@/data/game-ingredients"
 
 // Components
 import Header from '@/components/Header';
@@ -11,22 +9,13 @@ import GameTutorial from '@/components/GameTutorial';
 import SelectedIngredients from '@/components/GameSelectedIngredients';
 import NavBar from '@/components/NavBar';
 
+// Hooks
+import displayTutorial from '@/hooks/showTutorial';
+import gameIngredients from '@/hooks/gameIngredients';
+
 export default function Game() {
     const correctAnswer = ["Rice", "Veggies", "Egg", "Ground Beef"]
-    const [showTutorial, setShowTutorial] = useState(false);
-
-    // Stage 1
-
-    const [data, setData] = useState([...gameIngredientsList]);
-    const pickIngredient = () => {
-        // document.getElementsByClassName("ingredient")[0].style.border = "2px solid #5A8C32"; // it works
-
-        let ingredients = document.getElementsByClassName("ingredient")
-        console.log(ingredients);
-        // for(let i = 0; i <ingredients.length; i++){
-        //     ingredients[i].style.border = "2px solid #5A8C32";
-        // }
-    }
+    const {showTutorial, setShowTutorial} = displayTutorial();
     const Next = (stages) => {
         let steps = document.getElementsByClassName("game");
         for (let i = 0; i < steps.length; i++) {
@@ -34,6 +23,9 @@ export default function Game() {
         }
         document.getElementById(stages).style.display = "block";
     }
+
+    // Stage 1
+    const {data, setData} = gameIngredients();
 
     // Stage 2
     const mixIngredients = () => {
@@ -47,6 +39,10 @@ export default function Game() {
     const goBackGameStageOne = () => {
         document.getElementById("stageOne").style.display = "block";
         document.getElementById("stageThree").style.display = "none";
+        document.getElementById("rice").classList.remove("Game_stageTwoImagesRiceAnimated___Sjv_");   
+        document.getElementById("beef").classList.remove("Game_stageTwoImagesBeefAnimated__7i0th"); 
+        document.getElementById("vegetables").classList.remove("Game_stageTwoImagesVeggiesAnimated__JnJ9y");
+        document.getElementById("egg").classList.remove("Game_stageTwoImagesEggAnimated__SPSlG"); 
     }
 
     return (
