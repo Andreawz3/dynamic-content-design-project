@@ -30,6 +30,31 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.home_page__game {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--color-pure-white);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.home_page__game .content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 25px;
+}
+.content img {
+    object-fit: cover;
+    width: auto;
+}
+.content > div {
+    width: 150px;
+}
+
+
 @media (max-width: 500px) {
     
 }
