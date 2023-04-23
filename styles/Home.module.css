@@ -51,11 +51,15 @@
     object-fit: cover;
     width: auto;
 }
+.content h1 {
+    font-family: var(--secondary-font);
+}
 .content > div {
-    width: 150px;
+    width: auto;
 }
 
-
 @media (max-width: 500px) {
-    
+    .content > div {
+        width: 150px;
+    }
 }
