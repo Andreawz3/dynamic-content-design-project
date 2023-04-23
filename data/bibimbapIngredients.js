@@ -1,4 +1,4 @@
-export const gameIngredientsList = [
+export const bibimbapIngredientsList = [
     {
         name: "apple",
         image: "/images/game/ingredients/apple.png",

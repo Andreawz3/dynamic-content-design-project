@@ -1,4 +1,4 @@
-import styles from '@/styles/PlayGame.module.css';
+import styles from '@/styles/GameBibimbap.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -11,9 +11,9 @@ import NavBar from '@/components/NavBar';
 
 // Hooks
 import displayTutorial from '@/hooks/showTutorial';
-import gameIngredients from '@/hooks/gameIngredients';
+import getBibimbapIngredients from '@/hooks/getBibimbapIngredients';
 
-export default function Game() {
+export default function gameBibimbap() {
     const correctAnswer = ["Rice", "Veggies", "Egg", "Ground Beef"]
     const {showTutorial, setShowTutorial} = displayTutorial();
     const Next = (stages) => {
@@ -27,7 +27,7 @@ export default function Game() {
     let life = 3;
 
     // Stage 1
-    const {data, setData} = gameIngredients();
+    const {data, setData} = getBibimbapIngredients();
 
     // Stage 2
     const mixIngredients = () => {
@@ -106,7 +106,7 @@ export default function Game() {
                         <div className={styles.gameLayout}>
                             <div className={styles.navBar}>
                                 <div className={styles.navBarOption}>
-                                    <Link href='/gameLanding'><i class="fa fa-angle-left"></i> Back</Link>
+                                    <Link href='/game'><i class="fa fa-angle-left"></i> Back</Link>
                                     <div className={styles.gameOptiones}>
                                         <div className={styles.seeTutorial}>
                                             <Image
@@ -273,7 +273,7 @@ export default function Game() {
                                 height="270"
                             />
                             <div className={styles.thirdStageOptions}>
-                                <Link href="#" className={styles.thirdStageOptionDisplay} onClick={() => goBackGameStageOne()}> 
+                                <Link href="/game" className={styles.thirdStageOptionDisplay}> 
                                     <Image
                                         src="/images/game/chef-hat.png"
                                         alt="chef-hat"
