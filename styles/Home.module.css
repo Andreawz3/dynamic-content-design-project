@@ -16,21 +16,6 @@
     gap: 7px;
 }
 
-/* featured meal section */
-.featured_meal__dots {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 7px;
-}
-.featured_meal__dots div {
-    width: 10px;
-    height: 10px;
-    border-radius: 15px;
-    background-color: var(--color-light-green);
-    opacity: 50%;
-}
-
 /* categories section */
 .home_page__categories {
     margin: 40px 0;

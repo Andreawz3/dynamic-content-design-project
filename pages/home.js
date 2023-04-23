@@ -59,15 +59,7 @@ export default function Home() {
                 </div>
                 <div className={styles.home_page__carousel}>
                     <FeaturedMeal/>
-                    <div className={styles.featured_meal__dots}>
-                        <div/>
-                        <div/>
-                        <div/>
-                    </div>
                 </div>
-                <Link href="categories/lunch">
-                    Lunch
-                </Link>
                 <div className={styles.home_page__categories}>
                     <h2>Meal Categories</h2>
                     <div className={styles.meal_categories}>
