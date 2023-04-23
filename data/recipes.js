@@ -2,6 +2,7 @@ export const inventory = {
     recipe: [
         {
             dishName: "Homemade Mandu",
+            featuredDesc: "Discover the irresistible taste of authentic Korean cuisine.",
             prepTime:"30 min",
             cookTime:"7 min",
             cuisineCategory:"Dinner",
@@ -74,6 +75,7 @@ export const inventory = {
         },
         {
             dishName: "Korean Bibimbap",
+            featuredDesc: "Savor the vibrant flavors and textures of Korea's iconic dish.",
             prepTime:"45 min",
             cookTime:"15 min",
             cuisineCategory:"Snack",
@@ -140,6 +142,7 @@ export const inventory = {
         },
         {
             dishName: "Tofu Veggie Scramble",
+            featuredDesc: "A delicious and nutritious twist on traditional scrambled eggs.",
             prepTime:"5 mins",
             cookTime:"15 mins",
             cuisineCategory:"Breakfast",
