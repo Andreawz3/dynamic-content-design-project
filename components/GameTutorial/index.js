@@ -62,14 +62,7 @@ export default function GameTutorial(){
                                     <h1 className={styles.headline}>Find the Match!</h1>
                                     <div className={styles.findMatchView}>
                                         <div className={styles.findIngredientSample}>
-                                            <div className={styles.ingredient_image_sample}>
-                                                <Image
-                                                    className={styles.icons}
-                                                    src = "/images/game/wrong.png"
-                                                    alt="wrong"
-                                                    width="30"
-                                                    height="30"
-                                                />
+                                            <div>                                              
                                                 <Image
                                                     className={styles.wrong_ingredient}
                                                     src = "/images/game/ingredients/tomato.jpeg"
@@ -79,23 +72,13 @@ export default function GameTutorial(){
                                                 />
                                                 
                                             </div>
-                                            <div className={styles.arrowIcon}>
+                                            <div className={styles.arrowIconTop}>
                                                 <i class="fa fa-long-arrow-right"></i>
                                             </div>
-                                            <SelectedIngredients
-                                                    src = "/images/game/uncheck.png"
-                                                    children = "Carrot"
-                                            />
+                                            <p>Carrot</p>
                                         </div>
                                         <div className={styles.findIngredientSample}>
-                                            <div className={styles.ingredient_image_sample}>
-                                                <Image
-                                                    className={styles.icons}
-                                                    src = "/images/game/correct.png"
-                                                    alt="wrong"
-                                                    width="30"
-                                                    height="30"
-                                                />
+                                            <div>
                                                 <Image
                                                     className={styles.correct_ingredient}
                                                     src = "/images/game/ingredients/carrot.jpeg"
@@ -103,22 +86,26 @@ export default function GameTutorial(){
                                                     width="80"
                                                     height="80"
                                                 />
-                                                
                                             </div>
-                                            <div className={styles.arrowIcon}>
+                                            <div className={styles.arrowIconBottom}>
                                                 <i class="fa fa-long-arrow-right"></i>
                                             </div>
-                                            <SelectedIngredients
-                                                    src = "/images/game/check.png"
-                                                    children = "Carrot"
-                                            />
+                                            <div className={styles.rightPick}>
+                                                <Image
+                                                    src = "/images/game/correct.png"
+                                                    alt="wrong"
+                                                    width="30"
+                                                    height="30"
+                                                />
+                                                <p>Carrot</p>    
+                                            </div>
                                         </div>
                                     </div>    
                                     <p>
                                         Click on the correct image to find the right ingredient
                                     </p>
                                 </div>
-                                <div className={styles.find_match_next_button} onClick={() => Next("timeToMix")}>
+                                <div className={styles.find_match_next_button} onClick={() => Next("threeLife")}>
                                     <Button                    
                                         href=""
                                         backgroundColour='var(--color-emerald)'
@@ -132,6 +119,36 @@ export default function GameTutorial(){
                                 </div> 
                             </div>
                         </div>
+                        {/* Three Life */}
+                        <div id="threeLife" class="step" style={{display:"none"}}>
+                            <div className={styles.tutorialDisplay}>
+                                <div className={styles.life}>
+                                    <h1 className={styles.headline}>You have Three Attempts</h1>
+                                    <Image
+                                        src = "/images/game/life.png"
+                                        alt="cooking-wok"
+                                        width="220"
+                                        height="220"
+                                        paddingBottom="10px"
+                                    />
+                                    <p className={styles.tutorialParagraph}>
+                                        Get all the right ingredients before losing all your life
+                                    </p>
+                                </div>
+                                <div className={styles.find_match_next_button} onClick={() => Next("timeToMix")}>
+                                    <Button                    
+                                        href=""
+                                        backgroundColour='var(--color-emerald)'
+                                        colour='var(--color-white)'
+                                        children="Next"
+                                    />
+                                </div>
+                                <div className={styles.skipTutorials__link} onClick={() => setShowTutorial(false)}>
+                                    Skip tutorial 
+                                    <i class="fa fa-angle-double-right"></i>
+                                </div>
+                            </div> 
+                        </div>
                         {/* Time to Mix */}
                         <div id="timeToMix" class="step" style={{display:"none"}}>
                             <div className={styles.tutorialDisplay}>
@@ -143,7 +160,7 @@ export default function GameTutorial(){
                                         width="300"
                                         height="250"
                                     />
-                                    <p className={styles.findMatchPara}>
+                                    <p className={styles.tutorialParagraph}>
                                         Mix your ingredients to cook up your healthy meal
                                     </p>
                                 </div>
