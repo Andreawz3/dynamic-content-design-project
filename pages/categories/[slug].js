@@ -55,7 +55,7 @@ export default function SlugCategory({meals, capitalizedSlug}) {
                         <div className={styles.meal_card} key={index} >
                             <Link href={data.dishName === 'Korean Bibimbap' ? '/meal-recipe' : '#'} >
                                 <Image
-                                    src={'/images/bibimbap.svg'}
+                                    src={'/images/recipe-images/bibimbap.jpg'}
                                     alt={'bibimbap'}
                                     width={290}
                                     height={170}

@@ -70,7 +70,7 @@ export const inventory = {
             iron:"",
             servingSize: "Serving: 2",
             price: "$0.67 per serving",
-            image: "/images/recipe-images/"
+            image: "/images/recipe-images/homemade-mandu.jpeg"
         },
         {
             dishName: "Korean Bibimbap",
@@ -136,7 +136,7 @@ export const inventory = {
             iron:"",
             servingSize: "Serving: 1",
             price: "$4.31 per serving",
-            image: "/images/recipe-images/bibimbap.jpeg"
+            image: "/images/recipe-images/bibimbap.jpg"
         },
         {
             dishName: "Tofu Veggie Scramble",
@@ -479,7 +479,7 @@ export const inventory = {
             iron: "0.3mg",
             servingSize: "Serving: 4",
             price: "$0.75 per serving",
-            image: "/images/recipe-images/"
+            image: "/images/recipe-images/banana-cue.jpeg"
         },
         {
             dishName: "Sinigang",
@@ -551,7 +551,7 @@ export const inventory = {
             iron: "4.5mg",
             servingSize: "Serving: 4",
             price: "$1.17 per serving",
-            image: "/images/recipe-images/"
+            image: "/images/recipe-images/sinigang.jpg"
         },
         
     ]

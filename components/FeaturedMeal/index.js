@@ -8,8 +8,8 @@ export default function FeaturedMeal({
         <>
             <div className={styles.featured_meal}>
                 <Image
-                    src={'/images/featured-meal-img1.svg'}
-                    alt={'featured-meal-img1'}
+                    src={image}
+                    alt={name}
                     width={330}
                     height={250}
                 />

@@ -57,7 +57,7 @@ export default function MealRecipe() {
           <div className={styles.meal__details_container}>
             <div className={styles.meal__image_container}>
               <Image
-                src={"/images/bibimbap-img.jpeg"}
+                src={"/images/recipe-images/bibimbap.jpg"}
                 alt={"mandu-image"}
                 width={350}
                 height={170}
