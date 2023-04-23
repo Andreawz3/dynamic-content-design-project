@@ -1,6 +1,7 @@
 import FilterMenu from '@/components/FilterMenu'
 import Greeting from '@/components/Greeting'
 import Header from '@/components/Header'
+import MealCard from '@/components/MealCard'
 import NavBar from '@/components/NavBar'
 import NavMenu from '@/components/NavMenu'
 import Search from '@/components/Search'
@@ -12,8 +13,6 @@ import { inventory } from '@/data/recipes'
 import useNavMenu from '@/hooks/navmenu'
 
 import styles from '@/styles/Categories.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
 
 export async function getServerSideProps(context) {
 	const { params } = context;
@@ -52,30 +51,7 @@ export default function SlugCategory({meals, capitalizedSlug}) {
                 </div>
                 <div className={styles.meal_card__container}>
                     {meals.map((data, index) => 
-                        <div className={styles.meal_card} key={index} >
-                            <Link href={data.dishName === 'Korean Bibimbap' ? '/meal-recipe' : '#'} >
-                                <Image
-                                    src={'/images/recipe-images/bibimbap.jpg'}
-                                    alt={'bibimbap'}
-                                    width={290}
-                                    height={170}
-                                    className={styles.meal_card__img}
-                                />
-                                <div>
-                                    <h3>{data.dishName}</h3>
-                                    <div>
-                                        <div></div>
-                                        <span>{data.difficulty}</span>
-                                        {/* <Image/> */}
-                                    </div>
-                                    <div className={styles.meal_card__buttons}>
-                                        <span>View Details</span>
-                                        <button>Start Cooking</button>
-                                    </div>
-                                </div>
-                            </Link>
-
-                        </div>
+                        <MealCard data={data} index={index}/>
                     )}
                 </div>
             </main>
