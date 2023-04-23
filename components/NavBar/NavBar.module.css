@@ -3,12 +3,15 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 30px 60px;
     position: absolute;
     bottom: 0;
     max-width: 900px;
 }
-
+.navbar a {
+    height: 25px;
+}
 @media (max-width: 500px) {
     .navbar {
         justify-content: space-between;

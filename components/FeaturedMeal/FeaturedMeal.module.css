@@ -50,8 +50,8 @@
     width: 10px;
     height: 10px;
     border-radius: 15px;
-    background-color: var(--color-light-green);
     opacity: 70%;
+    cursor: pointer;
 }
 
 @media (max-width: 500px) {

@@ -5,6 +5,8 @@ import styles from './NavBar.module.css'
 import { 
     FaveOutlineIcon,
     FaveSolidIcon,
+    GameOutlineIcon,
+    GameSolidIcon,
     HomeOutlineIcon,
     HomeSolidIcon,
     ListOutlineIcon,
@@ -21,9 +23,9 @@ export default function NavBar() {
                     <HomeSolidIcon/> : <HomeOutlineIcon/>
                 }
             </Link>
-            <Link href={'/favorites'}>
-                {router.pathname == '/favorites' ? 
-                    <FaveSolidIcon/> : <FaveOutlineIcon/>
+            <Link href={'/game'}>
+                {router.pathname == '/game' ? 
+                    <GameSolidIcon/> : <GameOutlineIcon/>
                 }
             </Link>
             <Link href={'/shopping-list'}>

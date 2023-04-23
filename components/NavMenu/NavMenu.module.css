@@ -27,8 +27,23 @@
     padding-bottom: 20px;
     border-bottom: 1px solid var(--color-black);
     margin: 30px 0 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    filter: drop-shadow(0px 4px 10px rgba(40, 40, 40, 0.48));
+}
+.nav_menu__logo h1 {
+    font-family: var(--secondary-font);
+    font-weight: 900;
+    font-size: 48px;
 }
 .nav_menu__links {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+}
+.nav_menu__links a {
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
