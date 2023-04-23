@@ -4,10 +4,13 @@ import { useState } from "react";
 
 // Components
 import Button from '@/components/Button';
-import SelectedIngredients from '@/components/GameSelectedIngredients';
+
+// Hooks
+import displayGame from '@/hooks/showGame';
 
 export default function GameTutorial(){
     const [showTutorial, setShowTutorial] = useState(true);
+    const {showGame, setShowGame} = displayGame();
 
     const Next = (step) => {
         let steps = document.getElementsByClassName("step");
@@ -20,6 +23,7 @@ export default function GameTutorial(){
     const CloseModalBox = () => {
         const tutorial = document.getElementById('modal-box');
         tutorial.style.display = 'none';
+        setShowGame(true)
     }
 
     return (
@@ -125,7 +129,7 @@ export default function GameTutorial(){
                                 <div className={styles.life}>
                                     <h1 className={styles.headline}>You have Three Attempts</h1>
                                     <Image
-                                        src = "/images/game/life.png"
+                                        src = "/images/game/threeLife.png"
                                         alt="cooking-wok"
                                         width="220"
                                         height="220"

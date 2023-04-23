@@ -41,10 +41,6 @@ export default function NavMenu({
                             <AboutIcon/>
                             <span>ABOUT</span>
                         </Link>
-                        <Link href={'/game'}>
-                            <GameSolidIcon fill='var(--color-black)' />
-                            <span>GAME TUTORIAL</span>
-                        </Link>
                     </div>
                 </div>
             </div>
