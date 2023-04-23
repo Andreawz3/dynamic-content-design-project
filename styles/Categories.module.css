@@ -1,6 +1,6 @@
 .category_page {
-    padding: 0 0 90px;
     height: 100vh;
+    padding-bottom: 85px;
     overflow: scroll;
     position: relative;
     background-color: var(--color-white);
@@ -19,18 +19,14 @@
 
 /* meal card */
 .meal_card__container {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
 }
-.meal_card {
-    padding: 20px;
-    background-color: white;
-    border-radius: 15px;
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.2));
-}
-.meal_card__img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+
+@media (max-width: 700px) {
+    .meal_card__container {
+        grid-template-columns: 1fr ;
+    }
 }
