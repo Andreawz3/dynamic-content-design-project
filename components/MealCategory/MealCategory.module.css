@@ -18,3 +18,9 @@
         height: 170px;
     }
 }
+@media (max-width: 320px) {
+    .meal_categories__card img {
+        width: 60px;
+        height: auto;
+    }
+}

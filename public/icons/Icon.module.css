@@ -1,7 +1,15 @@
+.icon {
+    color: var(--color-black);
+}
 .icon:hover {
-    color: var(--color-emerald);
+    color: var(--color-light-green);
     cursor: pointer;
 }
+
+.close_icon {
+    color: var(--color-white);
+}
+
 .nav_icon {
     color: var(--color-white);
 }

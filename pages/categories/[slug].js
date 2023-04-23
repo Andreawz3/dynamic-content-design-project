@@ -1,6 +1,7 @@
 import FilterMenu from '@/components/FilterMenu'
 import Greeting from '@/components/Greeting'
 import Header from '@/components/Header'
+import MealCard from '@/components/MealCard'
 import NavBar from '@/components/NavBar'
 import NavMenu from '@/components/NavMenu'
 import Search from '@/components/Search'
@@ -48,11 +49,11 @@ export default function SlugCategory({meals, capitalizedSlug}) {
 						currentPage={'categories'}
 					/>
                 </div>
-				{meals.map((data, index) => 
-					<div key={index}>
-						{data.dishName}
-					</div>
-				)}
+                <div className={styles.meal_card__container}>
+                    {meals.map((data, index) => 
+                        <MealCard data={data} index={index}/>
+                    )}
+                </div>
             </main>
             <NavBar/>
             {showMenu && 

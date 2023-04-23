@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Button({
     href = "", 
     fontSize = "16px",
-    fontWeight = "300",
+    fontWeight = "400",
     padding = "20px 50px",
     border, colour, backgroundColour, children, imgBefore, imgAfter, imgAlt, imgWidth, imgHeight, boxShadow
 }) {

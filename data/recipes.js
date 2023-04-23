@@ -2,6 +2,7 @@ export const inventory = {
     recipe: [
         {
             dishName: "Homemade Mandu",
+            featuredDesc: "Discover the irresistible taste of authentic Korean cuisine.",
             prepTime:"30 min",
             cookTime:"7 min",
             cuisineCategory:"Dinner",
@@ -70,10 +71,11 @@ export const inventory = {
             iron:"",
             servingSize: "Serving: 2",
             price: "$0.67 per serving",
-            image: "/images/recipe-images/"
+            image: "/images/recipe-images/homemade-mandu.jpeg"
         },
         {
             dishName: "Korean Bibimbap",
+            featuredDesc: "Savor the vibrant flavors and textures of Korea's iconic dish.",
             prepTime:"45 min",
             cookTime:"15 min",
             cuisineCategory:"Snack",
@@ -136,10 +138,11 @@ export const inventory = {
             iron:"",
             servingSize: "Serving: 1",
             price: "$4.31 per serving",
-            image: "/images/recipe-images/bibimbap.jpeg"
+            image: "/images/recipe-images/bibimbap.jpg"
         },
         {
             dishName: "Tofu Veggie Scramble",
+            featuredDesc: "A delicious and nutritious twist on traditional scrambled eggs.",
             prepTime:"5 mins",
             cookTime:"15 mins",
             cuisineCategory:"Breakfast",
@@ -479,7 +482,7 @@ export const inventory = {
             iron: "0.3mg",
             servingSize: "Serving: 4",
             price: "$0.75 per serving",
-            image: "/images/recipe-images/"
+            image: "/images/recipe-images/banana-cue.jpeg"
         },
         {
             dishName: "Sinigang",
@@ -551,7 +554,7 @@ export const inventory = {
             iron: "4.5mg",
             servingSize: "Serving: 4",
             price: "$1.17 per serving",
-            image: "/images/recipe-images/"
+            image: "/images/recipe-images/sinigang.jpg"
         },
         
     ]

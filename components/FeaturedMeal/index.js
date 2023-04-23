@@ -1,27 +1,37 @@
 import Image from 'next/image'
+import { useState } from 'react';
+import { inventory } from '@/data/recipes';
+
 import styles from './FeaturedMeal.module.css'
 
-export default function FeaturedMeal({
-    image = "", name, desc, time, difficulty
-}) {
+export default function FeaturedMeal() {
+
+    const featuredMeal = inventory.recipe.slice(0, 3);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
     return (
         <>
             <div className={styles.featured_meal}>
                 <Image
-                    src={'/images/featured-meal-img1.svg'}
-                    alt={'featured-meal-img1'}
+                    src={featuredMeal[currentIndex].image}
+                    alt={featuredMeal[currentIndex].dishName}
                     width={330}
                     height={250}
                 />
                 <div className={styles.featured_meal__details}>
-                    <h2>Meal Name</h2>
-                    <p>Torem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>{featuredMeal[currentIndex].dishName}</h2>
+                    <p>{featuredMeal[currentIndex].featuredDesc}</p>
                     <div className={styles.info}>
-                        <span>25 MIN</span>
+                        <span>{featuredMeal[currentIndex].prepTime.toUpperCase()} </span>
                         <div/>
-                        <span>EASY</span>
+                        <span>{featuredMeal[currentIndex].difficulty.toUpperCase()}</span>
                     </div>
                 </div>
+            </div>
+            <div className={styles.featured_meal__dots}>
+                {featuredMeal.map((value, index) => 
+                    <div onClick={() => setCurrentIndex(index)} style={{backgroundColor: currentIndex === index ? "var(--color-avocado)" : "var(--color-light-green)"}} />
+                )}
             </div>
         </>
     )

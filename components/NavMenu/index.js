@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './NavMenu.module.css'
 
 // assets
-import { CloseIcon } from '@/public/icons/icons';
+import { AboutIcon, CloseIcon, GameOutlineIcon, GameSolidIcon, HomeSolidIcon, ListSolidIcon, ProfileIcon } from '@/public/icons/icons';
 
 export default function NavMenu({
     closeMenu
@@ -16,29 +16,30 @@ export default function NavMenu({
                         <CloseIcon/>
                     </button>
                     <div className={styles.nav_menu__logo}>
-                        <Image/>
+                        <Image 
+                            src={'/logos/logo.svg'}
+                            alt={'logo'}
+                            width={55}
+                            height={45}
+                        />
                         <h1>yori</h1>
                     </div>
                     <div className={styles.nav_menu__links}>
                         <Link href={'/home'} onClick={closeMenu}>
-                            <Image/>
+                            <HomeSolidIcon fill='var(--color-black)' />
                             <span>HOME</span>
                         </Link>
                         <Link href={'/shopping-list'}>
-                            <Image/>
+                            <ListSolidIcon fill='var(--color-black)' />
                             <span>SHOPPING LIST</span>
                         </Link>
                         <Link href={'/profile'}>
-                            <Image/>
+                            <ProfileIcon/>
                             <span>PROFILE</span>
                         </Link>
                         <Link href={'/about'}>
-                            <Image/>
+                            <AboutIcon/>
                             <span>ABOUT</span>
-                        </Link>
-                        <Link href={'/game'}>
-                            <Image/>
-                            <span>GAME TUTORIAL</span>
                         </Link>
                     </div>
                 </div>

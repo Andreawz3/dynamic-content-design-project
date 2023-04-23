@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import styles from '@/styles/Landing.module.css'
+
 // components
 import Header from '@/components/Header'
 import Button from '@/components/Button'
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Landing() {
 	const [loading, setLoading] = useState(false);
@@ -40,7 +40,7 @@ export default function Landing() {
 			{loading &&
 				<div className={styles.splash_screen}>
 					<Image
-						src={'/images/splash-screen-animation.png'}
+						src={'/logos/splash-screen.svg'}
 						alt={'splash-screen-animation'}
 						width={150}
 						height={170}
@@ -51,11 +51,12 @@ export default function Landing() {
 				<main className={styles.landing_page}>
 					<div className={styles.landing_page__container}>
 						<Image 
-							src={"/images/landing-img.png"}
+							src={"/images/landing-animation.gif"}
 							alt={"langding page image"}
-							width={320}
-							height={320}
+							width={330}
+							height={380}
 							className={styles.landing__img}
+							priority
 						/>
 						<div className={styles.landing_page__content}>
 							<h1>The Taste Of Healthy Living</h1>
@@ -64,7 +65,7 @@ export default function Landing() {
 					</div>
 					<div className={styles.link__home} onClick={() => showSplashScreen()}>
 						<Button
-							backgroundColour='var(--color-black)'
+							backgroundColour='var(--color-red)'
 							colour='var(--color-white)'
 							children='Get Started'
 						/>
