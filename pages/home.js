@@ -59,15 +59,7 @@ export default function Home() {
                 </div>
                 <div className={styles.home_page__carousel}>
                     <FeaturedMeal/>
-                    <div className={styles.featured_meal__dots}>
-                        <div/>
-                        <div/>
-                        <div/>
-                    </div>
                 </div>
-                <Link href="categories/lunch">
-                    Lunch
-                </Link>
                 <div className={styles.home_page__categories}>
                     <h2>Meal Categories</h2>
                     <div className={styles.meal_categories}>
@@ -76,6 +68,28 @@ export default function Home() {
                                 <MealCategory props={data}/>
                             </Link>
                         )}
+                    </div>
+                </div>
+                <div>
+                    <div className={styles.home_page__game}>
+                        <div className={styles.content}>
+                            <Image
+                                src={"/images/game/mascot.png"}
+                                alt={"mascot"}
+                                width={110}
+                                height={130}
+                            />
+                            <div>
+                                <h1>Let's Play</h1>
+                                <p>Learn how to cook healthy meals with our minigame.</p>
+                            </div>
+                        </div>
+                        <Button 
+                            href={"/game"}
+                            backgroundColour={"var(--color-light-green)"}
+                            colour={"var(--color-white)"}
+                            children='Play Now'                       
+                        />
                     </div>
                 </div>
             </main>

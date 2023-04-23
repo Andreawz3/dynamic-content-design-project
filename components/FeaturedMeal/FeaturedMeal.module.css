@@ -40,6 +40,20 @@
     border-left: 1px solid var(--color-white);
 }
 
+.featured_meal__dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+.featured_meal__dots div {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    background-color: var(--color-light-green);
+    opacity: 70%;
+}
+
 @media (max-width: 500px) {
     .featured_meal img {
         width: 100%;
