@@ -37,13 +37,21 @@ export default function Game() {
 
     // Stage 3
     const goBackGameStageOne = () => {
-        document.getElementById("game_over").style.display = "none"
+        document.getElementById("gameOver").style.display = "none"
         document.getElementById("stageOne").style.display = "block";
         document.getElementById("stageThree").style.display = "none";
         document.getElementById("rice").classList.remove("Game_stageTwoImagesRiceAnimated___Sjv_");   
         document.getElementById("beef").classList.remove("Game_stageTwoImagesBeefAnimated__7i0th"); 
         document.getElementById("vegetables").classList.remove("Game_stageTwoImagesVeggiesAnimated__JnJ9y");
         document.getElementById("egg").classList.remove("Game_stageTwoImagesEggAnimated__SPSlG"); 
+    }
+
+    // Modal Box
+    const opneGameOver = () => {
+        document.getElementById("gameOver").style.display = "flex";
+    }
+    const opneCollectPoints = () => {
+        document.getElementById("collectPoints").style.display = "flex";
     }
 
     return (
@@ -59,7 +67,7 @@ export default function Game() {
                     <GameTutorial/>
                 </div>
                 {/* Game Over (modal box) */}
-                <div id='game_over' className={styles.gameOver} style={{display:"none"}}>
+                <div id='gameOver' className={styles.gameOver} style={{display:"none"}}>
                     <div className={styles.gameOverDisplay}>
                         <div className={styles.gameOverDesc}>
                             <h1>Game Over</h1>
@@ -81,7 +89,7 @@ export default function Game() {
                                         height="50"
                                     />
                                 </div>
-                                <div className={styles.playerSelection}>
+                                <Link href='/home' className={styles.playerSelection}>
                                     <p>NO</p>
                                     <Image
                                         src = "/images/game/wrong.png"
@@ -89,7 +97,7 @@ export default function Game() {
                                         width="50"
                                         height="50"
                                     />
-                                </div>
+                                </Link>       
                             </div>
                         </div>
                     </div>
@@ -276,13 +284,16 @@ export default function Game() {
                                 </Link>
                             </div>
                         </div>
+                        <div style={{position:"absolute", bottom:"140px", cursor:"pointer"}}>
+                            <p onClick={() => opneCollectPoints()}>Collect Points - modal box</p>
+                        </div>
+                        <div style={{position:"absolute", bottom:"100px", cursor:"pointer"}}>
+                            <p onClick={() => opneGameOver()}>Game Over - modal box</p>
+                        </div>
                     </div>
-                    <div>
-                        <NavBar style={{position:"inherit"}}/>
-                    </div>                   
                 </div>  
                 {/* Win */}
-                <div id='cleared' className={styles.cleared} style={{display:"none"}}>
+                <div id='collectPoints' className={styles.cleared} style={{display:"none"}}>
                     <div className={styles.clearedDisplay}>
                         <div className={styles.clearedDesc}>
                         <h1>Cleared</h1>
@@ -308,7 +319,8 @@ export default function Game() {
                 {showTutorial &&
                     <GameTutorial/>
                 }                     
-            </main>       
+            </main>  
+            <NavBar style={{position:"inherit"}}/>     
         </>
     )
 }

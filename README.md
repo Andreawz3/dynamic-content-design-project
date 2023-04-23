@@ -9,7 +9,11 @@ YORI is a mobile web application cook book that promotes a variety of healthy, a
 ## Coding Language
 - Next.js
 
-## Command Lines:
+## Dependancy Installation
+DoughnutChart
+```
+npm i react-chartjs-2
+```
 
 ### Next.js
 ```
