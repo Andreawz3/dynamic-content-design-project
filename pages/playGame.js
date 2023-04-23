@@ -282,7 +282,7 @@ export default function Game() {
                                     />
                                     <p>Play again</p>
                                 </Link>
-                                <Link href="/mealRecipe" className={styles.thirdStageOptionDisplay}> 
+                                <Link href="/meal-recipe" className={styles.thirdStageOptionDisplay}> 
                                     <Image
                                         src="/images/game/cutlery.png"
                                         alt="cutlery"
