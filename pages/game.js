@@ -37,6 +37,7 @@ export default function Game() {
 
     // Stage 3
     const goBackGameStageOne = () => {
+        document.getElementById("game_over").style.display = "none"
         document.getElementById("stageOne").style.display = "block";
         document.getElementById("stageThree").style.display = "none";
         document.getElementById("rice").classList.remove("Game_stageTwoImagesRiceAnimated___Sjv_");   
@@ -53,10 +54,45 @@ export default function Game() {
             />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <main className={styles.game__page}>
-                <div id='game-tutorial' className={styles.game_tutorial}
-                    // style={{display:"none"}}>
-                    >
+                {/* Tutorial (modal box) */}
+                <div id='game-tutorial' className={styles.game_tutorial}>
                     <GameTutorial/>
+                </div>
+                {/* Game Over (modal box) */}
+                <div id='game_over' className={styles.gameOver} style={{display:"none"}}>
+                    <div className={styles.gameOverDisplay}>
+                        <div className={styles.gameOverDesc}>
+                            <h1>Game Over</h1>
+                            <p>Oh no! You did not pick the right ingredients</p>
+                            <h3>Play Again?</h3>
+                            <Image
+                                src = "/images/game/sad-strawberry.png"
+                                alt = "sad-strawberry"
+                                width="200"
+                                height="200"
+                            />
+                            <div className={styles.goOptions}>
+                                <div className={styles.playerSelection} onClick={() => goBackGameStageOne()}>
+                                    <p>YES</p>
+                                    <Image
+                                        src = "/images/game/correct.png"
+                                        alt = "sad-strawberry"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </div>
+                                <div className={styles.playerSelection}>
+                                    <p>NO</p>
+                                    <Image
+                                        src = "/images/game/wrong.png"
+                                        alt = "sad-strawberry"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.game_container}>
                     {/* Stage 1 */}
@@ -243,9 +279,32 @@ export default function Game() {
                     </div>
                     <div>
                         <NavBar style={{position:"inherit"}}/>
-                    </div>
-                    
+                    </div>                   
                 </div>  
+                {/* Win */}
+                <div id='cleared' className={styles.cleared} style={{display:"none"}}>
+                    <div className={styles.clearedDisplay}>
+                        <div className={styles.clearedDesc}>
+                        <h1>Cleared</h1>
+                            <p>Congratulations, you're a culinary master!</p>
+                            <h3>You earned 200 points</h3>
+                            <Image
+                                src = "/images/game/mascot.png"
+                                alt = "sad-strawberry"
+                                width="250"
+                                height="250"
+                            />
+                            <div className={styles.next__button} onClick={() => Next("stageTwo")}>
+                                <Button                      
+                                    href="/profile"
+                                    backgroundColour='var(--color-yellow)'
+                                    colour='var(--color-black)'
+                                    children="COLLECT POINTS"
+                                />      
+                            </div> 
+                        </div>
+                    </div>
+                </div>
                 {showTutorial &&
                     <GameTutorial/>
                 }                     

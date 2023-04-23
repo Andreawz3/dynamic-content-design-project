@@ -105,7 +105,12 @@
 .find_match_display {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
+}
+
+.find_match_display > p {
+    width: 245px;
 }
 
 .findMatchView {
@@ -119,12 +124,8 @@
 .findIngredientSample {
     width: 300px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-}
-
-.ingredient_image_sample {
-   position: relative;
 }
 
 .icons {
@@ -143,8 +144,19 @@
     border-radius: 5px;
 }
 
-.arrowIcon {
+.arrowIconTop {
+    padding-right: 30px;
     font-size: 40px;
+}
+
+.arrowIconBottom {
+    font-size: 40px;
+}
+
+.rightPick {
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 @keyframes fadeIn {
