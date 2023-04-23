@@ -1,8 +1,6 @@
 import styles from '@/styles/Game.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
-import { gameIngredientsList } from "@/data/game-ingredients"
 
 // Components
 import Header from '@/components/Header';
@@ -11,22 +9,13 @@ import GameTutorial from '@/components/GameTutorial';
 import SelectedIngredients from '@/components/GameSelectedIngredients';
 import NavBar from '@/components/NavBar';
 
+// Hooks
+import displayTutorial from '@/hooks/showTutorial';
+import gameIngredients from '@/hooks/gameIngredients';
+
 export default function Game() {
     const correctAnswer = ["Rice", "Veggies", "Egg", "Ground Beef"]
-    const [showTutorial, setShowTutorial] = useState(false);
-
-    // Stage 1
-
-    const [data, setData] = useState([...gameIngredientsList]);
-    const pickIngredient = () => {
-        // document.getElementsByClassName("ingredient")[0].style.border = "2px solid #5A8C32"; // it works
-
-        let ingredients = document.getElementsByClassName("ingredient")
-        console.log(ingredients);
-        // for(let i = 0; i <ingredients.length; i++){
-        //     ingredients[i].style.border = "2px solid #5A8C32";
-        // }
-    }
+    const {showTutorial, setShowTutorial} = displayTutorial();
     const Next = (stages) => {
         let steps = document.getElementsByClassName("game");
         for (let i = 0; i < steps.length; i++) {
@@ -34,6 +23,9 @@ export default function Game() {
         }
         document.getElementById(stages).style.display = "block";
     }
+
+    // Stage 1
+    const {data, setData} = gameIngredients();
 
     // Stage 2
     const mixIngredients = () => {
@@ -45,8 +37,21 @@ export default function Game() {
 
     // Stage 3
     const goBackGameStageOne = () => {
+        document.getElementById("gameOver").style.display = "none"
         document.getElementById("stageOne").style.display = "block";
         document.getElementById("stageThree").style.display = "none";
+        document.getElementById("rice").classList.remove("Game_stageTwoImagesRiceAnimated___Sjv_");   
+        document.getElementById("beef").classList.remove("Game_stageTwoImagesBeefAnimated__7i0th"); 
+        document.getElementById("vegetables").classList.remove("Game_stageTwoImagesVeggiesAnimated__JnJ9y");
+        document.getElementById("egg").classList.remove("Game_stageTwoImagesEggAnimated__SPSlG"); 
+    }
+
+    // Modal Box
+    const opneGameOver = () => {
+        document.getElementById("gameOver").style.display = "flex";
+    }
+    const opneCollectPoints = () => {
+        document.getElementById("collectPoints").style.display = "flex";
     }
 
     return (
@@ -57,10 +62,45 @@ export default function Game() {
             />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <main className={styles.game__page}>
-                <div id='game-tutorial' className={styles.game_tutorial}
-                    // style={{display:"none"}}>
-                    >
+                {/* Tutorial (modal box) */}
+                <div id='game-tutorial' className={styles.game_tutorial}>
                     <GameTutorial/>
+                </div>
+                {/* Game Over (modal box) */}
+                <div id='gameOver' className={styles.gameOver} style={{display:"none"}}>
+                    <div className={styles.gameOverDisplay}>
+                        <div className={styles.gameOverDesc}>
+                            <h1>Game Over</h1>
+                            <p>Oh no! You did not pick the right ingredients</p>
+                            <h3>Play Again?</h3>
+                            <Image
+                                src = "/images/game/sad-strawberry.png"
+                                alt = "sad-strawberry"
+                                width="200"
+                                height="200"
+                            />
+                            <div className={styles.goOptions}>
+                                <div className={styles.playerSelection} onClick={() => goBackGameStageOne()}>
+                                    <p>YES</p>
+                                    <Image
+                                        src = "/images/game/correct.png"
+                                        alt = "sad-strawberry"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </div>
+                                <Link href='/home' className={styles.playerSelection}>
+                                    <p>NO</p>
+                                    <Image
+                                        src = "/images/game/wrong.png"
+                                        alt = "sad-strawberry"
+                                        width="50"
+                                        height="50"
+                                    />
+                                </Link>       
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.game_container}>
                     {/* Stage 1 */}
@@ -244,16 +284,43 @@ export default function Game() {
                                 </Link>
                             </div>
                         </div>
+                        <div style={{position:"absolute", bottom:"140px", cursor:"pointer"}}>
+                            <p onClick={() => opneCollectPoints()}>Collect Points - modal box</p>
+                        </div>
+                        <div style={{position:"absolute", bottom:"100px", cursor:"pointer"}}>
+                            <p onClick={() => opneGameOver()}>Game Over - modal box</p>
+                        </div>
                     </div>
-                    <div>
-                        <NavBar style={{position:"inherit"}}/>
-                    </div>
-                    
                 </div>  
+                {/* Win */}
+                <div id='collectPoints' className={styles.cleared} style={{display:"none"}}>
+                    <div className={styles.clearedDisplay}>
+                        <div className={styles.clearedDesc}>
+                        <h1>Cleared</h1>
+                            <p>Congratulations, you're a culinary master!</p>
+                            <h3>You earned 200 points</h3>
+                            <Image
+                                src = "/images/game/mascot.png"
+                                alt = "sad-strawberry"
+                                width="250"
+                                height="250"
+                            />
+                            <div className={styles.next__button} onClick={() => Next("stageTwo")}>
+                                <Button                      
+                                    href="/profile"
+                                    backgroundColour='var(--color-yellow)'
+                                    colour='var(--color-black)'
+                                    children="COLLECT POINTS"
+                                />      
+                            </div> 
+                        </div>
+                    </div>
+                </div>
                 {showTutorial &&
                     <GameTutorial/>
                 }                     
-            </main>       
+            </main>  
+            <NavBar style={{position:"inherit"}}/>     
         </>
     )
 }

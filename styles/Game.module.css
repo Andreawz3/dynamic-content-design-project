@@ -9,6 +9,73 @@
     display: contents;
 }
 
+/* Game Over & Cleared */
+.gameOver, .cleared  {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    background-color: #034806bf;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+.gameOverDisplay, .clearedDisplay {
+    width: 100%;
+    max-width: 350px;
+    height: 600px;
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+
+.gameOverDesc, .clearedDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gameOverDesc > h1 {
+    padding-top: 60px;
+    font-family: var(--secondary-font);
+    color: var(--color-red);
+}
+
+.gameOverDesc > p, .clearedDesc > p {
+    width: 180px;
+    text-align: center;
+}
+
+.gameOverDesc > h3 {
+    color: var(--color-avocado);
+}
+
+.clearedDesc > h1 {
+    padding-top: 60px;
+    font-family: var(--secondary-font);
+    color: var(--color-avocado);
+}
+
+.clearedDesc > h3 {
+    color: var(--color-red);
+}
+
+.goOptions {
+    display: flex;
+    gap: 60px;
+}
+
+.playerSelection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 /* HeadLine */
 .navBar {
     max-width: 900px;

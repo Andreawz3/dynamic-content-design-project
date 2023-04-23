@@ -3,6 +3,7 @@ import styles from './TopNav.module.css'
 
 // assets
 import { MenuIcon } from "@/public/icons/icons"
+import Link from "next/link"
 
 export default function TopNav({
     boxShadow = true,
@@ -15,12 +16,14 @@ export default function TopNav({
                 <button onClick={openMenu}>
                     <MenuIcon/>
                 </button>
-                <Image
-                    src={'/images/jane.jpeg'}
-                    alt={'profile-placeholder'}
-                    width={40}
-                    height={40}
-                />
+                <Link href='/profile'>
+                    <Image
+                        src={'/images/jane.jpeg'}
+                        alt={'profile-placeholder'}
+                        width={40}
+                        height={40}
+                    />
+                </Link>
             </div>
         </>
     )
