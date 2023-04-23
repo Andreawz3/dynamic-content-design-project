@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   margin: 0 1.875rem;
-  padding-top: 2.5rem;
   /* overflow: scroll;
   height: 100vh; */
 }
 
+.top__nav{
+  padding: 0 30px;
+}
 
 
 /** Top Section **/

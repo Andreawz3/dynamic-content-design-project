@@ -1,0 +1,107 @@
+.ingredients__save_to_list > a{
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+  }
+  
+  .recipe__button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .switch__button {
+    background: rgba(255, 255, 255, 0.56);
+    border: 1px solid var(--color-black);
+    border-radius: 30px;
+    overflow: hidden;
+    width: 240px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-right: 120px;
+    position: relative;
+    font-size: .85rem;
+  }
+
+  .switch__button:before {
+    content: "DIRECTIONS";
+    position: absolute;
+    color: var(--color-black);
+    font-size: .85rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+  }
+  
+  .switch__button_checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+  }
+  .switch__button_checkbox:checked + .switch__button_label:before {
+    transform: translateX(120px);
+    transition: transform 300ms linear;
+  }
+  .switch__button_checkbox + .switch__button_label {
+    position: relative;
+    padding: 15px 0;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+  }
+  .switch__button_checkbox + .switch__button_label:before {
+    content: "";
+    background: var(--color-light-green);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    border: 1px solid var(--color-black);
+    transform: translateX(0);
+    transition: transform 300ms;
+  }
+  .switch__button_checkbox + .switch__button_label .switch__button_label_span {
+    position: relative;
+  }
+  
+  .ingredients__list{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  
+  .ingredients{
+  display: flex;
+  gap: .15rem;
+  align-items: baseline;
+  margin-top: -.1rem;
+  }
+  
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+  }
+  
+  .measurement{
+  color: var(--color-lightgray);
+  }
+  
+  .checkbox{
+    accent-color: var(--color-light-green);
+  }

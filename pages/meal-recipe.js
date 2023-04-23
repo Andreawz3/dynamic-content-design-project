@@ -4,11 +4,13 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import styles from "@/styles/MealRecipe.module.css";
 import NavBar from "@/components/NavBar";
+import Logo from "@/components/Logo";
 import TopNav from "@/components/TopNav";
 
 import { inventory } from "@/data/recipes";
 import { useState } from "react";
 import useRecipeSwitch from "@/hooks/recipeSwitch";
+import RecipeSwitch from "@/components/RecipeSwitch";
 
 export default function MealRecipe() {
   const recipeData = inventory.recipe;
@@ -19,8 +21,9 @@ export default function MealRecipe() {
   return (
     <>
       <Header title="Meal Recipe" metaTitle="Meal Recipe" />
+     
       <main className={styles.main__meal_recipe_content}>
-        <TopNav />
+         <TopNav className={styles.top__nav}/>
         <div className={styles.scroll__container}>
           <div className={styles.top__section}>
             <div className={styles.back__button}>
@@ -138,8 +141,8 @@ export default function MealRecipe() {
             <div className={styles.recipe__header_container}>
               <h1>{recipeData[1].dishName}</h1>
             </div>
-
-            <div className={styles.recipe__button_container}>
+            <RecipeSwitch/>
+            {/* <div className={styles.recipe__button_container}>
               <div className={styles.switch__button}>
                 <input
                   className={styles.switch__button_checkbox}
@@ -190,7 +193,7 @@ export default function MealRecipe() {
                 </div>
               </div>
             )}
-
+            
             {showDirections && (
             <div className={styles.directions__container}>
               <div className={styles.directions__upper_text}>
@@ -212,7 +215,7 @@ export default function MealRecipe() {
                 })}
               </div>
             </div>
-            )}
+            )} */}
           </div>
         </div>
       </main>
