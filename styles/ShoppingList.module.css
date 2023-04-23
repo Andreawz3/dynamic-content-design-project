@@ -1,0 +1,22 @@
+.list_page {
+    height: 100vh;
+    padding-bottom: 85px;
+    overflow: scroll;
+    position: relative;
+    background-color: var(--color-white);
+}
+.list_page > * {
+    padding: 0 30px;
+}
+.list_page > h1 {
+    font-family: var(--secondary-font);
+    color: var(--color-avocado);
+}
+
+/* filter section */
+.list_page__filter {
+    padding: 25px 30px;
+    overflow: scroll;
+    display: flex;
+    gap: 7px;
+}
