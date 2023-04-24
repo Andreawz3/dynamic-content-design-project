@@ -11,10 +11,10 @@ import TopNav from "@/components/TopNav";
 import { inventory } from "@/data/recipes";
 import { useState } from "react";
 import useRecipeSwitch from "@/hooks/recipeSwitch";
-import RecipeSwitch from "@/components/RecipeSwitch";
 
 //hooks
 import useNavMenu from '@/hooks/navmenu';
+import RecipeSwitchButton from "@/components/RecipeSwitchButton";
 
 export default function MealRecipe() {
   const {showMenu, setShowMenu} = useNavMenu();
@@ -133,7 +133,7 @@ export default function MealRecipe() {
             <div className={styles.recipe__header_container}>
               <h1>{recipeData[1].dishName}</h1>
             </div>
-            {/* <RecipeSwitch/> */}
+            <RecipeSwitchButton/>
           </div>
         </div>
       </main>

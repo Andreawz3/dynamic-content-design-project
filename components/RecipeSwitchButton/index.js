@@ -1,11 +1,11 @@
 import { inventory } from "@/data/recipes";
 import { useState } from "react";
 import useRecipeSwitch from "@/hooks/recipeSwitch";
-import styles from "./RecipeSwitch.module.css";
+import styles from "./RecipeSwitchButton.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function RecipeSwitch() {
+export default function RecipeSwitchButton() {
     const recipeData = inventory.recipe;
     // console.log(recipeData[1]);
   
