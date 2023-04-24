@@ -114,8 +114,8 @@ export default function gameBibimbap() {
                                 <Link href="/game" className={styles.playerSelection}>
                                     <p>YES</p>
                                     <Image
-                                        src = "/images/game/correct.png"
-                                        alt = "sad-strawberry"
+                                        src = "/images/game/selected.png"
+                                        alt = "check"
                                         width="50"
                                         height="50"
                                     />
@@ -124,7 +124,7 @@ export default function gameBibimbap() {
                                     <p>NO</p>
                                     <Image
                                         src = "/images/game/wrong.png"
-                                        alt = "sad-strawberry"
+                                        alt = "x-icon"
                                         width="50"
                                         height="50"
                                     />
