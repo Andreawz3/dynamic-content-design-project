@@ -96,7 +96,7 @@ export default function GameTutorial(){
                                             </div>
                                             <div className={styles.rightPick}>
                                                 <Image
-                                                    src = "/images/game/correct.png"
+                                                    src = "/images/game/selected.png"
                                                     alt="wrong"
                                                     width="30"
                                                     height="30"
