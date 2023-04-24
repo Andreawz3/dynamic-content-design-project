@@ -22,22 +22,42 @@ export default function Game() {
             />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <main className={styles.game__page}>
-                <TopNav openMenu={() => setShowMenu(true)}/>
-                <div>
-                    <div>
+                <div className={styles.game_display}>
+                    <TopNav openMenu={() => setShowMenu(true)}/>
+                    <div className={styles.game_container}>
+                        <div className={styles.games}>
+                            <Link 
+                                className={styles.seeGameText}
+                                id='play_game' 
+                                href="/gameBibimbap" 
+                            >Bibimbap Game</Link>
+                            <Link 
+                                className={styles.seeGameText}
+                                id='play_game' 
+                                href="/gameMandu" 
+                            >Mandu Game</Link>
+                            <Link 
+                                className={styles.seeGameText}
+                                id='play_game' 
+                                href="/gameMisoPasta" 
+                            >Miso Pasta Game</Link>
+                            <Link 
+                                className={styles.seeGameText}
+                                id='play_game' 
+                                href="/gameRissoto" 
+                            >Rissoto Game</Link>
+                            
+                        </div>
                         <Link 
-                            className={styles.seeGameText}
-                            id='play_game' 
-                            href="/playGame" 
-                        >PLAY GAME</Link>
-                        <Link 
-                            className={styles.seeTutorialText}
+                            className={styles.tutorial}
                             id='watch__tutorial' 
                             href="#" 
                             onClick={() => setShowTutorial(true)}
-                        >SEE TUTORIAL</Link>
-                    </div>                  
+                        >SEE TUTORIAL</Link>                  
+                    </div>
                 </div>
+                
+                
                 {showTutorial &&
                     <GameTutorial/>
                 } 
