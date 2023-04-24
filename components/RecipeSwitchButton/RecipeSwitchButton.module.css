@@ -1,0 +1,174 @@
+.ingredients__save_to_list > a{
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+  }
+  
+  .recipe__button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 357px;
+  }
+  .switch__button {
+    background: #d6e2b5;
+    box-shadow: inset 0px 0px 13px #a0be52;
+    border-radius: 40px;
+    overflow: hidden;
+    width: 336px;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-right: 127px;
+    position: relative;
+    font-size: .85rem;
+  }
+
+  .switch__button:before {
+    content: "DIRECTIONS";
+    position: absolute;
+    color: var(--color-black);
+    font-size: .85rem;
+    top: 0;
+    bottom: 0;
+    right: 33px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+  }
+  
+  .switch__button_checkbox {
+    cursor: pointer;
+    position: absolute;
+    /* top: 0px; */
+    /* left: 0px; */
+    /* bottom: -1px; */
+    width: -48px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+  }
+  .switch__button_checkbox:checked + .switch__button_label:before {
+    transform: translateX(120px);
+    transition: transform 300ms linear;
+  }
+  .switch__button_checkbox + .switch__button_label {
+    position: relative;
+    padding: 26px 0;
+    width: 100%;
+    display: block;
+    -moz-user-select: none;
+    user-select: none;
+    pointer-events: none;
+  }
+  .switch__button_checkbox + .switch__button_label:before {
+    content: "";
+    background: var(--color-avocado);
+    height: 100%;
+    box-shadow: inset 0px 0px 10px var(--color-light-green);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 40px;
+    transform: translateX(0);
+    transition: transform 300ms;
+  }
+  .switch__button_checkbox + .switch__button_label .switch__button_label_span {
+    position: relative;
+  }
+
+  /** ingredients tab **/
+
+  .ingredients__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .ingredients__upper_text{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .ingredients__list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 14px;
+  }
+
+  .checklist__container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.35rem;
+    align-items: center;
+  }
+  
+  .ingredients{
+  display: flex;
+  gap: .15rem;
+  align-items: baseline;
+  justify-content: space-between;
+  }
+  
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    justify-items: stretch;
+  }
+  
+  .measurement{
+  color: var(--color-lightgray);
+  }
+  
+  .checkbox{
+    accent-color: var(--color-light-green);
+  }
+
+
+  /** Directions tab **/
+  .directions__container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: .75rem;
+  }
+
+  .directions__upper_text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 100;
+  }
+
+  .directions__steps{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .step__header_1{
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .directions_header{
+    font-weight: 400;
+  }
+
+  .directions__text{
+    font-weight: 100;
+  }

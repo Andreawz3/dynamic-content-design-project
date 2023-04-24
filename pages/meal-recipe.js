@@ -4,23 +4,34 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import styles from "@/styles/MealRecipe.module.css";
 import NavBar from "@/components/NavBar";
+import NavMenu from "@/components/NavMenu";
+import Logo from "@/components/Logo";
 import TopNav from "@/components/TopNav";
 
 import { inventory } from "@/data/recipes";
 import { useState } from "react";
 import useRecipeSwitch from "@/hooks/recipeSwitch";
 
+//hooks
+import useNavMenu from '@/hooks/navmenu';
+import RecipeSwitchButton from "@/components/RecipeSwitchButton";
+
 export default function MealRecipe() {
+  const {showMenu, setShowMenu} = useNavMenu();
   const recipeData = inventory.recipe;
-  console.log(recipeData[1]);
+  // console.log(recipeData[1]);
 
   const { op, showIngredientList,showDirections } = useRecipeSwitch();
 
   return (
     <>
-      <Header title="Meal Recipe" metaTitle="Meal Recipe" />
+      <Header 
+      title="Meal Recipe" 
+      metaTitle="Meal Recipe" 
+      />
+     
       <main className={styles.main__meal_recipe_content}>
-        <TopNav />
+         <TopNav openMenu={() => setShowMenu(true)} />
         <div className={styles.scroll__container}>
           <div className={styles.top__section}>
             <div className={styles.back__button}>
@@ -29,7 +40,7 @@ export default function MealRecipe() {
                   src={"/icons/recipe/back-icon.svg"}
                   alt={"back-icon"}
                   width={20}
-                  height={20}
+                  height={17}
                 />
               </Link>
               <Link href="/">
@@ -40,9 +51,8 @@ export default function MealRecipe() {
             <div className={styles.nutrition__details_button}>
               <div className={styles.nutrition__details_button_text}>
                 <Link href="/">
-                  <p className={styles.nutrition__text}>NUTRITION DETAILS</p>
+                  <p>NUTRITION DETAILS</p>
                 </Link>
-                <hr />
               </div>
               <Link href="/">
                 <Image
@@ -103,20 +113,6 @@ export default function MealRecipe() {
                 </div>
               </div>
 
-              <div className={styles.category}>
-                <div className={styles.category__icon_container}>
-                  <Image
-                    src={"/icons/recipe/poultry.png"}
-                    alt={"chicken-icon"}
-                    width={16}
-                    height={16}
-                  />
-                </div>
-                <div className={styles.labels__p}>
-                  <p>category</p>
-                </div>
-              </div>
-
               <div className={styles.rating}>
                 <div className={styles.rating__icon_container}>
                   <Image
@@ -132,91 +128,19 @@ export default function MealRecipe() {
                 </div>
               </div>
             </div>
-            <hr />
           </div>
           <div className={styles.recipe__container}>
             <div className={styles.recipe__header_container}>
               <h1>{recipeData[1].dishName}</h1>
             </div>
-
-            <div className={styles.recipe__button_container}>
-              <div className={styles.switch__button}>
-                <input
-                  className={styles.switch__button_checkbox}
-                  type="checkbox"
-                  onClick={() => op()}
-                ></input>
-                <label className={styles.switch__button_label} for="">
-                  <span className={styles.switch__button_label_span}>
-                    INGREDIENTS
-                  </span>
-                </label>
-              </div>
-            </div>
-
-            {showIngredientList && (
-              <div className={styles.ingredients__container}>
-                <div className={styles.ingredients__upper_text}>
-                  <div className={styles.ingredients__upper_text_p}>
-                    <p>5 items</p>
-                  </div>
-                  <div className={styles.ingredients__save_to_list}>
-                    <Link href="#">
-                      <p>SAVE TO LIST</p>
-                      <Image
-                        src={"/icons/recipe/note-icon.svg"}
-                        alt={""}
-                        width={18}
-                        height={20}
-                      />
-                    </Link>
-                  </div>
-                </div>
-                <div className={styles.ingredients__list}>
-                  {recipeData[1].ingredientList.map((value, index) => {
-                    return (
-                      <div key={index} className={styles.ingredients}>
-                        <input className={styles.checkbox} type="checkbox" />
-                        <span className={styles.checkmark}></span>
-                        <label className={styles.container}>
-                          {value.ingredientName}
-                          <span className={styles.measurement}>
-                            {value.measurementType}
-                          </span>
-                        </label>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-
-            {showDirections && (
-            <div className={styles.directions__container}>
-              <div className={styles.directions__upper_text}>
-                <div className={styles.serving}>
-                  <p>{recipeData[1].servingSize}</p>
-                </div>
-                <div className={styles.price}>
-                  <p>{recipeData[1].price}</p>
-                </div>
-              </div>
-              <div className={styles.directions__steps}>
-                {recipeData[1].directions.map((step, index) => {
-                  return (
-                    <div key={index} className={styles.step__header_1}>
-                      <h2>Step {index + 1}</h2>
-                      <p className={styles.directions__text}>{step}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            )}
+            <RecipeSwitchButton/>
           </div>
         </div>
       </main>
       <NavBar />
+      {showMenu && 
+                <NavMenu closeMenu={() => setShowMenu(false)}/>
+      }
     </>
   );
 }

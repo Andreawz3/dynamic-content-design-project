@@ -5,7 +5,7 @@ export const inventory = {
             featuredDesc: "Discover the irresistible taste of authentic Korean cuisine.",
             prepTime:"30 min",
             cookTime:"7 min",
-            cuisineCategory:"Dinner",
+            cuisineCategory:"Snack",
             category: "Korean",
             difficulty:"Medium",
             ingredientList: [ 
@@ -62,7 +62,7 @@ export const inventory = {
                 "Pour in 1/4 cup of water into the pan, then quickly cover with a lid to create steam. Cook for an additional 2-3 minutes or until the mandu are cooked through.",
                 "Serve hot with a side of dipping sauce made with soy sauce, rice vinegar, and a little bit of sugar."],
             review:"4",
-            calories: "",
+            calories: "200kcal",
             carb: "",
             protein: "",
             fat: "",
@@ -78,7 +78,7 @@ export const inventory = {
             featuredDesc: "Savor the vibrant flavors and textures of Korea's iconic dish.",
             prepTime:"45 min",
             cookTime:"15 min",
-            cuisineCategory:"Snack",
+            cuisineCategory:"Dinner",
             category: "Korean",
             difficulty:"Hard",
             ingredientList:[
@@ -111,16 +111,20 @@ export const inventory = {
                     measurementType:"1"                      
                 },
                 {
-                    ingredientName: "Soy sauce",                       
+                    ingredientName: "Soy sauce", 
+                    measurementType:"1½ tbsp"                        
                 },
                 {
-                    ingredientName: "Sesame oil",                       
+                    ingredientName: "Sesame oil",
+                    measurementType:"1 tsp"                         
                 },
                 {
-                    ingredientName: "Gochujang (Korean chili paste)",                       
+                    ingredientName: "Gochujang (Korean chili paste)",
+                    measurementType:"1 tbsp"                         
                 },
                 {
-                    ingredientName: "Toasted sesame seeds"
+                    ingredientName: "Toasted sesame seeds",
+                    measurementType:"1 pinch"  
                 }         
             ],   
             directions:[
@@ -129,7 +133,7 @@ export const inventory = {
                 "Arrange the prepared vegetables and beef on top of the rice in a circular pattern. Top with the fried or poached egg in the center.",
                 "Drizzle a little bit of gochujang on top of the egg and sprinkle with toasted sesame seeds.","Serve immediately and mix everything together before eating."],
             review:"5",
-            calories: "",
+            calories: "407kcal",
             carb: "",
             protein: "",
             fat: "",
@@ -137,7 +141,7 @@ export const inventory = {
             calcium: "",
             iron:"",
             servingSize: "Serving: 1",
-            price: "$4.31 per serving",
+            price: "$2.31 per serving",
             image: "/images/recipe-images/bibimbap.jpg"
         },
         {
