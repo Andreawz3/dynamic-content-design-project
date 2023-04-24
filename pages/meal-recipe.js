@@ -133,7 +133,7 @@ export default function MealRecipe() {
             <div className={styles.recipe__header_container}>
               <h1>{recipeData[1].dishName}</h1>
             </div>
-            <RecipeSwitch/>
+            {/* <RecipeSwitch/> */}
           </div>
         </div>
       </main>
