@@ -36,7 +36,7 @@ export default function RecipeSwitch() {
                     <Link href="#">
                       <p>SAVE TO LIST</p>
                       <Image
-                        src={"@/public/icons/recipe/note-icon.svg"}
+                        src={"/icons/recipe/note-icon.svg"}
                         alt={""}
                         width={18}
                         height={20}
@@ -48,14 +48,16 @@ export default function RecipeSwitch() {
                   {recipeData[1].ingredientList.map((value, index) => {
                     return (
                       <div key={index} className={styles.ingredients}>
-                        <input className={styles.checkbox} type="checkbox" />
-                        <span className={styles.checkmark}></span>
-                        <label className={styles.container}>
-                          {value.ingredientName}
-                          <span className={styles.measurement}>
+                        <div className={styles.checklist__container}>        
+                            <input className={styles.checkbox} type="checkbox" />
+                            <span className={styles.checkmark}></span>
+                            <label className={styles.container}>
+                            {value.ingredientName}
+                            </label> 
+                        </div>
+                        <span className={styles.measurement}>
                             {value.measurementType}
                           </span>
-                        </label>
                       </div>
                     );
                   })}
@@ -77,7 +79,7 @@ export default function RecipeSwitch() {
                 {recipeData[1].directions.map((step, index) => {
                   return (
                     <div key={index} className={styles.step__header_1}>
-                      <h2>Step {index + 1}</h2>
+                      <h2 className={styles.directions_header}>Step {index + 1}</h2>
                       <p className={styles.directions__text}>{step}</p>
                     </div>
                   );

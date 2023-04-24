@@ -17,13 +17,16 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: 2.5rem;
-  padding-bottom: 1rem
+  padding-bottom: 1rem;
+  align-items: center;
 }
 
 .back__button{
   display: flex;
   flex-direction: row;
   gap: 0.375rem;
+  font-size: 14px;
+
 }
 
 .nutrition__details_button{
@@ -31,12 +34,14 @@ display: flex;
 flex-direction: row;
 gap: 0.375rem;
 align-items: center;
+
 }
 
 .nutrition__details_button_text{
   display: flex;
   flex-direction: column;
-  font-size: .9rem;
+  font-size: 12px;
+  border-bottom: .15rem solid var(--color-light-green);
 }
 
 
@@ -60,30 +65,35 @@ align-items: center;
 .meal__information_preview{
   display: flex;
   flex-direction: row;
-  gap: .9rem;
-  justify-content: center;
-  align-items: center;
+  gap: 0.9rem;
+  justify-content: space-between;
   margin-top: 1.5625rem;
   margin-bottom: 1.25rem;
-  padding: .25rem;
+  padding: 0.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: .15rem solid var(--color-light-green);
 }
 
 .cooktime{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .cooktime__icon_container{
   display: flex;
   flex-direction: row;
-justify-content: space-between;
-align-items: center;
+  gap: 0.2rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .preptime{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.4rem;
 }
 
 .preptime__icon_container{
@@ -97,6 +107,7 @@ align-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.4rem;
 }
 
 .level__h4 > h4{
@@ -105,18 +116,12 @@ align-items: center;
   font-size: .85rem;
 }
 
-.category{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .rating{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: .4rem;
 }
 .rating__icon_container{
   display: flex;
@@ -140,7 +145,7 @@ font-family: var(--secondary-font);
 text-decoration: underline;
 }
 
-/* Ingredients List container */
+/** Ingredients List container **/
 
 .ingredients__save_to_list > a{
   display: flex;
