@@ -155,12 +155,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-.ingredients {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    color: var(--color-emerald);
+    font-size: 18px;
 }
 
 .containerPickIngredients {

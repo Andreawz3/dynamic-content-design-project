@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Button from '@/components/Button';
 import GameTutorial from '@/components/GameTutorial';
-import SelectedIngredients from '@/components/GameSelectedIngredients';
 import NavBar from '@/components/NavBar';
 
 // Hooks
@@ -29,27 +28,30 @@ export default function gameBibimbap() {
     }
 
     // Stage 1
-    const {data, setData, righttAnswer} = getBibimbapIngredients();
+    let numberOfRightAnswer = 0;
+    const {data, setData, rightAnswer} = getBibimbapIngredients();
     const {lives, deductLives} = countingLife();
     const {playAudioRight} = rightEffect();
     const {playAudioWrong} = wrongEffect();
+
     const CheckIngredient = (name) => {
-        if (name == "rice" ) {
-            document.getElementById("rice").style.border = "2px solid var(--color-avocado)";
-            document.getElementById("rice").style.backgroundColor = "var(--color-avocado)";
+        let isRightAnswer = false;
+        rightAnswer.forEach((answer) => {
+            if (answer.toLowerCase() == name.toLowerCase()) {
+                isRightAnswer = true;
+            }
+        })
+    
+        if (isRightAnswer) {
+            let ingredientName = name + "_text";
+            document.getElementById(name).style.border = "2px solid var(--color-avocado)";
+            document.getElementById(name).style.backgroundColor = "var(--color-avocado)";
+            document.getElementById(ingredientName).style.textDecoration = "line-through"
             playAudioRight();
-        } else if (name == "beef") {
-            document.getElementById("beef").style.border = "2px solid var(--color-avocado)";
-            document.getElementById("beef").style.backgroundColor = "var(--color-avocado)";
-            playAudioRight();
-        } else if (name == "egg") {
-            document.getElementById("egg").style.border = "2px solid var(--color-avocado)";
-            document.getElementById("egg").style.backgroundColor = "var(--color-avocado)";
-            playAudioRight();
-        } else if (name == "veggies") {
-            document.getElementById("veggies").style.border = "2px solid var(--color-avocado)";
-            document.getElementById("veggies").style.backgroundColor = "var(--color-avocado)";
-            playAudioRight();
+            numberOfRightAnswer++; 
+            if(numberOfRightAnswer == 4) {
+                document.getElementById('nextButton').style.visibility = "visible";
+            }
         } else {
             document.getElementById(name).style.border = "2px solid var(--color-red)";
             document.getElementById(name).style.backgroundColor = "var(--color-red)";
@@ -58,33 +60,21 @@ export default function gameBibimbap() {
             if(lives === 1) {
                 document.getElementById("gameOver").style.display = "flex";
             }
-            console.log(lives)
         }
     }
 
     // Stage 2
     const mixIngredients = () => {
-        document.getElementById("rice").classList.add("GameBibimbap_stageTwoImagesRiceAnimated__J0iQA");   
-        document.getElementById("beef").classList.add("GameBibimbap_stageTwoImagesBeefAnimated__DWAN5"); 
+        document.getElementById("rice_bowl").classList.add("GameBibimbap_stageTwoImagesRiceAnimated__J0iQA");   
+        document.getElementById("ground_beef").classList.add("GameBibimbap_stageTwoImagesBeefAnimated__DWAN5"); 
         document.getElementById("vegetables").classList.add("GameBibimbap_stageTwoImagesVeggiesAnimated__LCPVE");
-        document.getElementById("egg").classList.add("GameBibimbap_stageTwoImagesEggAnimated__huV1n"); 
+        document.getElementById("sunny_egg").classList.add("GameBibimbap_stageTwoImagesEggAnimated__huV1n"); 
     }
 
     // Stage 3
-    const goBackGameStageOne = () => {
-        document.getElementById("gameOver").style.display = "none"
-        document.getElementById("stageOne").style.display = "block";
-        document.getElementById("stageThree").style.display = "none";
-        document.getElementById("rice").classList.remove("GameBibimbap_stageTwoImagesRiceAnimated__J0iQA");   
-        document.getElementById("beef").classList.remove("GameBibimbap_stageTwoImagesBeefAnimated__DWAN5"); 
-        document.getElementById("vegetables").classList.remove("GameBibimbap_stageTwoImagesVeggiesAnimated__LCPVE");
-        document.getElementById("egg").classList.remove("GameBibimbap_stageTwoImagesEggAnimated__huV1n"); 
-    }
+    
 
     // Modal Box
-    const opneGameOver = () => {
-        document.getElementById("gameOver").style.display = "flex";
-    }
     const opneCollectPoints = () => {
         document.getElementById("collectPoints").style.display = "flex";
     }
@@ -92,8 +82,8 @@ export default function gameBibimbap() {
     return (
         <>
             <Header
-                title={'Play Game'}
-                metaTitle={'Play Game'}
+                title={'Bibimbap Game'}
+                metaTitle={'Bibimbap Game'}
             />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <main className={styles.playGame__page}>
@@ -193,30 +183,18 @@ export default function gameBibimbap() {
                             </div>
                             <div className={styles.selectIngredients}>
                                 <div className={styles.ingredientsTypes}>
-                                    <div className={styles.ingredients}>
-                                        <SelectedIngredients
-                                                src = "/images/game/unselected.png"
-                                                children = {righttAnswer[0]} 
-                                        />
-                                        <SelectedIngredients
-                                                src = "/images/game/unselected.png"
-                                                children = {righttAnswer[1]}
-                                        />
-                                    </div>
-                                    <div className={styles.ingredients}>
-                                        <SelectedIngredients
-                                                src = "/images/game/unselected.png"
-                                                children = {righttAnswer[2]}
-                                        />
-                                        <SelectedIngredients
-                                                src = "/images/game/unselected.png"
-                                                children = {righttAnswer[3]}
-                                        />
-                                    </div>
+                                    {rightAnswer.map((info, index) => {
+                                        return (
+                                            <p id={rightAnswer[index].toLowerCase() + "_text"}>{rightAnswer[index]}</p>
+                                        )
+                                    })}
                                 </div>                  
                             </div>
-                            <div className={styles.next__button} onClick={() => Next("stageTwo")}
-                                // style={{visibility:"hidden"}}
+                            <div 
+                                id='nextButton'
+                                className={styles.next__button} 
+                                onClick={() => Next("stageTwo")}
+                                style={{visibility:"hidden"}}
                             >
                                 <Button                      
                                     href="#"
@@ -234,58 +212,39 @@ export default function gameBibimbap() {
                                 <p className={styles.subHealine}>Let's made:</p>
                                 <h1 className={styles.mainHeadline}>Bibimbap</h1>
                             </div>
-                            <div>
-                            {data && data.map((info, index) => {
-                                if(info.name === "rice")
-                                    return (
-                                        <div>
-                                            <Image
-                                                id="rice"
-                                                className={`${styles.stageTwoImages} ${styles.stageTwoImagesRice}`}
-                                                src={info.image}
-                                                alt={info.name}
-                                                width={150}
-                                                height={150}
-                                            />
-                                        </div>
-                                ); else if(info.name === "beef")
-                                    return (
-                                        <div>
-                                            <Image
-                                                id="beef"
-                                                className={`${styles.stageTwoImages} ${styles.stageTwoImagesBeef}`}
-                                                src={info.image}
-                                                alt={info.name}
-                                                width={150}
-                                                height={150}
-                                            />
-                                        </div>
-                                ); else if(info.name === "egg")
-                                    return (
-                                        <div>
-                                            <Image
-                                                id="egg"
-                                                className={`${styles.stageTwoImages} ${styles.stageTwoImagesEgg}`}
-                                                src={info.image}
-                                                alt={info.name}
-                                                width={150}
-                                                height={150}
-                                            />
-                                        </div>
-                                ); else if(info.name === "veggies")
-                                return (
-                                    <div>
-                                        <Image
-                                            id="vegetables"
-                                            className={`${styles.stageTwoImages} ${styles.stageTwoImagesVeggies}`}
-                                            src={info.image}
-                                            alt={info.name}
-                                            width={150}
-                                            height={150}
-                                        />
-                                    </div>
-                            );
-                            })}
+                            <div>                          
+                                <Image
+                                    id="rice_bowl" 
+                                    className={`${styles.stageTwoImages} ${styles.stageTwoImagesRice}`}
+                                    src="/images/game/ingredients/rice.png"
+                                    alt="rice"
+                                    width={150}
+                                    height={150}
+                                />
+                                <Image
+                                    id="ground_beef"
+                                    className={`${styles.stageTwoImages} ${styles.stageTwoImagesBeef}`}
+                                    src="/images/game/ingredients/ground_beef.png"
+                                    alt="beef"
+                                    width={150}
+                                    height={150}
+                                />
+                                <Image
+                                    id="sunny_egg"
+                                    className={`${styles.stageTwoImages} ${styles.stageTwoImagesEgg}`}
+                                    src="/images/game/ingredients/sunny-egg.png"
+                                    alt="egg"
+                                    width={150}
+                                    height={150}
+                                />
+                                <Image
+                                    id="vegetables"
+                                    className={`${styles.stageTwoImages} ${styles.stageTwoImagesVeggies}`}
+                                    src="/images/game/ingredients/veggies.png"
+                                    alt="vegetables"
+                                    width={150}
+                                    height={150}
+                                />
                             </div>
                             <div id="letsCook" className={styles.letsCookButton} onClick={() => mixIngredients()}>
                                 <Button                      
