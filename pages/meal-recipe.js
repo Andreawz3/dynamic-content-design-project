@@ -19,7 +19,7 @@ import useNavMenu from '@/hooks/navmenu';
 export default function MealRecipe() {
   const {showMenu, setShowMenu} = useNavMenu();
   const recipeData = inventory.recipe;
-  console.log(recipeData[1]);
+  // console.log(recipeData[1]);
 
   const { op, showIngredientList,showDirections } = useRecipeSwitch();
 
