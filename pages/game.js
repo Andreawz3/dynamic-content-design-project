@@ -49,7 +49,7 @@ export default function Game() {
                                 width='100'
                                 height='75'
                                 />
-                                <PlayGameButton/>
+                                {/* <PlayGameButton/> */}
                             </Link>
                                 
                             </div>
@@ -69,7 +69,7 @@ export default function Game() {
                                 width='100'
                                 height='75'
                             />
-                            <PlayGameButton/>
+                            {/* <PlayGameButton/> */}
                             </Link>
                             </div>
 
@@ -88,7 +88,7 @@ export default function Game() {
                                width='100'
                                height='75'
                                 />
-                            <PlayGameButton/>
+                            {/* <PlayGameButton/> */}
                             </Link>
                             </div>
 
@@ -107,7 +107,7 @@ export default function Game() {
                                width='100'
                                height='75'
                             />
-                            <PlayGameButton/>
+                            {/* <PlayGameButton/> */}
                             </Link>
                             </div>
                         </div>
