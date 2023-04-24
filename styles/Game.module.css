@@ -17,7 +17,66 @@
 }
 
 .games {
+    display: grid;
+    grid-template-columns: 155px 155px;
+    gap: 15px;
+}
+
+
+/** Tutorial Button **/
+.tutorial_button{
+    display: flex;
+    flex-direction: row;
+    gap: .25rem;
+    align-items: center;
+    border-radius: 40px;
+    background-color: var(--color-orange);
+    color: var(--color-pure-white);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 50px;
+}
+
+/** Bibimbap Card **/
+.game__card_bibimbap{
+    border-radius: 45px;
+    border: .15rem solid var(--color-red);
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Mandu Card **/
+.game__card_mandu{
+    border-radius: 45px;
+    border: .15rem solid var(--color-red);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Miso Pasta Card **/
+.game__card_miso_pasta{
+    border-radius: 45px;
+    border: .15rem solid var(--color-red);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Risotto Card **/
+.game__card_risotto{
+    border-radius: 45px;
+    border: .15rem solid var(--color-red);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
