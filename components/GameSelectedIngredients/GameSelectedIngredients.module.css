@@ -1,6 +1,0 @@
-.checkbox {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    font-size: var(--body-font-size-desktop);
-}
