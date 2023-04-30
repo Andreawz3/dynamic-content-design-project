@@ -73,7 +73,7 @@
 
 /* HeadLine */
 .navBar {
-    max-width: 900px;
+    max-width: 414px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -352,6 +352,11 @@
 .gameLayoutThirdStage {
     padding-top: 80px;
     padding-bottom: 130px;
+}
+
+.thirdStageImg {
+    animation-name: fadeIn;
+    animation-duration: 2s;
 }
 
 .thirdStageOptions {

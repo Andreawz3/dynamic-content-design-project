@@ -4,11 +4,17 @@ import Image from 'next/image';
 // Components
 import Header from '@/components/Header';
 import NavBar from '@/components/NavBar';
+import NavMenu from "@/components/NavMenu";
 import TopNav from '@/components/TopNav';
 import DoughnutChart from '@/components/DoughnutChart/DoughnutChart';
 import Button from '@/components/Button';
 
+// Hooks
+import useNavMenu from '@/hooks/navmenu';
+
 export default function Profile() {
+    const {showMenu, setShowMenu} = useNavMenu();
+
     return (
         <>
             <Header
@@ -80,6 +86,9 @@ export default function Profile() {
                 </div>
             </main>
             <NavBar style={{position:"inherit"}}/>
+            {showMenu && 
+                <NavMenu closeMenu={() => setShowMenu(false)}/>
+            }
         </>
     )
 }

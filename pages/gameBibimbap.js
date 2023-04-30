@@ -11,13 +11,13 @@ import NavBar from '@/components/NavBar';
 // Hooks
 import displayTutorial from '@/hooks/showTutorial';
 import getBibimbapIngredients from '@/hooks/getBibimbapIngredients';
+import checkClick from '@/hooks/isClicked';
+import answerPoint from '@/hooks/answerPoint';
 import countingLife from '@/hooks/countingLife';
-import rightEffect from '@/hooks/rightAnswer';
-import wrongEffect from '@/hooks/wrongAnswerEffect';
+import getAllEffects from '@/hooks/getAllEffects';
 
 export default function gameBibimbap() {
     const {showTutorial, setShowTutorial} = displayTutorial();
-    
     
     const Next = (stages) => {
         let steps = document.getElementsByClassName("game");
@@ -28,47 +28,64 @@ export default function gameBibimbap() {
     }
 
     // Stage 1
-    let numberOfRightAnswer = 0;
     const {data, setData, rightAnswer} = getBibimbapIngredients();
+    const {checkIngredientClick, ingredientDataName} = checkClick();
+    const {point, add} = answerPoint();
     const {lives, deductLives} = countingLife();
-    const {playAudioRight} = rightEffect();
-    const {playAudioWrong} = wrongEffect();
+    const {correctSound, incorrectSound, cook, pointsSound} = getAllEffects();
 
     const CheckIngredient = (name) => {
-        let isRightAnswer = false;
-        rightAnswer.forEach((answer) => {
-            if (answer.toLowerCase() == name.toLowerCase()) {
-                isRightAnswer = true;
-            }
-        })
-    
-        if (isRightAnswer) {
-            let ingredientName = name + "_text";
-            document.getElementById(name).style.border = "2px solid var(--color-avocado)";
-            document.getElementById(name).style.backgroundColor = "var(--color-avocado)";
-            document.getElementById(ingredientName).style.textDecoration = "line-through"
-            playAudioRight();
-            numberOfRightAnswer++; 
-            if(numberOfRightAnswer == 4) {
-                document.getElementById('nextButton').style.visibility = "visible";
-            }
-        } else {
-            document.getElementById(name).style.border = "2px solid var(--color-red)";
-            document.getElementById(name).style.backgroundColor = "var(--color-red)";
-            deductLives();
-            playAudioWrong();
-            if(lives === 1) {
-                document.getElementById("gameOver").style.display = "flex";
+        if(point <= 4) {
+            let isRightAnswer = false;
+            rightAnswer.forEach((answer) => {
+                if (answer.toLowerCase() == name.toLowerCase()) {
+                    isRightAnswer = true;
+                }
+            })
+            if (isRightAnswer) {
+                correctSound();
+                add();
+                let ingredientName = name + "_text";
+                document.getElementById(name).style.border = "2px solid var(--color-avocado)";
+                document.getElementById(name).style.backgroundColor = "var(--color-avocado)";
+                document.getElementById(ingredientName).style.textDecoration = "line-through";
+                
+                if(point == 4) {
+                    document.getElementById('nextButton').style.visibility = "visible";
+                }
+            } else {
+                deductLives();
+                incorrectSound();
+                document.getElementById(name).style.border = "2px solid var(--color-red)";
+                document.getElementById(name).style.backgroundColor = "var(--color-red)";
+                
+                if(lives === 1) {
+                    document.getElementById("gameOver").style.display = "flex";
+                }
             }
         }
     }
 
     // Stage 2
     const mixIngredients = () => {
+        cook();
         document.getElementById("rice_bowl").classList.add("GameBibimbap_stageTwoImagesRiceAnimated__J0iQA");   
         document.getElementById("ground_beef").classList.add("GameBibimbap_stageTwoImagesBeefAnimated__DWAN5"); 
         document.getElementById("vegetables").classList.add("GameBibimbap_stageTwoImagesVeggiesAnimated__LCPVE");
         document.getElementById("sunny_egg").classList.add("GameBibimbap_stageTwoImagesEggAnimated__huV1n"); 
+        setTimeout(() => {
+            document.getElementById("collectPoints").style.display = "flex";
+        }, 1300)
+    }
+
+    const collectPoints = () => {
+        pointsSound();
+        setTimeout(() => {
+            document.getElementById("stageThree").style.display = "block";
+            document.getElementById("stageTwo").style.display = "none";
+            document.getElementById("collectPoints").style.display = "none";
+            
+        },800);  
     }
 
     // Stage 3
@@ -101,7 +118,7 @@ export default function gameBibimbap() {
                                 height="200"
                             />
                             <div className={styles.goOptions}>
-                                <Link href="/game" className={styles.playerSelection}>
+                                <div className={styles.playerSelection} onClick={() => {window.location.reload()}}>
                                     <p>YES</p>
                                     <Image
                                         src = "/images/game/selected.png"
@@ -109,7 +126,7 @@ export default function gameBibimbap() {
                                         width="50"
                                         height="50"
                                     />
-                                </Link>
+                                </div>
                                 <Link href='/home' className={styles.playerSelection}>
                                     <p>NO</p>
                                     <Image
@@ -263,11 +280,6 @@ export default function gameBibimbap() {
                                 />
                             </div>
                         </div>
-                        <div style={{position:"absolute", bottom:"100px", cursor:"pointer"}}>
-                            <p onClick={() => Next("stageThree")}>
-                                Stage 3
-                            </p>
-                        </div>
                     </div>
                     {/* Stage 3 */}
                     <div  id="stageThree" class="game" style={{display:"none"}}>
@@ -277,13 +289,14 @@ export default function gameBibimbap() {
                                 <h1 className={styles.mainHeadline}>Bibimbap</h1>
                             </div>
                             <Image
+                                className={styles.thirdStageImg}
                                 src="/images/game/bibimbap.png"
                                 alt="bibimbap"
-                                width="320"
-                                height="270"
+                                width="350"
+                                height="320"
                             />
                             <div className={styles.thirdStageOptions}>
-                                <Link href="/game" className={styles.thirdStageOptionDisplay}> 
+                                <div className={styles.thirdStageOptionDisplay} onClick={() => {window.location.reload()}}> 
                                     <Image
                                         src="/images/game/chef-hat.png"
                                         alt="chef-hat"
@@ -291,20 +304,17 @@ export default function gameBibimbap() {
                                         height="80"
                                     />
                                     <p>Play again</p>
-                                </Link>
-                                <Link href="/meal-recipe" className={styles.thirdStageOptionDisplay}> 
+                                </div>
+                                <Link href="/game" className={styles.thirdStageOptionDisplay}> 
                                     <Image
                                         src="/images/game/cutlery.png"
                                         alt="cutlery"
                                         width="80"
                                         height="80"
                                     />
-                                    <p>Back to Recipe</p>
+                                    <p>Exit Game</p>
                                 </Link>
                             </div>
-                        </div>
-                        <div style={{position:"absolute", bottom:"140px", cursor:"pointer"}}>
-                            <p onClick={() => opneCollectPoints()}>Collect Points - modal box</p>
                         </div>
                     </div>
                 </div>  
@@ -321,9 +331,9 @@ export default function gameBibimbap() {
                                 width="250"
                                 height="250"
                             />
-                            <div className={styles.next__button} onClick={() => Next("stageTwo")}>
+                            <div className={styles.next__button} onClick={() => collectPoints()}>
                                 <Button                      
-                                    href="/profile"
+                                    href=""
                                     backgroundColour='var(--color-yellow)'
                                     colour='var(--color-black)'
                                     children="COLLECT POINTS"
