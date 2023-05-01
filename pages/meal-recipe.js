@@ -7,18 +7,24 @@ import NavBar from "@/components/NavBar";
 import NavMenu from "@/components/NavMenu";
 import Logo from "@/components/Logo";
 import TopNav from "@/components/TopNav";
+import RecipeSwitchButton from "@/components/RecipeSwitchButton";
+import NutritionDetails from "@/components/NutritionDetails";
+import NutritionButton from "@/components/NutritionButton";
 
 import { inventory } from "@/data/recipes";
 import { useState } from "react";
-import useRecipeSwitch from "@/hooks/recipeSwitch";
+
 
 //hooks
 import useNavMenu from '@/hooks/navmenu';
-import RecipeSwitchButton from "@/components/RecipeSwitchButton";
+import useRecipeSwitch from "@/hooks/recipeSwitch";
+import useNutritionDetails from "@/hooks/nutritionDetails";
+
 
 export default function MealRecipe() {
   const {showMenu, setShowMenu} = useNavMenu();
   const recipeData = inventory.recipe;
+  const {showNutrition, setShowNutrition} = useNutritionDetails();
   // console.log(recipeData[1]);
 
   const { op, showIngredientList,showDirections } = useRecipeSwitch();
@@ -31,7 +37,7 @@ export default function MealRecipe() {
       />
      
       <main className={styles.main__meal_recipe_content}>
-         <TopNav openMenu={() => setShowMenu(true)} />
+        <TopNav openMenu={() => setShowMenu(true)} />
         <div className={styles.scroll__container}>
           <div className={styles.top__section}>
             <div className={styles.back__button}>
@@ -47,8 +53,10 @@ export default function MealRecipe() {
                 <p className={styles.back__text}>Back</p>
               </Link>
             </div>
-
-            <div className={styles.nutrition__details_button}>
+            <div className={styles.nutrition__link}>
+            <NutritionButton openDetails={()=> setShowNutrition(true)}/>
+            </div>
+            {/* <div className={styles.nutrition__details_button}>
               <div className={styles.nutrition__details_button_text}>
                 <Link href="/">
                   <p>NUTRITION DETAILS</p>
@@ -62,7 +70,7 @@ export default function MealRecipe() {
                   height={20}
                 />
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className={styles.meal__details_container}>
             <div className={styles.meal__image_container}>
@@ -139,7 +147,10 @@ export default function MealRecipe() {
       </main>
       <NavBar />
       {showMenu && 
-                <NavMenu closeMenu={() => setShowMenu(false)}/>
+        <NavMenu closeMenu={() => setShowMenu(false)}/>
+      }
+      {showNutrition &&
+        <NutritionDetails closeDetails={()=> setShowNutrition(false)}/>
       }
     </>
   );
