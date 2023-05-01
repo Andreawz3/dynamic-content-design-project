@@ -84,11 +84,7 @@ export default function Game() {
                         />
                         <div className={styles.games}>
                             <div className={styles.game__card_bibimbap}>
-                                <div
-                                    className={styles.seeGameText}
-                                    id='play_game' 
-                                    href="/gameBibimbap" 
-                                >
+                                <div className={styles.seeGameText}>
                                     <p>Let's make a</p>
                                     <h3>Bibimbap</h3> 
                                     <Image
@@ -98,64 +94,59 @@ export default function Game() {
                                     width='85'
                                     height='65'
                                     />
-                                    <PlayGameButton/>
+                                    <PlayGameButton
+                                        href="/gameBibimbap" 
+                                    />
                                 </div>
                             </div>
-
                             <div className={styles.game__card_mandu}>
-                                <div
-                                    className={styles.seeGameText}
-                                    id='play_game' 
-                                    href="/gameMandu" 
-                                >  
-                                <p>Let's make a</p>
-                                <h3>Mandu</h3> 
-                                <Image
-                                    className={styles.mandu__thumbnail}
-                                    src='/images/game/mandu-vector-img.svg'
-                                    alt='mandu-img'
-                                    width='85'
-                                    height='65'
-                                />
-                                <PlayGameButton/>
+                                <div className={styles.seeGameText}>  
+                                    <p>Let's make a</p>
+                                    <h3>Mandu</h3> 
+                                    <Image
+                                        className={styles.mandu__thumbnail}
+                                        src='/images/game/mandu-vector-img.svg'
+                                        alt='mandu-img'
+                                        width='85'
+                                        height='65'
+                                    />
+                                    <PlayGameButton
+                                        href="/gameMandu" 
+                                    />
                                 </div>
                             </div>
 
                             <div className={styles.game__card_miso_pasta}>
-                                <div 
-                                    className={styles.seeGameText}
-                                    id='play_game' 
-                                    href="/gameMisoPasta" 
-                                >  
-                                <p>Let's make a</p>
-                                <h3>Miso Pasta</h3> 
-                                <Image
-                                    className={styles.miso__pasta_thumbnail}
-                                    src='/images/game/pasta-vector-img.svg'
-                                alt='miso-pasta-img'
-                                width='85'
-                                height='65'
+                                <div className={styles.seeGameText}>  
+                                    <p>Let's make a</p>
+                                    <h3>Miso Pasta</h3> 
+                                    <Image
+                                        className={styles.miso__pasta_thumbnail}
+                                        src='/images/game/pasta-vector-img.svg'
+                                    alt='miso-pasta-img'
+                                    width='85'
+                                    height='65'
+                                        />
+                                    <PlayGameButton
+                                        href="/gameMisoPasta"
                                     />
-                                <PlayGameButton/>
                                 </div>
                             </div>
 
                             <div className={styles.game__card_risotto}>
-                                <div 
-                                    className={styles.seeGameText}
-                                    id='play_game' 
-                                    href="/gameRisotto" 
-                                >  
-                                <p>Let's make a</p>
-                                <h3>Risotto</h3> 
-                                <Image
-                                className={styles.risotto__thumbnail}
-                                src='/images/game/risotto-vector-img.svg'
-                                alt='risotto-img'
-                                width='85'
-                                height='65'
-                                />
-                                <PlayGameButton/>
+                                <div className={styles.seeGameText}>  
+                                    <p>Let's make a</p>
+                                    <h3>Risotto</h3> 
+                                    <Image
+                                    className={styles.risotto__thumbnail}
+                                    src='/images/game/risotto-vector-img.svg'
+                                    alt='risotto-img'
+                                    width='85'
+                                    height='65'
+                                    />
+                                    <PlayGameButton
+                                        href="/gameRissoto"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -180,7 +171,7 @@ export default function Game() {
                     <Image
                     src={'/logos/deco-shapes.svg'}
                     alt={'deco-shapes'}
-                    width={445}
+                    width={413}
                     height={115}
                     />
                     </div>

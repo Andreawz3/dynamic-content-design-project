@@ -91,8 +91,8 @@ export default function gameMandu() {
     return (
         <>
         <Header
-            title={'Bibimbap Game'}
-            metaTitle={'Bibimbap Game'}
+            title={'Mandu Game'}
+            metaTitle={'Mandu Game'}
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         <main className={styles.playGame__page}>
@@ -278,7 +278,7 @@ export default function gameMandu() {
                     <div className={`${styles.gameLayout} ${styles.gameLayoutThirdStage}`}>
                         <div className={styles.headlines}>
                             <p className={styles.subHealine}>Well done! You made:</p>
-                            <h1 className={styles.mainHeadline}>Bibimbap</h1>
+                            <h1 className={styles.mainHeadline}>Mandu</h1>
                         </div>
                         <div className={styles.thirdStageImages}>
                             <Image
