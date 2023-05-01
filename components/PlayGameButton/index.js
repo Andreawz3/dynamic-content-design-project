@@ -9,7 +9,7 @@ export default function PlayGameButton({
         <>
             <Link  
                 className={styles.play__button_container}
-                href="#"
+                href="/gameBibimbap"
             > PLAY GAME
                 <Image
                     src={'/images/game/arrow_icon.svg'}
