@@ -37,7 +37,7 @@ export default function NavMenu({
                             <ProfileIcon/>
                             <span>PROFILE</span>
                         </Link>
-                        <Link href={'/about'}>
+                        <Link href={'/about-landing'}>
                             <AboutIcon/>
                             <span>ABOUT</span>
                         </Link>
