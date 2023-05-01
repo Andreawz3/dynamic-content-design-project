@@ -31,7 +31,8 @@ export async function getServerSideProps(context) {
 
 export default function SlugCategory({meals, capitalizedSlug}) {
 	const {showMenu, setShowMenu} = useNavMenu();
-    const mealCategories = meal_categories.map((data) => data.category)	
+    const mealCategories = meal_categories.map((data) => data.category);
+
     return (
         <>
             <Header
@@ -51,7 +52,7 @@ export default function SlugCategory({meals, capitalizedSlug}) {
                 </div>
                 <div className={styles.meal_card__container}>
                     {meals.map((data, index) => 
-                        <MealCard data={data} index={index}/>
+                        <MealCard data={data} index={index} key={index}/>
                     )}
                 </div>
             </main>
