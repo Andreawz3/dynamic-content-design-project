@@ -85,15 +85,7 @@ export default function gameBibimbap() {
             document.getElementById("stageTwo").style.display = "none";
             document.getElementById("collectPoints").style.display = "none";
             
-        },800);  
-    }
-
-    // Stage 3
-    
-
-    // Modal Box
-    const opneCollectPoints = () => {
-        document.getElementById("collectPoints").style.display = "flex";
+        },1000);  
     }
 
     return (
@@ -233,34 +225,34 @@ export default function gameBibimbap() {
                                 <Image
                                     id="rice_bowl" 
                                     className={`${styles.stageTwoImages} ${styles.stageTwoImagesRice}`}
-                                    src="/images/game/ingredients/rice.png"
+                                    src="/images/game/ingredients/bibimbap/rice.png"
                                     alt="rice"
-                                    width={150}
-                                    height={150}
+                                    width={120}
+                                    height={120}
                                 />
                                 <Image
                                     id="ground_beef"
                                     className={`${styles.stageTwoImages} ${styles.stageTwoImagesBeef}`}
-                                    src="/images/game/ingredients/ground_beef.png"
+                                    src="/images/game/ingredients/bibimbap/ground_beef.png"
                                     alt="beef"
-                                    width={150}
-                                    height={150}
+                                    width={120}
+                                    height={120}
                                 />
                                 <Image
                                     id="sunny_egg"
                                     className={`${styles.stageTwoImages} ${styles.stageTwoImagesEgg}`}
-                                    src="/images/game/ingredients/sunny-egg.png"
+                                    src="/images/game/ingredients/bibimbap/sunny-egg.png"
                                     alt="egg"
-                                    width={150}
-                                    height={150}
+                                    width={120}
+                                    height={120}
                                 />
                                 <Image
                                     id="vegetables"
                                     className={`${styles.stageTwoImages} ${styles.stageTwoImagesVeggies}`}
-                                    src="/images/game/ingredients/veggies.png"
+                                    src="/images/game/ingredients/bibimbap/veggies.png"
                                     alt="vegetables"
-                                    width={150}
-                                    height={150}
+                                    width={120}
+                                    height={120}
                                 />
                             </div>
                             <div id="letsCook" className={styles.letsCookButton} onClick={() => mixIngredients()}>
@@ -288,13 +280,30 @@ export default function gameBibimbap() {
                                 <p className={styles.subHealine}>Well done! You made:</p>
                                 <h1 className={styles.mainHeadline}>Bibimbap</h1>
                             </div>
-                            <Image
-                                className={styles.thirdStageImg}
-                                src="/images/game/bibimbap.png"
-                                alt="bibimbap"
-                                width="350"
-                                height="320"
-                            />
+                            <div className={styles.thirdStageImages}>
+                                <Image
+                                    className={styles.blingLeft}
+                                    src="/images/game/bling.png"
+                                    alt="bling"
+                                    width="50"
+                                    height="50"
+                                />
+                                <Image
+                                    className={styles.thirdStageImg}
+                                    src="/images/game/bibimbap.png"
+                                    alt="bibimbap"
+                                    width="350"
+                                    height="320"
+                                />
+                                <Image
+                                    className={styles.blingRight}
+                                    src="/images/game/bling.png"
+                                    alt="bling"
+                                    width="50"
+                                    height="50"
+                                />
+                            </div>
+                            
                             <div className={styles.thirdStageOptions}>
                                 <div className={styles.thirdStageOptionDisplay} onClick={() => {window.location.reload()}}> 
                                     <Image

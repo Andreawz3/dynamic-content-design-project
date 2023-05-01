@@ -23,7 +23,7 @@ export default function Profile() {
             />
             <main>
                 <TopNav openMenu={() => setShowMenu(true)}/>
-                <div className={styles.profileBackground}>
+                <div className={styles.profileContainer}>
                     <div className={styles.profileInfo}>
                         <Image
                             className={styles.profileImage}

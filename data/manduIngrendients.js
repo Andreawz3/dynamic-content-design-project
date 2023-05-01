@@ -1,26 +1,37 @@
 export const manduIngredientsList = [
     {
-        name: "",
-        image: "/images/game/ingredients/",
+        name: "pork",
+        image: "/images/game/ingredients/mandu/ground_meat.png",
     },
     {
-        name: "apple",
-        image: "/images/game/ingredients/apple.png",
+        name: "butter",
+        image: "/images/game/ingredients/rissoto/butter.png",
+    },
+    {
+        name: "sauce",
+        image: "/images/game/ingredients/mandu/soy-sauce.png",
+    },{
+        name: "veggies",
+        image: "/images/game/ingredients/mandu/veggies.png",
     },
     {
         name: "cheese",
-        image: "/images/game/ingredients/cheese.jpeg",
+        image: "/images/game/ingredients/cheese.png",
     },
     {
-        name: "drumstick",
-        image: "/images/game/ingredients/drumstick.jpeg",
+        name: "water",
+        image: "/images/game/ingredients/rissoto/water.png",
     },
     {
         name: "chocolate",
-        image: "/images/game/ingredients/chocolate.jpeg",
+        image: "/images/game/ingredients/chocolate.png",
     },
     {
-        name: "orange",
-        image: "/images/game/ingredients/orange.jpeg",
+        name: "egg",
+        image: "/images/game/ingredients/bibimbap/sunny-egg.png",
+    },
+    {
+        name: "wrappers",
+        image: "/images/game/ingredients/mandu/wrappers.png",
     }
 ]
