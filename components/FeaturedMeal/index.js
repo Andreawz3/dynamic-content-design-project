@@ -30,7 +30,7 @@ export default function FeaturedMeal() {
             </div>
             <div className={styles.featured_meal__dots}>
                 {featuredMeal.map((value, index) => 
-                    <div onClick={() => setCurrentIndex(index)} style={{backgroundColor: currentIndex === index ? "var(--color-avocado)" : "var(--color-light-green)"}} />
+                    <div key={index} onClick={() => setCurrentIndex(index)} style={{backgroundColor: currentIndex === index ? "var(--color-avocado)" : "var(--color-light-green)"}} />
                 )}
             </div>
         </>

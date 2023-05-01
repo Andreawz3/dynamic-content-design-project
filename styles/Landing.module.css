@@ -1,6 +1,5 @@
 .splash_screen {
     position: absolute;
-    max-width: 900px;
     background-color: var(--color-red);
     width: 100%;
     height: 100vh;
@@ -13,8 +12,9 @@
     padding: 50px 30px;
     height: 100vh;
     display: flex;
+    gap: 50px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     background-color: var(--color-light-green);
     color: var(--color-white);
 }
@@ -29,9 +29,9 @@
     height: auto;
 }
 .landing_page__content {
-   max-width: 330px;
-   margin-top: 50px;
-   margin-right: auto;
+    max-width: 330px;
+    margin-top: 50px;
+    margin-right: auto;
 }
 .landing_page h1 {
     font-family: var(--secondary-font);
@@ -41,38 +41,9 @@
 }
 .landing_page p {
     font-weight: 300;
+    font-size: 21px;
 }
 .link__home {
     margin-top: 50px;
     margin-left: auto;
-}
-
-@media (min-width: 700px) {
-	.landing_page {
-        justify-content: center;
-    }
-    .landing_page__container {
-        gap: 30px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .landing_page__content {
-        margin-right: 0;
-        margin-top: 0;
-    }
-}
-@media (min-width: 880px) {
-	.landing__img {
-        /* width: 400px;
-        height: 400px; */
-        margin: 0;
-    }
-}
-@media (max-width: 500px) {
-    .landing__img {
-        /* height: 250px; */
-    }
-    .landing_page__content {
-        margin-top: 25px;
-    }
 }
