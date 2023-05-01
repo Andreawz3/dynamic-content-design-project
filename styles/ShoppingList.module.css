@@ -37,59 +37,52 @@
     font-weight: 300;
 }
 
-.shopping_list__checkbox  {
-    width: 20px;
-    height: 20px;
-    /* background-color: transparent; */
-    border: none;
-    border: 1.5px solid var(--color-light-green);
+.shopping_list__checkbox {
+    position: relative;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+/* hide default checkbox */
+.shopping_list__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+/* custom checkbox */
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: 1.5px solid #A0BE52;
     border-radius: 5px;
 }
-
-.form_group {
-    display: block;
-    margin-bottom: 15px;
-  }
-  
-  .form_group input {
-    padding: 0;
-    height: initial;
-    width: initial;
-    margin-bottom: 0;
-    display: none;
-    cursor: pointer;
-  }
-  
-  .form_group label {
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .form_group label:before {
-    content:'';
-    background-color: transparent;
-    border: 2px solid #0079bf;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-    padding: 10px;
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    cursor: pointer;
-    margin-right: 5px;
-  }
-  
-  .form_group input:checked + label:after {
-    content: '';
-    display: block;
+.shopping_list__checkbox input:checked ~ .checkmark {
+    background-color: #A0BE52;
+}
+/* checkmark */
+.checkmark:after {
+    content: "";
     position: absolute;
-    top: 2px;
-    left: 9px;
-    width: 6px;
-    height: 14px;
-    border: solid #0079bf;
+    display: none;
+}
+.shopping_list__checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+.shopping_list__checkbox .checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 5px;
+    height: 12px;
+    border: solid white;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
-  }
+}
 
 /* filter section */
 .list_page__filter {
