@@ -1,6 +1,6 @@
 .splash_screen {
     position: absolute;
-    background-color: var(--color-red);
+    background-color: var(--color-light-green);
     width: 100%;
     height: 100vh;
     display: flex;
