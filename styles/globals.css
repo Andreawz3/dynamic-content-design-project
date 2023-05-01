@@ -37,7 +37,7 @@
 html,
 body {
 	scroll-behavior: smooth;
-	max-width: 900px;
+	max-width: 414px;
 	margin: 0 auto;
 	font-family: var(--primary-font);
 	font-size: var(--body-font-size-desktop);
