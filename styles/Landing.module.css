@@ -1,7 +1,7 @@
 .splash_screen {
     position: absolute;
     background-color: var(--color-light-green);
-    width: 100%;
+    width: var(--max-width-screen);
     height: 100vh;
     display: flex;
     align-items: center;

@@ -21,7 +21,7 @@
     --body-font-size-mobile: 14px;
 
 	/* sizes */
-	--min-width-tablet: 768px;
+	--max-width-screen: 414px;
 }
 
 @font-face {
@@ -37,7 +37,7 @@
 html,
 body {
 	scroll-behavior: smooth;
-	max-width: 414px;
+	max-width: var(--max-width-screen);
 	margin: 0 auto;
 	font-family: var(--primary-font);
 	font-size: var(--body-font-size-desktop);

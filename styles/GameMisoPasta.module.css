@@ -73,7 +73,7 @@
 
 /* HeadLine */
 .navBar {
-    max-width: 414px;
+    max-width: var(--max-width-screen);
     width: 100%;
     display: flex;
     justify-content: center;

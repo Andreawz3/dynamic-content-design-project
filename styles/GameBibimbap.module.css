@@ -130,7 +130,7 @@
 /* Main Game Lauout */
 .game_container {
     width: 100%;
-    max-width: 414px;
+    max-width: var(--max-width-screen);
 }
 
 .gameLayout {
