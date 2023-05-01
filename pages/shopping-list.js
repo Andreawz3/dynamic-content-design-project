@@ -4,13 +4,17 @@ import NavBar from '@/components/NavBar'
 import NavMenu from '@/components/NavMenu'
 import Search from '@/components/Search'
 import TopNav from '@/components/TopNav'
+// data
 import { shopping_list } from '@/data/shopping-list'
+// hooks
+import useCheckList from '@/hooks/checkList'
 import useNavMenu from '@/hooks/navmenu'
 
 import styles from '@/styles/ShoppingList.module.css'
 
 export default function ShoppingList() {
     const {showMenu, setShowMenu} = useNavMenu();
+    const {checked, handleCheckedItems} = useCheckList();
     const listCategories = ["Recently Added", "By Recipe"];
     const shoppingList = shopping_list;
 
@@ -34,20 +38,25 @@ export default function ShoppingList() {
 				<div className={styles.list_page__content}>
                     {shoppingList.map((data, index) => 
                         <div 
+                            key={index}
                             className={styles.shopping_list}
-                            style={{borderLeft: data.id == 1 ? "4px solid var(--color-teal)" : "4px solid var(--color-orange)"}}
+                            style={{
+                                borderLeft: checked.includes(index) ? "4px solid var(--color-lightgray)" : data.id == 1 ? "4px solid var(--color-teal)" : "4px solid var(--color-orange)",
+                                color: checked.includes(index) ? "var(--color-lightgray)" : "initial" 
+                            }}
                         >
                             <div className={styles.shopping_list__content}>
-                                <p>{data.quantity} {data.ingredient}</p>
+                                <p style={{textDecorationLine: checked.includes(index) ?  "line-through" : "none"}}>{data.quantity} {data.ingredient}</p>
                                 <p>saved from {data.meal} recipe</p>
                             </div>
-                            <div className={styles.form_group}>
-                                <input type="checkbox" id={data.ingredient}/>
-                                <label for={data.ingredient} />
-                            </div>
+                            <label className={styles.shopping_list__checkbox}>
+                                <input type="checkbox" onChange={() => handleCheckedItems(index)} />
+                                <span className={styles.checkmark}></span>
+                            </label>
                         </div>
                     )}
                 </div>
+                
             </main>
             <NavBar/>
             {showMenu && 
