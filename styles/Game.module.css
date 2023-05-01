@@ -231,12 +231,9 @@
 }
 
 .footer__shapes{
-    color: transparent;
-    position: fixed;
-    bottom: 13rem;
+    position: absolute;
+    bottom: -2.5rem;
     z-index: -2;
-    left: 0;
-    top: 44rem;
 }
 
 .nav__bar {

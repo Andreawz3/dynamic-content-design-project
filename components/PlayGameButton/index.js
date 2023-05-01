@@ -4,12 +4,13 @@ import Image from 'next/image';
 
 
 export default function PlayGameButton({
+    href,
 }) {
     return (
         <>
             <Link  
                 className={styles.play__button_container}
-                href="/gameBibimbap"
+                href={href}
             > PLAY GAME
                 <Image
                     src={'/images/game/arrow_icon.svg'}
