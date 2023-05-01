@@ -73,7 +73,7 @@
 
 /* HeadLine */
 .navBar {
-    max-width: 900px;
+    max-width: 414px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -130,6 +130,7 @@
 /* Main Game Lauout */
 .game_container {
     width: 100%;
+    max-width: 414px;
 }
 
 .gameLayout {
@@ -202,26 +203,22 @@
 .stageTwoImages {
     position: absolute;
     z-index: -1;
-    border: 2px solid var(--color-lightgray);
+    border: 2px solid var(--color-light-green);
     border-radius: 5px;
 }
 
 .stageTwoImagesRice {
-    top: 210px;
-    left: 32%;
+    top: 200px;
+    left: 18%;
 }
 
 .stageTwoImagesRiceAnimated {
-    top: 635px;
-    left: 50%;
     opacity: 0;
     animation-name: addRice;
     animation-duration: 1.5s;
 }
 @keyframes addRice {
     0%{
-        top: 210px;
-        left: 32%;
         opacity: 1;
     }
     50% {
@@ -239,21 +236,17 @@
 }
 
 .stageTwoImagesBeef {
-    top: 210px;
-    right: 32%;
+    top: 200px;
+    right: 18%;
 }
 
 .stageTwoImagesBeefAnimated {
-    top: 700px;
-    right: 50%;
     opacity: 0;
     animation-name: addBeef;
     animation-duration: 1.5s;
 }
 @keyframes addBeef {
     0%{
-        top: 210px;
-        right: 32%;
         opacity: 1;
     }
     50% {
@@ -271,21 +264,17 @@
 }
 
 .stageTwoImagesVeggies {
-    top: 385px;
-    left: 32%;
+    top: 340px;
+    left: 18%;
 }
 
 .stageTwoImagesVeggiesAnimated {
-    top: 700px;
-    left: 50%;
     opacity: 0;
     animation-name: addVeggies;
     animation-duration: 1.5s;
 }
 @keyframes addVeggies {
     0%{
-        top: 385px;
-        left: 32%;
         opacity: 1;
     }
     50% {
@@ -303,21 +292,17 @@
 }
 
 .stageTwoImagesEgg {
-    top: 385px;
-    right: 32%;
+    top: 340px;
+    right: 18%;
 }
 
 .stageTwoImagesEggAnimated {
-    top: 700px;
-    right: 50%;
     opacity: 0;
     animation-name: addEgg;
     animation-duration: 1.5s;
 }
 @keyframes addEgg {
     0%{
-        top: 385px;
-        right: 32%;
         opacity: 1;
     }
     50% {
@@ -354,6 +339,55 @@
     padding-bottom: 130px;
 }
 
+.thirdStageImages {
+    position: relative;
+}
+
+.blingLeft {
+    position: absolute;
+    left: 2em;
+    top: -3em;
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.blingRight {
+    position: absolute;
+    right: 2em;
+    top: -2.5em;
+    animation-name: blinkDelayed;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes blinkDelayed {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.thirdStageImg {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
 .thirdStageOptions {
     display: flex;
     gap: 50px;
@@ -364,31 +398,6 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
-/* Mobile Size */
-@media (max-width: 500px) {
-    .navBar {
-        max-width: 415px;
-    }
-    .stageTwoImages {
-        width: 120px;
-        height: 120px;
-    }
-    .stageTwoImagesRice {
-        top: 200px;
-        left: 18%;
-    } 
-    .stageTwoImagesVeggies {
-        top: 340px;
-        left: 18%;
-    }
-    .stageTwoImagesBeef {
-        top: 200px;
-        right: 18%;
-    } 
-    .stageTwoImagesEgg {
-        top: 340px;
-        right: 18%;
-    }
-}

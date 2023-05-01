@@ -5,7 +5,7 @@ export const bibimbapIngredientsList = [
     },
     {
         name: "veggies",
-        image: "/images/game/ingredients/veggies.png",
+        image: "/images/game/ingredients/bibimbap/veggies.png",
     },
     {
         name: "cheese",
@@ -13,7 +13,7 @@ export const bibimbapIngredientsList = [
     },
     {
         name: "egg",
-        image: "/images/game/ingredients/sunny-egg.png",
+        image: "/images/game/ingredients/bibimbap/sunny-egg.png",
     },
     {
         name: "drumstick",
@@ -21,7 +21,7 @@ export const bibimbapIngredientsList = [
     },
     {
         name: "beef",
-        image: "/images/game/ingredients/ground_beef.png",
+        image: "/images/game/ingredients/bibimbap/ground_beef.png",
     },
     {
         name: "chocolate",
@@ -29,7 +29,7 @@ export const bibimbapIngredientsList = [
     },
     {
         name: "rice",
-        image: "/images/game/ingredients/rice.png",
+        image: "/images/game/ingredients/bibimbap/rice.png",
     },
     {
         name: "orange",

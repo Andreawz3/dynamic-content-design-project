@@ -1,0 +1,403 @@
+.playGame__page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Game Over & Cleared */
+.gameOver, .cleared  {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    background-color: #034806bf;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
+.gameOverDisplay, .clearedDisplay {
+    width: 100%;
+    max-width: 350px;
+    height: 600px;
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+
+.gameOverDesc, .clearedDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gameOverDesc > h1 {
+    padding-top: 60px;
+    font-family: var(--secondary-font);
+    color: var(--color-red);
+}
+
+.gameOverDesc > p, .clearedDesc > p {
+    width: 180px;
+    text-align: center;
+}
+
+.gameOverDesc > h3 {
+    color: var(--color-avocado);
+}
+
+.clearedDesc > h1 {
+    padding-top: 60px;
+    font-family: var(--secondary-font);
+    color: var(--color-avocado);
+}
+
+.clearedDesc > h3 {
+    color: var(--color-red);
+}
+
+.goOptions {
+    display: flex;
+    gap: 60px;
+}
+
+.playerSelection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* HeadLine */
+.navBar {
+    max-width: 414px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 30px 0 30px;
+}
+
+.navBarOption {
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-black);
+}
+
+.seeTutorial {
+    display: flex;
+    align-items: center;
+}
+
+.gameOptiones {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: end;
+}
+
+.gameLife {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    color: var(--color-pure-white);
+}
+
+.headlines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.subHealine {
+    font-size: var(--body-font-size-desktop);
+    font-family: var(--primary-font);
+}
+
+.mainHeadline {
+    font-size: var(--main-headline-font-size-desktop);
+    font-family: var(--secondary-font);
+    letter-spacing: 1px;
+    color: var(--color-red);
+}
+
+/* Main Game Lauout */
+.game_container {
+    width: 100%;
+    max-width: 414px;
+}
+
+.gameLayout {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+/* Stage 1 */
+.selectIngredients {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ingredientsTypes {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-emerald);
+    font-size: 15px;
+}
+
+.containerPickIngredients {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ingredientsList {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.ingredientsSections {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ingredientImages {
+    border: 2px solid var(--color-lightgray);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.ingredientImages:hover {
+    transform: scale(1.1);
+}
+
+.next__button {
+    display: flex;
+    justify-content: center;
+}
+
+/* Stage 2 */
+.gameLayoutSecondStage {
+    padding-top: 80px;
+}
+.stageTwoImages {
+    position: absolute;
+    z-index: -1;
+    border: 2px solid var(--color-light-green);
+    border-radius: 5px;
+}
+
+.stageTwoImagesMisoPaste {
+    top: 200px;
+    left: 18%;
+}
+
+.stageTwoImagesMisoPasteAnimated {
+    opacity: 0;
+    animation-name: addMiso;
+    animation-duration: 1.5s;
+}
+@keyframes addMiso {
+    0%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.stageTwoImagesPasta {
+    top: 200px;
+    right: 18%;
+}
+
+.stageTwoImagesPastaAnimated {
+    opacity: 0;
+    animation-name: addPasta;
+    animation-duration: 1.5s;
+}
+@keyframes addPasta {
+    0%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        right: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.stageTwoImagesPeanutButter {
+    top: 340px;
+    left: 18%;
+}
+
+.stageTwoImagesPeanutButterAnimated {
+    opacity: 0;
+    animation-name: addButter;
+    animation-duration: 1.5s;
+}
+@keyframes addButter {
+    0%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.stageTwoImagesVeggies {
+    top: 340px;
+    right: 18%;
+}
+
+.stageTwoImagesVeggiesAnimated {
+    opacity: 0;
+    animation-name: addVeggies;
+    animation-duration: 1.5s;
+}
+@keyframes addVeggies {
+    0%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+        width: 50px;
+        height: 50px;
+    } 
+    100% {
+        top: 700px;
+        right: 50%;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+.letsCookButton {
+    padding-top: 340px;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Stage 3 */
+.gameLayoutThirdStage {
+    padding-top: 80px;
+    padding-bottom: 130px;
+}
+
+.thirdStageImages {
+    position: relative;
+}
+
+.blingLeft {
+    position: absolute;
+    left: 2em;
+    top: -3em;
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.blingRight {
+    position: absolute;
+    right: 2em;
+    top: -2.5em;
+    animation-name: blinkDelayed;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes blinkDelayed {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.thirdStageImg {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.thirdStageOptions {
+    display: flex;
+    gap: 50px;
+} 
+
+.thirdStageOptionDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
