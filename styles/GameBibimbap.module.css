@@ -130,6 +130,7 @@
 /* Main Game Lauout */
 .game_container {
     width: 100%;
+    max-width: 414px;
 }
 
 .gameLayout {
@@ -397,5 +398,6 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
 }
 
