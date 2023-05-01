@@ -1,0 +1,90 @@
+/** about main **/
+.about__main{
+    background: linear-gradient(0.37deg, #F2F2F2 6.08%, #A9EDF1 103.31%);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.globe__container{
+    margin-top: -7rem;
+}
+
+.clouds {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 7.2rem;
+    padding-top: 14rem;
+    z-index: 1;
+    animation: clouds 2s infinite;
+    animation-direction: alternate;
+}
+
+.sparkles {
+    position: relative;
+    top: -10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10.2rem;
+    z-index: 1;
+}
+
+.sparkles__top{
+    display: flex;
+    flex-direction: row;
+    gap: 12rem;
+    align-items: baseline;
+}
+ 
+.globe {
+    width: 70%;
+    position: relative;
+    top: -28rem;
+    left: 3.5rem;
+}
+
+.about__yori{
+    display: flex;
+    flex-direction: row;
+    margin: 0 30px;
+    margin-top: -25rem;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.yori__text_container{
+    width: 12rem;
+}
+
+.yori__text_container>p{
+    color: var(--color-emerald);
+    font-size: 16px;
+}
+
+.learn__more>a{
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    animation: learnMore 1s;
+    position: relative;
+    color: var(--color-emerald);
+    font-weight: 100;
+    font-size: 14px;
+}
+
+@keyframes learnMore {
+    from {opacity: 0%; top: 30px;}
+    to {opacity: 100%; top: 0px;}
+}
+  
+  
+@keyframes clouds {
+    from { transition-timing-function: ease-in-out; top: 20px;}
+    to { transition-timing-function: ease-in-out; top: 0px;}
+}
