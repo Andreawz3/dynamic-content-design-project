@@ -6,7 +6,7 @@ export default function MealCard({data, index}) {
     return (
         <>
             <div className={styles.meal_card} key={index} >
-                <Link href={data.dishName === 'Korean Bibimbap' ? '/meal-recipe' : '#'} >
+                <Link href={`/meal-recipe/${data.slug}`} >
                     <Image
                         src={data.image}
                         alt={data.dishName}
