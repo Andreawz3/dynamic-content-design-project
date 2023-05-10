@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { CloseIcon } from '@/public/icons/icons'
 
 //hooks
+import { NutritionChart } from '@/components/NutritionChart'
 
 
 export default function NutritionDetails({
@@ -17,14 +18,8 @@ export default function NutritionDetails({
                 <CloseIcon/>
             </button>
             <h1>Nutritional Value</h1>
-            <div className={styles.scroll__container}>
-                <Image 
-                src="/images/game/bibimbap-vector-img"
-                alt="bibimbap-vector"
-                width={200}
-                height={100}
-                />
-
+            <div className={styles.nutrition__container}>
+            <NutritionChart/>
             </div>
         </div>
         </>

@@ -42,11 +42,11 @@ export default function NutritionButton() {
 
     return (
         <>
-        <div onClick={()=>{
-            setShowNutrition(!showNutrition);
-        }}>
-            <div>
-                <button> 
+        <div >
+            <div >
+                <button onClick={()=>{
+                    setShowNutrition(!showNutrition);
+                }}> 
                     NUTRITION DETAILS
                     <Image
                     className={styles.apple__icon}

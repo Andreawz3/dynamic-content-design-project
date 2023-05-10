@@ -54,7 +54,7 @@ export default function MealRecipe() {
               </Link>
             </div>
             <div className={styles.nutrition__link}>
-            <NutritionButton openDetails={()=> setShowNutrition(true)}/>
+            {/* <NutritionButton openDetails={()=> setShowNutrition(true)}/> */}
             </div>
             {/* <div className={styles.nutrition__details_button}>
               <div className={styles.nutrition__details_button_text}>
@@ -71,6 +71,18 @@ export default function MealRecipe() {
                 />
               </Link>
             </div> */}
+            <button onClick={()=>{
+                    setShowNutrition(!showNutrition);
+                }}> 
+                    NUTRITION DETAILS
+                    <Image
+                    className={styles.apple__icon}
+                    src={"/icons/recipe/apple.svg"}
+                    alt={"apple-icon"}
+                    height={20}
+                    width={20}
+                    />
+                </button>
           </div>
           <div className={styles.meal__details_container}>
             <div className={styles.meal__image_container}>
