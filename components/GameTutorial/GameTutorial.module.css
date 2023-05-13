@@ -137,19 +137,16 @@
 .wrong_ingredient {
     border: 2px solid var(--color-red);
     border-radius: 5px;
+    background-color: var(--color-red);
 }
 
 .correct_ingredient {
     border: 2px solid var(--color-avocado);
     border-radius: 5px;
+    background-color: var(--color-avocado);
 }
 
-.arrowIconTop {
-    padding-right: 30px;
-    font-size: 40px;
-}
-
-.arrowIconBottom {
+.arrowIcon{
     font-size: 40px;
 }
 
