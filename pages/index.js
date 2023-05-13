@@ -45,6 +45,12 @@ export default function Landing() {
 						width={150}
 						height={170}
 					/>
+					<div>
+						<div className={styles.loading_dots}></div>
+						<div className={styles.loading_dots}></div>
+						<div className={styles.loading_dots}></div>
+						<div className={styles.loading_dots}></div>
+					</div>
 				</div>
 			}
 			{showLanding && 
