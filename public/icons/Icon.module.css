@@ -1,5 +1,6 @@
 .icon {
     color: var(--color-black);
+    transition: .2s ease-in-out;
 }
 .icon:hover {
     color: var(--color-light-green);
