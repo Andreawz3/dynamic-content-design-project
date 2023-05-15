@@ -1,6 +1,7 @@
 export const inventory = {
     recipe: [
         {
+            slug: "homemade-mandu",
             dishName: "Homemade Mandu",
             featuredDesc: "Discover the irresistible taste of authentic Korean cuisine.",
             prepTime:"30 min",
@@ -8,7 +9,7 @@ export const inventory = {
             cuisineCategory:"Snack",
             category: "Korean",
             difficulty:"Medium",
-            ingredientList: [ 
+            ingredients: [ 
                 {
                     ingredientName: "lean ground pork",
                     measurementType:"1 cup"                      
@@ -31,32 +32,32 @@ export const inventory = {
                 },
                 {
                     ingredientName: "minced garlic",
-                    measurementType:"1 tablespoon"                       
+                    measurementType:"1 tbsp"                       
                 },
                 {
                     ingredientName: "soy sauce",
-                    measurementType:"1 tablespoon"                       
+                    measurementType:"1 tbsp"                       
                 },
                 {
                     ingredientName: "sesame oil",
-                    measurementType:"1 tablespoon"                       
+                    measurementType:"1 tbsp"                       
                 },
                 {
                     ingredientName: "black pepper",
-                    measurementType:"1/4 teaspoon"                       
+                    measurementType:"1/4 tsp"                       
                 },
                 {
                     ingredientName: "salt",
-                    measurementType:"1/4 teaspoon"                       
+                    measurementType:"1/4 tsp"                       
                 },
                 {
                     ingredientName: "round mandu wrappers (or you can make your own)",
-                    measurementType:"1 package"                       
+                    measurementType:"1 pack"                       
                 },
             ],
             directions:[
                 "In a large mixing bowl, combine the ground pork, cabbage, scallions, onion, carrot, garlic, soy sauce, sesame oil, black pepper, and salt. Mix well until all the ingredients are evenly distributed.",
-                "Take one mandu wrapper and place about 1 tablespoon of filling in the center. Fold the wrapper in half to create a half-moon shape, and then press the edges together to seal. You can also crimp the edges with a fork for a decorative touch.",
+                "Take one mandu wrapper and place about 1 tbsp of filling in the center. Fold the wrapper in half to create a half-moon shape, and then press the edges together to seal. You can also crimp the edges with a fork for a decorative touch.",
                 "Repeat the process with the remaining wrappers and filling until all the filling is used up.",
                 "Heat a large non-stick pan over medium-high heat. Once the pan is hot, add the mandu in a single layer and cook for about 2-3 minutes, or until the bottoms are golden brown.",
                 "Pour in 1/4 cup of water into the pan, then quickly cover with a lid to create steam. Cook for an additional 2-3 minutes or until the mandu are cooked through.",
@@ -74,6 +75,7 @@ export const inventory = {
             image: "/images/recipe-images/homemade-mandu.jpeg"
         },
         {
+            slug: "korean-bibimbap",
             dishName: "Korean Bibimbap",
             featuredDesc: "Savor the vibrant flavors and textures of Korea's iconic dish.",
             prepTime:"45 min",
@@ -81,7 +83,7 @@ export const inventory = {
             cuisineCategory:"Dinner",
             category: "Korean",
             difficulty:"Hard",
-            ingredientList:[
+            ingredients:[
                 {
                     ingredientName: "cooked brown rice",
                     measurementType:"1 cup"                       
@@ -129,7 +131,7 @@ export const inventory = {
             ],   
             directions:[
                 "Prepare all the ingredients as directed and set them aside.", 
-                "In a small bowl, mix together 1 tablespoon of sesame oil and 1 tablespoon of soy sauce. Drizzle the mixture over the cooked brown rice and mix well.",
+                "In a small bowl, mix together 1 tbsp of sesame oil and 1 tbsp of soy sauce. Drizzle the mixture over the cooked brown rice and mix well.",
                 "Arrange the prepared vegetables and beef on top of the rice in a circular pattern. Top with the fried or poached egg in the center.",
                 "Drizzle a little bit of gochujang on top of the egg and sprinkle with toasted sesame seeds.","Serve immediately and mix everything together before eating."],
             review:"5",
@@ -145,6 +147,7 @@ export const inventory = {
             image: "/images/recipe-images/bibimbap.jpg"
         },
         {
+            slug: "tofu-veggie-scramble",
             dishName: "Tofu Veggie Scramble",
             featuredDesc: "A delicious and nutritious twist on traditional scrambled eggs.",
             prepTime:"5 mins",
@@ -152,14 +155,14 @@ export const inventory = {
             cuisineCategory:"Breakfast",
             category:"Italian",
             difficulty:"Easy",
-            ingredientList:[
+            ingredients:[
                 {
                     ingredientName: "extra-firm tofu, pressed and crumbled with a fork",
                     measurementType: "1 14 oz",                       
                 }, 
                 {
                     ingredientName: "oil",
-                    measurementType: "1 tablespoon"                       
+                    measurementType: "1 tbsp"                       
                 }, 
                 {
                     ingredientName: "medium yellow or red onion, diced",
@@ -178,34 +181,29 @@ export const inventory = {
                     measurementType: "¼ cup"                     
                 }, 
                 {
-                    sauce: [
-                        {
-                            ingredientName: "cumin",
-                            measurementType: "½ teaspoon"                      
-                        }, 
-                        {
-                            ingredientName: "coriander",
-                            measurementType: "¼ teaspoon"                      
-                        }, 
-                        {
-                            ingredientName: "garlic powder",
-                            measurementType: "½ teaspoon"                      
-                        }, 
-                        {
-                            ingredientName: "turmeric",
-                            measurementType: "¼ teaspoon"                      
-                        }, 
-                        {
-                            ingredientName: "black pepper",
-                            measurementType: "¼ teaspoon"                      
-                        }, 
-                        {
-                            ingredientName: "water",
-                            measurementType: "2 teaspoon"                      
-                        }, 
-                    ]
-                }
- 
+                    ingredientName: "cumin",
+                    measurementType: "½ tsp"                      
+                }, 
+                {
+                    ingredientName: "coriander",
+                    measurementType: "¼ tsp"                      
+                }, 
+                {
+                    ingredientName: "garlic powder",
+                    measurementType: "½ tsp"                      
+                }, 
+                {
+                    ingredientName: "turmeric",
+                    measurementType: "¼ tsp"                      
+                }, 
+                {
+                    ingredientName: "black pepper",
+                    measurementType: "¼ tsp"                      
+                }, 
+                {
+                    ingredientName: "water",
+                    measurementType: "2 tsp"                      
+                },
             ],
             directions:[
                 "Heat oil in a large pan over medium-high heat. Add onion and cook for 2-3 minutes, until it begins to soften. Turn down the heat to medium and cook the other vegetables until softened - depends on the vegetables used.",
@@ -227,6 +225,7 @@ export const inventory = {
             image: "/images/recipe-images/toffu-veggie-scramble.jpeg"
         },
         {
+            slug: "miso-pasta",
             dishName: "Miso Pasta",
             prepTime: "5 mins",
             cookTime: "20mins",
@@ -236,27 +235,27 @@ export const inventory = {
             ingredients: [
                 {
                     ingredientName: "white miso paste",
-                    measurementType:"1-2 tablespoons"                      
+                    measurementType:"1-2 tbsp"                      
                 }, 
                 {
                     ingredientName: "peanut butter",
-                    measurementType:"1 tablespoon"                      
+                    measurementType:"1 tbsp"                      
                 },
                 {
                     ingredientName: "low-sodium soy sauce",
-                    measurementType:"1 teaspoon"                       
+                    measurementType:"1 tsp"                       
                 },
                 {
                     ingredientName: "sesame oil",
-                    measurementType:"1 tablespoon"                       
+                    measurementType:"1 tbsp"                       
                 },
                 {
                     ingredientName: "rice vinegar",
-                    measurementType:"2 teaspoons"                       
+                    measurementType:"2 tsps"                       
                 },
                 {
                     ingredientName: "minced garlic",
-                    measurementType:"1 teaspoon"                       
+                    measurementType:"1 tsp"                       
                 },
                 {
                     ingredientName: "reserved pasta water",
@@ -264,7 +263,7 @@ export const inventory = {
                 },
                 {
                     ingredientName: "olive oil",
-                    measurementType:"2 teaspoons"                      
+                    measurementType:"2 tsps"                      
                 },
                 {
                     ingredientName: "frozen vegetable",
@@ -275,10 +274,10 @@ export const inventory = {
                     measurementType:"8 ounces"                       
                 },
             ],
-            direction:[
+            directions:[
                 "Bring a large pot of water to a boil. Add the pasta and cook according to package instructions. Be sure to reserve ¾ cup of pasta water.",
                 "While the pasta is cooking, make the sauce - Add all the ingredients in a bowl and combine. It will be thick and lumpy.",
-                "In a large skillet, heat 1 teaspoons of oil over medium-high heat. Add the frozen vegetables and edamame. Stir for about 2-3 minutes then add a splash of water. Cover and cook for 5-8 minutes, or until softened.",
+                "In a large skillet, heat 1 tsps of oil over medium-high heat. Add the frozen vegetables and edamame. Stir for about 2-3 minutes then add a splash of water. Cover and cook for 5-8 minutes, or until softened.",
                 "Add ¼ cup of the slightly cooled starchy pasta water to the miso sauce. Stir until the miso is well dissolved.",
                 "Once the vegetables are done, add the cooked pasta to the skillet. Pour the sauce over and toss to coat."
             ],
@@ -295,6 +294,7 @@ export const inventory = {
             image: "/images/recipe-images/miso-pasta.jpeg"
         },
         {
+            slug: "carrot-lentil-soup",
             dishName: "Carrot and Lentil Soup",
             prepTime: "10 mins",
             cookTime: "20 mins",
@@ -304,7 +304,7 @@ export const inventory = {
             ingredients: [
                 {
                     ingredientName: "olive oil",
-                    measurementType:"1 tablespoon"                       
+                    measurementType:"1 tbsp"                       
                 }, 
                 {
                     ingredientName: "yellow onion, diced",
@@ -324,15 +324,15 @@ export const inventory = {
                 },
                 {
                     ingredientName: "cumin",
-                    measurementType:"1 teaspoon"                       
+                    measurementType:"1 tsp"                       
                 },
                 {
                     ingredientName: "turmeric",
-                    measurementType:"1 teaspoon"                       
+                    measurementType:"1 tsp"                       
                 },
                 {
                     ingredientName: "smoked paprika",
-                    measurementType:"½ teaspoon"                       
+                    measurementType:"½ tsp"                       
                 },
                 {
                     ingredientName: "red lentils",
@@ -347,7 +347,7 @@ export const inventory = {
                     measurementType:"15 ounce"                       
                 },
             ],
-            direction:[
+            directions:[
                 "Heat oil in a large Dutch oven or pot over medium heat. Saute the onion until soft, about 2 minutes. Add garlic, carrots, celery, and all the spices. Cook for an additional 6-8 minutes.",
                 "Add the lentils, broth, and coconut milk. Stir to combine and bring to a boil. Reduce heat to low, cover, and simmer for 20 minutes, or until lentils and vegetables are tender. Be sure to stir occasionally.",
                 "Enjoy the soup as is or add to a high speed blender and blend until smooth. You can also blend half and keep the rest chunky.",
@@ -366,6 +366,7 @@ export const inventory = {
             image: "/images/recipe-images/carrot-lentil-soup-.jpeg"
         },
         {
+            slug: "pumpkin-risotto",
             dishName: "Pumpkin Risotto",
             prepTime: "10 mins",
             cookTime: "30 mins",
@@ -383,7 +384,7 @@ export const inventory = {
                 },
                 {
                     ingredientName: "butter",
-                    measurementType:"3 tablespoons"                       
+                    measurementType:"3 tbsp"                       
                 },
                 {
                     ingredientName: "finely diced yellow onion",
@@ -407,18 +408,18 @@ export const inventory = {
                 },
                 {
                     ingredientName: "nutmeg",
-                    measurementType:"¼ teaspoon"                       
+                    measurementType:"¼ tsp"                       
                 },
                 {
                     ingredientName: "smoked paprika",
-                    measurementType:"¼ teaspoon"                      
+                    measurementType:"¼ tsp"                      
                 },
                 {
                     ingredientName: "can pumpkin puree",
                     measurementType:"15 ounce"                     
                 },
             ],
-            direction:[
+            directions:[
                 "Combine stock and water in a medium saucepan and bring to a low simmer.",
                 "In a large Dutch oven, heat the butter over medium heat. Once it starts to bubble, add the onion and celery, and cook until softened, about 6-8 minutes. Add the garlic and cook for 30 seconds to 1 minute.",
                 "Add the rice and toast, stirring constantly for 2-3 minutes.  Add the hot liquid to the pot (reserve 1 cup) and bring to a boil. Reduce heat, simmer, cover, and cook for 15-18 minutes. Stir once or twice during the cooking process. It’s important to maintain a low simmer.",
@@ -438,6 +439,7 @@ export const inventory = {
             image: "/images/recipe-images/pumpkin-risotto.jpeg"
         },
         {
+            slug: "banana-cue",
             dishName: "Banana Cue",
             prepTime: "5 mins",
             cookTime: "15 mins",
@@ -451,7 +453,7 @@ export const inventory = {
                 }, 
                 {
                     ingredientName: "oil",
-                    measurementType:"2 tablespoons"                       
+                    measurementType:"2 tbsp"                       
                 }, 
                 {
                     ingredientName: "small onion, peeled and sliced thinly",
@@ -473,7 +475,7 @@ export const inventory = {
                     ingredientName: "salt and pepper to taste"                     
                 }, 
             ],
-            direction:[
+            directions:[
                 "Heat the oil over medium low heat. Add the brown sugar and wait until the sugar starts to caramelize.",
                 "Place the bananas in the oil and fry them with the brown sugar so until they are covered with the sticky brown sugar and a deep golden color.",
                 "Drain on paper towels and serve on individual skewers.",
@@ -491,9 +493,10 @@ export const inventory = {
             image: "/images/recipe-images/banana-cue.jpeg"
         },
         {
+            slug: "sinigang",
             dishName: "Sinigang",
             prepTime: "15 mins",
-            cookTime: "1 hr 10 mins",
+            cookTime: "1 hr",
             cuisineCategory: "Lunch",
             category: "Filipino",
             difficulty: "medium",
@@ -508,7 +511,7 @@ export const inventory = {
                 }, 
                 {
                     ingredientName: "fish sauce",
-                    measurementType:"3 tablespoons"                       
+                    measurementType:"3 tbsp"                       
                 }, 
                 {
                     ingredientName: "string beans, cut in 2 inch length",
@@ -524,7 +527,7 @@ export const inventory = {
                 }, 
                 {
                     ingredientName: "cooking oil",
-                    measurementType:"1 tablespoons"                       
+                    measurementType:"1 tbsp"                       
                 }, 
                 {
                     ingredientName: "water",
@@ -539,7 +542,7 @@ export const inventory = {
                     measurementType:"2 pieces"                       
                 }, 
             ],
-            direction:[
+            directions:[
                 "Heat the pot and put-in the cooking oil",
                 "Sauté the onion until its layers separate from each other",
                 "Add the pork belly and cook until outer part turns light brown",

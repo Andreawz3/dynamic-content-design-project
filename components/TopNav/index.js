@@ -12,7 +12,7 @@ export default function TopNav({
 }) {
     return (
         <>
-            <div className={styles.top__nav} style={{boxShadow: boxShadow && "0px 4px 10px rgba(0, 0, 0, 0.2)", backgroundColor: backgroundColor}}>
+            <div className={styles.top__nav} style={{boxShadow: boxShadow ? "0px 4px 10px rgba(0, 0, 0, 0.2)" : "none", backgroundColor: backgroundColor}}>
                 <button onClick={openMenu}>
                     <MenuIcon/>
                 </button>

@@ -1,4 +1,4 @@
-import styles from '@/styles/GameMisoPasta.module.css';
+import styles from '@/styles/GameRisotto.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -10,13 +10,13 @@ import NavBar from '@/components/NavBar';
 
 // Hooks
 import displayTutorial from '@/hooks/showTutorial';
-import getMisoPasteIngredients from '@/hooks/getMisoPastaIngredients';
+import getRisottoIngredients from '@/hooks/getRisottoIngredients';
 import answerPoint from '@/hooks/answerPoint';
 import countingLife from '@/hooks/countingLife';
 import getAllEffects from '@/hooks/getAllEffects';
 
-
-export default function gameMisoPasta() {
+export default function gameRissoto() {
+    
     const {showTutorial, setShowTutorial} = displayTutorial();
     
     const Next = (stages) => {
@@ -28,13 +28,13 @@ export default function gameMisoPasta() {
     }
 
     // Stage 1
-    const {data, setData, rightAnswer} = getMisoPasteIngredients();
+    const {data, setData, rightAnswer} = getRisottoIngredients();
     const {point, add} = answerPoint();
     const {lives, deductLives} = countingLife();
     const {correctSound, incorrectSound, cook, pointsSound} = getAllEffects();
 
     const CheckIngredient = (name) => {
-        if(point <= 4) {
+        if(point <= 5) {
             let isRightAnswer = false;
             rightAnswer.forEach((answer) => {
                 if (answer.toLowerCase() == name.toLowerCase()) {
@@ -49,7 +49,7 @@ export default function gameMisoPasta() {
                 document.getElementById(name).style.backgroundColor = "var(--color-avocado)";
                 document.getElementById(ingredientName).style.textDecoration = "line-through";
                 
-                if(point == 4) {
+                if(point == 5) {
                     document.getElementById('nextButton').style.visibility = "visible";
                 }
             } else {
@@ -68,10 +68,12 @@ export default function gameMisoPasta() {
     // Stage 2
     const mixIngredients = () => {
         cook();
-        document.getElementById("miso").classList.add("GameMisoPasta_stageTwoImagesMisoPasteAnimated__TLSkD");   
-        document.getElementById("spaghetti").classList.add("GameMisoPasta_stageTwoImagesPastaAnimated__PuBzP"); 
-        document.getElementById("peanut").classList.add("GameMisoPasta_stageTwoImagesPeanutButterAnimated__yR8Xy"); 
-        document.getElementById("vegetables").classList.add("GameMisoPasta_stageTwoImagesPeanutButterAnimated__yR8Xy"); 
+        document.getElementById("cup_of_water").classList.add("GameRisotto_stageTwoImageWaterAnimated__aeiit");   
+        document.getElementById("bar_butter").classList.add("GameRisotto_stageTwoImagebutterAnimated__aw1dF"); 
+        document.getElementById("bowl_soup").classList.add("GameRisotto_stageTwoImageSoupAnimated__5yBPp"); 
+        document.getElementById("bunch_veggies").classList.add("GameRisotto_stageTwoImageVeggiesAnimated__egi28"); 
+        document.getElementById("shredded_cheese").classList.add("GameRisotto_stageTwoImageCheeseAnimated__gbdgz"); 
+        console.log(document.getElementById("water"));
         setTimeout(() => {
             document.getElementById("collectPoints").style.display = "flex";
         }, 1300)
@@ -86,7 +88,7 @@ export default function gameMisoPasta() {
             
         },1000);  
     }
-
+    
     return (
         <>
             <Header
@@ -202,7 +204,7 @@ export default function gameMisoPasta() {
                                 id='nextButton'
                                 className={styles.next__button} 
                                 onClick={() => Next("stageTwo")}
-                                style={{visibility:"hidden"}} //hidden  visible
+                                style={{visibility:"visible"}} //hidden visible
                             >
                                 <Button                      
                                     href="#"
@@ -222,36 +224,44 @@ export default function gameMisoPasta() {
                             </div>
                             <div>                          
                                 <Image
-                                    id="miso" 
-                                    className={`${styles.stageTwoImages} ${styles.stageTwoImagesMisoPaste}`}
-                                    src="/images/game/ingredients/misoPasta/miso-paste.png"
-                                    alt="miso"
-                                    width={120}
-                                    height={120}
+                                    id="cup_of_water" 
+                                    className={`${styles.stageTwoImages} ${styles.stageTwoImageWater}`}
+                                    src="/images/game/ingredients/risotto/water.png"
+                                    alt="water"
+                                    width={80}
+                                    height={80}
                                 />
                                 <Image
-                                    id="spaghetti"
-                                    className={`${styles.stageTwoImages} ${styles.stageTwoImagesPasta}`}
-                                    src="/images/game/ingredients/misoPasta/pasta.png"
-                                    alt="spaghetti"
-                                    width={120}
-                                    height={120}
+                                    id="bar_butter"
+                                    className={`${styles.stageTwoImages} ${styles.stageTwoImagebutter}`}
+                                    src="/images/game/ingredients/risotto/butter.png"
+                                    alt="butter"
+                                    width={80}
+                                    height={80}
                                 />
                                 <Image
-                                    id="peanut"
-                                    className={`${styles.stageTwoImages} ${styles.stageTwoImagesPeanutButter}`}
-                                    src="/images/game/ingredients/misoPasta/peanut-butter.png"
-                                    alt="peanut"
-                                    width={120}
-                                    height={120}
+                                    id="bowl_soup"
+                                    className={`${styles.stageTwoImages} ${styles.stageTwoImageSoup}`}
+                                    src="/images/game/ingredients/risotto/soup.png"
+                                    alt="soup"
+                                    width={80}
+                                    height={80}
                                 />
                                 <Image
-                                    id="vegetables"
-                                    className={`${styles.stageTwoImages} ${styles.stageTwoImagesVeggies}`}
-                                    src="/images/game/ingredients/misoPasta/veggies.png"
-                                    alt="vegetables"
-                                    width={120}
-                                    height={120}
+                                    id="bunch_veggies"
+                                    className={`${styles.stageTwoImages} ${styles.stageTwoImageVeggies}`}
+                                    src="/images/game/ingredients/risotto/veggies.png"
+                                    alt="veggies"
+                                    width={80}
+                                    height={80}
+                                />
+                                <Image
+                                    id="shredded_cheese"
+                                    className={`${styles.stageTwoImages} ${styles.stageTwoImageCheese}`}
+                                    src="/images/game/ingredients/risotto/cheese.png"
+                                    alt="cheese"
+                                    width={80}
+                                    height={80}
                                 />
                             </div>
                             <div className={styles.letsCookButton} onClick={() => mixIngredients()}>

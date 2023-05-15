@@ -5,8 +5,6 @@ import { useState } from 'react';
 import { CloseIcon } from '@/public/icons/icons'
 import NutritionChart from '@/components/NutritionChart'
 
-import showNutritionDetails from "@/hooks/nutritionDetails";
-
 export default function NutritionDetails({
     closeMenu
 }) {

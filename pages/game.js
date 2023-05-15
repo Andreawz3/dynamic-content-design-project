@@ -145,7 +145,7 @@ export default function Game() {
                                     height='65'
                                     />
                                     <PlayGameButton
-                                        href="/gameRissoto"
+                                        href="/gameRisotto"
                                     />
                                 </div>
                             </div>

@@ -104,7 +104,7 @@ export default function gameMandu() {
                         <p>Oh no! You did not pick the right ingredients</p>
                         <h3>Play Again?</h3>
                         <Image
-                            src = "/images/game/sad-strawberry.png"
+                            src = "/images/game/mascot-sad.svg"
                             alt = "sad-strawberry"
                             width="200"
                             height="200"
@@ -119,7 +119,7 @@ export default function gameMandu() {
                                     height="50"
                                 />
                             </div>
-                            <Link href='/home' className={styles.playerSelection}>
+                            <Link href='/game' className={styles.playerSelection}>
                                 <p>NO</p>
                                 <Image
                                     src = "/images/game/wrong.png"

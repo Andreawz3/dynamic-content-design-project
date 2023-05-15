@@ -15,6 +15,7 @@ export default function FilterMenu({filterMenu, currentCategory, currentPage}) {
                 fontWeight={currentCategory == 'all' ? 600 : 400}
                 padding='15px 20px'
                 boxShadow
+                categoryButton
             />
             {filterMenu.map((data, index) => 
                 <Button
@@ -30,6 +31,7 @@ export default function FilterMenu({filterMenu, currentCategory, currentPage}) {
                     fontWeight={data == currentCategory ? 600 : 400}
                     padding='15px 40px'
                     boxShadow
+                    categoryButton
                 />
             )}
         </>
