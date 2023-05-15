@@ -10,8 +10,11 @@
     align-items: center;
     justify-content: center;
     color: var(--color-white);
+    transition: .2s ease-in-out;
 }
-
+.meal_categories__card:hover {
+    opacity: 0.7;
+}
 .meal_categories__card img {
     width: 60px;
     height: auto;

@@ -3,8 +3,6 @@ import { useRouter } from 'next/router';
 import styles from './NavBar.module.css'
 
 import { 
-    FaveOutlineIcon,
-    FaveSolidIcon,
     GameOutlineIcon,
     GameSolidIcon,
     HomeOutlineIcon,

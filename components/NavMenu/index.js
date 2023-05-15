@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './NavMenu.module.css'
 
 // assets
-import { AboutIcon, CloseIcon, GameOutlineIcon, GameSolidIcon, HomeSolidIcon, ListSolidIcon, ProfileIcon } from '@/public/icons/icons';
+import { AboutIcon, CloseIcon, HomeSolidIcon, ListSolidIcon, ProfileIcon } from '@/public/icons/icons';
 
 export default function NavMenu({
     closeMenu

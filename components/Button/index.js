@@ -7,6 +7,7 @@ export default function Button({
     fontSize = "16px",
     fontWeight = "400",
     padding = "20px 50px",
+    categoryButton,
     border, colour, backgroundColour, children, imgBefore, imgAfter, imgAlt, imgWidth, imgHeight, boxShadow
 }) {
     return (
@@ -21,7 +22,7 @@ export default function Button({
                     />
                 }
                 <button 
-                    className={styles.button}
+                    className={categoryButton ? styles.category_button : styles.button}
                     style={{
                         backgroundColor: backgroundColour,
                         color: colour,
