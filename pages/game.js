@@ -164,7 +164,7 @@ export default function Game() {
                                     height={20}
                                 />
                                 SEE TUTORIAL
-                                </Link>      
+                             </Link>      
                         </div>                    
                     </div>   
                     <div className={styles.footer__shapes}>

@@ -3,23 +3,25 @@ import styles from './NutritionChart.module.css'
 
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import { inventory } from "@/data/recipes";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export default function DoughnutChart() {
-    const recipeData = inventory.recipe;
+export default function NutritionChart() {
+    const recipeData = inventory.recipe[1];
     const [chartData, setChartData] = useState({
         datasets: []
     })
     const [chartOptions, setChartOptions] = useState({})
 
+    // console.log("carb", recipeData.carb);
     useEffect(() => {
         setChartData({
-            labels: ['Calories', 'Carbs', 'Protein', 'Fat', 'Fiber', 'Calcium', 'Iron'],
+            labels: ['Carbs', 'Protein', 'Fat', 'Fiber', 'Calcium', 'Iron'],
             datasets: [
                 {
                     label: '',
-                    data: [recipeData.calories, recipeData.carb, recipeData.protein, recipeData.fat, recipeData.fiber, recipeData.calcium, recipeData.iron],
+                    data: [recipeData.carbGram, recipeData.proteinGram, recipeData.fatGram, recipeData.fiberGram, recipeData.calciumGram, recipeData.ironGram],
                     backgroundColor: [
                       'rgb(229,100,92)',
                       'rgb(90,140,50)',
@@ -51,7 +53,7 @@ export default function DoughnutChart() {
             <div className={styles.container}>
                 <Doughnut data={chartData} options={chartOptions} />
             </div>
-            <span className={styles.label}>{recipeData.dishName}</span>
+            <span className={styles.label}>{recipeData.dishName} <p className={styles.p__text}>(measured in grams)</p></span>
         </>
     )
 }

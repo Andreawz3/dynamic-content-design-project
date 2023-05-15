@@ -1,11 +1,18 @@
 .container {
     margin-top: 50px;
-    width: 500px;
-    height: 400px;
+    height: 330px;
 }
+
 .label {
-    font-size: small;
+    display: block;
     text-align: center;
-    margin-top: 15px;
-    color: var(--color-black);
-}
+    font-size: 18px;
+    font-weight: 700;
+    font-family: var(--primary-font);
+    margin-top: 1rem;
+  }
+  
+  .p__text{
+    font-size: 14px;
+    color: var(--color-lightgray);
+  }

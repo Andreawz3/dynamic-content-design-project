@@ -9,7 +9,8 @@ import Logo from "@/components/Logo";
 import TopNav from "@/components/TopNav";
 import RecipeSwitchButton from "@/components/RecipeSwitchButton";
 import NutritionDetails from "@/components/NutritionDetails";
-import NutritionButton from "@/components/NutritionButton";
+// import NutritionButton from "@/components/NutritionButton";
+// import NutritionChart from "@/components/NutritionChart";
 
 import { inventory } from "@/data/recipes";
 import { useState } from "react";
@@ -18,13 +19,13 @@ import { useState } from "react";
 //hooks
 import useNavMenu from '@/hooks/navmenu';
 import useRecipeSwitch from "@/hooks/recipeSwitch";
-import useNutritionDetails from "@/hooks/nutritionDetails";
+import showNutritionDetails from "@/hooks/nutritionDetails";
 
 
 export default function MealRecipe() {
   const {showMenu, setShowMenu} = useNavMenu();
   const recipeData = inventory.recipe;
-  const {showNutrition, setShowNutrition} = useNutritionDetails();
+  const {showNutrition, setShowNutrition} = showNutritionDetails();
   // console.log(recipeData[1]);
 
   const { op, showIngredientList,showDirections } = useRecipeSwitch();
@@ -54,35 +55,22 @@ export default function MealRecipe() {
               </Link>
             </div>
             <div className={styles.nutrition__link}>
-            {/* <NutritionButton openDetails={()=> setShowNutrition(true)}/> */}
+              <Link 
+                href="#" 
+                className={styles.nutrition__button_container}
+                onClick={() => setShowNutrition(true)}
+              > 
+                      NUTRITION DETAILS
+                      <Image
+                        className={styles.apple__icon}
+                        src={"/icons/recipe/apple.svg"}
+                        alt={"apple-icon"}
+                        height={20}
+                        width={20}
+                      />
+              </Link> 
             </div>
-            {/* <div className={styles.nutrition__details_button}>
-              <div className={styles.nutrition__details_button_text}>
-                <Link href="/">
-                  <p>NUTRITION DETAILS</p>
-                </Link>
-              </div>
-              <Link href="/">
-                <Image
-                  src={"/icons/recipe/apple.svg"}
-                  alt={"apple-icon"}
-                  width={20}
-                  height={20}
-                />
-              </Link>
-            </div> */}
-            <button onClick={()=>{
-                    setShowNutrition(!showNutrition);
-                }}> 
-                    NUTRITION DETAILS
-                    <Image
-                    className={styles.apple__icon}
-                    src={"/icons/recipe/apple.svg"}
-                    alt={"apple-icon"}
-                    height={20}
-                    width={20}
-                    />
-                </button>
+              
           </div>
           <div className={styles.meal__details_container}>
             <div className={styles.meal__image_container}>
@@ -156,13 +144,13 @@ export default function MealRecipe() {
             <RecipeSwitchButton/>
           </div>
         </div>
+      {showNutrition &&
+        <NutritionDetails closeMenu={() => setShowNutrition(false)}/>
+      }
       </main>
       <NavBar />
       {showMenu && 
         <NavMenu closeMenu={() => setShowMenu(false)}/>
-      }
-      {showNutrition &&
-        <NutritionDetails closeDetails={()=> setShowNutrition(false)}/>
       }
     </>
   );
