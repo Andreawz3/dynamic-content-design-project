@@ -95,7 +95,6 @@ export default function gameRissoto() {
         document.getElementById("bowl_soup").classList.add("GameRisotto_stageTwoImageSoupAnimated__5yBPp"); 
         document.getElementById("bunch_veggies").classList.add("GameRisotto_stageTwoImageVeggiesAnimated__egi28"); 
         document.getElementById("shredded_cheese").classList.add("GameRisotto_stageTwoImageCheeseAnimated__gbdgz"); 
-        console.log(document.getElementById("water"));
         setTimeout(() => {
             document.getElementById("collectPoints").style.display = "flex";
         }, 1300)
@@ -179,11 +178,11 @@ export default function gameRissoto() {
                 {/* Play Game */}
                 <div className={styles.game_container}>
                     {/* Stage 1 */}
-                    <div id="stageOne" class="game" style={{display:"block"}}>
+                    <div id="stageOne" className="game" style={{display:"block"}}>
                         <div className={styles.gameLayout}>
                             <div className={styles.navBar}>
                                 <div className={styles.navBarOption}>
-                                    <div className={styles.backLink} onClick={() => exitGame()}><i class="fa fa-angle-left"></i> Back</div>
+                                    <div className={styles.backLink} onClick={() => exitGame()}><i className="fa fa-angle-left"></i> Back</div>
                                     <div className={styles.gameOptiones}>
                                         <div className={styles.seeTutorial}>
                                             <Image
@@ -219,7 +218,7 @@ export default function gameRissoto() {
                                 <div className={styles.ingredientsList}>
                                     {data && data.map((info, index) => {
                                         return (
-                                            <div className={styles.ingredientsSections}>
+                                            <div className={styles.ingredientsSections} key={index}>
                                                 <Image
                                                     id={info.name}
                                                     className={styles.ingredientImages}
@@ -238,7 +237,7 @@ export default function gameRissoto() {
                                 <div className={styles.ingredientsTypes}>
                                     {rightAnswer.map((info, index) => {
                                         return (
-                                            <p id={rightAnswer[index].toLowerCase() + "_text"}>{rightAnswer[index]}</p>
+                                            <p key={index} id={rightAnswer[index].toLowerCase() + "_text"}>{rightAnswer[index]}</p>
                                         )
                                     })}
                                 </div>                  
@@ -259,7 +258,7 @@ export default function gameRissoto() {
                         </div>
                     </div>
                     {/* stage 2 */}
-                    <div id="stageTwo" class="game" style={{display:"none"}}>
+                    <div id="stageTwo" className="game" style={{display:"none"}}>
                         <div className={`${styles.gameLayout} ${styles.gameLayoutSecondStage}`}>
                             <div className={styles.headlines}>
                                 <p className={styles.subHealine}>Let's made:</p>
@@ -326,7 +325,7 @@ export default function gameRissoto() {
                         </div>
                     </div>
                     {/* Stage 3 */}
-                    <div  id="stageThree" class="game" style={{display:"none"}}>
+                    <div  id="stageThree" className="game" style={{display:"none"}}>
                         <div className={`${styles.gameLayout} ${styles.gameLayoutThirdStage}`}>
                             <div className={styles.headlines}>
                                 <p className={styles.subHealine}>Well done! You made:</p>

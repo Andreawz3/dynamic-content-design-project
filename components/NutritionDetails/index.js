@@ -1,32 +1,29 @@
 import styles from './NutritionDetails.module.css'
-import Image from 'next/image'
+import { useState } from 'react';
 
 //assets
 import { CloseIcon } from '@/public/icons/icons'
-
-//hooks
-
+import NutritionChart from '@/components/NutritionChart'
 
 export default function NutritionDetails({
-    closeDetails
+    closeMenu, props
 }) {
     return (
         <>
-        <div className={styles.overlay__container}>
-            <button className={styles.overlay__close_button} onClick={closeDetails}>
-                <CloseIcon/>
-            </button>
-            <h1>Nutritional Value</h1>
-            <div className={styles.scroll__container}>
-                <Image 
-                src="/images/game/bibimbap-vector-img"
-                alt="bibimbap-vector"
-                width={200}
-                height={100}
-                />
-
+            <div className={styles.overlay__background}>
+                <div className={styles.overlay__container}>
+                    <button 
+                        className={styles.overlay__close_button} 
+                        onClick={closeMenu}
+                    >
+                        <CloseIcon stroke='var(--color-black)'/>
+                    </button>
+                    <h1>Nutritional Value</h1>
+                    <div className={styles.nutrition__container}>
+                        <NutritionChart props={props}/>
+                    </div>
+                </div>
             </div>
-        </div>
         </>
-    )
+        )
 }

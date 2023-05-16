@@ -1,0 +1,36 @@
+.overlay__background{
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(1px);
+    max-width: var(--max-width-screen);
+    width: 100vw;
+    height: 101vh;
+}
+.overlay__container {
+    width: 90%;
+    height: max-content;
+    background-color: var(--color-pure-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: auto;
+    padding: 25px 30px 50px;
+}
+.overlay__close_button {
+    scale: 1.2;
+    margin-left: auto;
+}
+.overlay__container>h1{
+    font-family: var(--secondary-font);
+    color: var(--color-avocado);
+    margin-top: 2.5rem;
+    font-size: 2.5rem;
+}
+.nutrition__container {
+    width: 100%;
+}

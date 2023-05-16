@@ -32,7 +32,7 @@ export default function GameTutorial(){
                 <div id="modal-box" className={styles.modalBox}>
                     <div className={styles.gameToturialDisplay}> 
                         {/* Let's Play */}
-                        <div id="letsPlay" class="step" style={{display:"block"}}>        
+                        <div id="letsPlay" className="step" style={{display:"block"}}>        
                             <div className={styles.tutorialDisplay}>
                                 <div className={styles.gameToturial}>
                                     <p>At Yori, we get to play with our food!</p>
@@ -55,12 +55,12 @@ export default function GameTutorial(){
                                 </div>
                                 <div className={styles.skipTutorials__link} onClick={() => setShowTutorial(false)}>
                                     Skip tutorial 
-                                    <i class="fa fa-angle-double-right"></i>
+                                    <i className="fa fa-angle-double-right"></i>
                                 </div>
                             </div>  
                         </div>
                         {/* Find the Math Ingredient */}
-                        <div id="findMatch" class="step" style={{display:"none"}}>
+                        <div id="findMatch" className="step" style={{display:"none"}}>
                             <div className={styles.tutorialDisplay} >
                                 <div className={styles.find_match_display}>
                                     <h1 className={styles.headline}>Find the Match!</h1>
@@ -77,7 +77,7 @@ export default function GameTutorial(){
                                                 
                                             </div>
                                             <div className={styles.arrowIcon}>
-                                                <i class="fa fa-long-arrow-right"></i>
+                                                <i className="fa fa-long-arrow-right"></i>
                                             </div>
                                             <div className={styles.rightPick}>
                                                 <Image
@@ -100,7 +100,7 @@ export default function GameTutorial(){
                                                 />
                                             </div>
                                             <div className={styles.arrowIcon}>
-                                                <i class="fa fa-long-arrow-right"></i>
+                                                <i className="fa fa-long-arrow-right"></i>
                                             </div>
                                             <div className={styles.rightPick}>
                                                 <Image
@@ -127,12 +127,12 @@ export default function GameTutorial(){
                                 </div>
                                 <div className={styles.skipTutorials__link} onClick={() => setShowTutorial(false)}>
                                     Skip tutorial 
-                                    <i class="fa fa-angle-double-right"></i>
+                                    <i className="fa fa-angle-double-right"></i>
                                 </div> 
                             </div>
                         </div>
                         {/* Three Life */}
-                        <div id="threeLife" class="step" style={{display:"none"}}>
+                        <div id="threeLife" className="step" style={{display:"none"}}>
                             <div className={styles.tutorialDisplay}>
                                 <div className={styles.life}>
                                     <h1 className={styles.headline}>You have Three Attempts</h1>
@@ -157,12 +157,12 @@ export default function GameTutorial(){
                                 </div>
                                 <div className={styles.skipTutorials__link} onClick={() => setShowTutorial(false)}>
                                     Skip tutorial 
-                                    <i class="fa fa-angle-double-right"></i>
+                                    <i className="fa fa-angle-double-right"></i>
                                 </div>
                             </div> 
                         </div>
                         {/* Time to Mix */}
-                        <div id="timeToMix" class="step" style={{display:"none"}}>
+                        <div id="timeToMix" className="step" style={{display:"none"}}>
                             <div className={styles.tutorialDisplay}>
                                 <div className={styles.timeToMix}>
                                     <h1 className={styles.headline}>Time to Mix!</h1>
