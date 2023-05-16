@@ -73,7 +73,6 @@ export default function gameRissoto() {
         document.getElementById("bowl_soup").classList.add("GameRisotto_stageTwoImageSoupAnimated__5yBPp"); 
         document.getElementById("bunch_veggies").classList.add("GameRisotto_stageTwoImageVeggiesAnimated__egi28"); 
         document.getElementById("shredded_cheese").classList.add("GameRisotto_stageTwoImageCheeseAnimated__gbdgz"); 
-        console.log(document.getElementById("water"));
         setTimeout(() => {
             document.getElementById("collectPoints").style.display = "flex";
         }, 1300)
