@@ -7,9 +7,11 @@ import Header from '@/components/Header';
 import Button from '@/components/Button';
 import NavBar from '@/components/NavBar';
 import GameTutorial from '@/components/GameTutorial';
+import GameMusic from '@/components/GameMusic/GameMusic';
 
 // Hook
 import displayTutorial from '@/hooks/showTutorial';
+import playGameMusic from '@/hooks/playGameMusic';
 import getBibimbapIngredients from '@/hooks/getBibimbapIngredients';
 import useCheckList from '@/hooks/checkList';
 import answerPoint from '@/hooks/answerPoint';
@@ -18,6 +20,7 @@ import getAllEffects from '@/hooks/getAllEffects';
 
 export default function gameBibimbap() {    
     const {showTutorial, setShowTutorial} = displayTutorial();
+    const {playMusic, setPlayMusic} = playGameMusic();
     const {clickSound, correctSound, incorrectSound, cook, pointsSound} = getAllEffects();
 
     const Next = (stages) => {

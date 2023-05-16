@@ -19,6 +19,19 @@ function getAllEffects() {
     }
 }
 
+function gameMusic() {
+    const soundUrl = '/sounds/jeopardy.mp3';
+    const [play] = useSound(
+        soundUrl, 
+        { volume: 0.1,}
+    );
+
+    function playAudio() {
+        play();
+    };
+    return playAudio;
+}
+
 function gameStart() {
     const soundUrl = '/sounds/game-start.mp3';
     const [play] = useSound(
@@ -37,7 +50,7 @@ function clickEffect() {
     const [play] = useSound(soundUrl, {
         volume: 0.5,
     });
-    
+
     function playAudio() {
         play();
     };
