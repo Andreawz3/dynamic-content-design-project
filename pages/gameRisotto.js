@@ -261,7 +261,7 @@ export default function gameRissoto() {
                     <div id="stageTwo" className="game" style={{display:"none"}}>
                         <div className={`${styles.gameLayout} ${styles.gameLayoutSecondStage}`}>
                             <div className={styles.headlines}>
-                                <p className={styles.subHealine}>Let's made:</p>
+                                <p className={styles.subHealine}>Let's make:</p>
                                 <h1 className={styles.mainHeadline}>Miso Pasta</h1>
                             </div>
                             <div>                          
