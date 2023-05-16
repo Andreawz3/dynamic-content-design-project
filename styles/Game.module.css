@@ -1,90 +1,37 @@
-.top__nav{
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-
 .game__page {
+    height: 100vh;
+    padding-bottom: 85px;
+    overflow: scroll;
     position: relative;
-    display: flex;
-    justify-content: center;
 }
-
-.game_display {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.game__page > * {
+    padding: 0 30px;
 }
-
-.game_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    /* height: 75vh; */
-}
-
-.seeGameText>p {
-    font-family: var(--secondary-font);
-    color: var(--color-light-green);
-    font-size: 12px;
-}
-.seeGameText h3 {
-    font-family: var(--secondary-font);
-    color: var(--color-red);
-}
-
-.seeGameText{
+.game__page_content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .15rem;
+    margin-top: 25px;
+    gap: 20px;
+    position: relative;
 }
 
-
-.games {
-    display: grid;
-    grid-template-columns: 155px 155px;
-    gap: 22px;
-}
-
-/** Game Header  **/
+/* Games Header */
 .game__header_container {
-    background: linear-gradient(180deg, rgba(229, 100, 92, 0.56) 0%, rgba(236, 198, 79, 0.29) 100%);
-    border-radius: 15px;
-    width: 335px;
-    height: 164px;
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
 }
-
+.game__header_img:first-child {
+    width: 100%;
+    height: auto;
+}
 .sparkles_icon{
     position: absolute;
-    margin-top: 0.85rem;
-    left: 3.1rem;
+    margin-top: -1rem;
     animation: sparkle 3s infinite;
-}
-
-.header__text_container{
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
-   padding-top: 2.75rem;
-
-}
-
-.chef__hat_icon{
-    position: relative;
-    top: .9rem;
-    left: 4rem;
-}
-.kitchen___quest{
-    font-family: var(--secondary-font);
-    color: var(--color-avocado);
-    font-size: 34px;
 }
 .header__p{
     font-family: var(--primary-font);
@@ -92,62 +39,40 @@
     color: var(--color-black);
     font-size: 14px;
 }
-
 @keyframes sparkle {
     0% {top: 5px;}
     50% {top: 0px;}
     100% {top: 5px;}
 }
-
-/** Games Container **/
-.get__ready_header{
-        display: flex;
-        margin-left: -3rem;
-        margin-top: 2rem;
-        font-family: var(--primary-font);
-        font-size: 16px;
-        font-weight: 400;
-        gap: .15rem;
-        text-decoration:underline;
-        text-underline-offset: 3px;
+.game__title {
+    width: 100%;
+    text-align: left;
+    text-decoration: underline;
+    position: relative;
+}
+.game__title h2 {
+    font-size: 20px;
 }
 .cook__text{
- 
     color: var(--color-avocado);
 }
-
 .yellow__sparkles{
     position: absolute;
-    bottom: 26rem;
-    right: 4.25rem;
+    top: -4px;
+    right: 6.7rem;
 }
 
-
-/** Bibimbap Card **/
-.game__card_bibimbap {
-    border-radius: 20px;
-    border: 0.15rem solid var(--color-red);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-pure-white);
+/* Game Cards */
+.game__collection {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
 }
-    .game__card_bibimbap::before{
-        content: "";
-        position: absolute;
-        background: linear-gradient(105.2deg, #E5A755 11.62%, #E5645C 97.71%);
-        border-radius: 20px;
-        z-index: -1;
-        margin-left: 0.85rem;
-        margin-top: 1.2rem;
-        width: 9.85rem;
-        height: 9.85rem;
-    }
-
-
-/** Mandu Card **/
-.game__card_mandu {
+.game__card_bibimbap,
+.game__card_mandu,
+.game__card_miso_pasta,
+.game__card_risotto {
     border-radius: 20px;
     border: 0.15rem solid var(--color-red);
     padding: .7rem 0;
@@ -156,67 +81,47 @@
     align-items: center;
     justify-content: center;
     background: var(--color-pure-white);
+    min-height: 9.85rem;
 }
 
-.game__card_mandu::before{
+.game__card_bibimbap::before,
+.game__card_mandu::before,
+.game__card_miso_pasta::before, 
+.game__card_risotto::before {
     content: "";
     position: absolute;
     background: linear-gradient(105.2deg, #E5A755 11.62%, #E5645C 97.71%);
     border-radius: 20px;
     z-index: -1;
-    margin-left: 0.85rem;
+    margin-left: 1.5rem;
     margin-top: 1.2rem;
     width: 9.85rem;
     height: 9.85rem;
 }
 
-/** Miso Pasta Card **/
-.game__card_miso_pasta {
-    border-radius: 20px;
-    border: 0.15rem solid var(--color-red);
+.seeGameText > p {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    color: var(--color-light-green);
+    font-size: 14px;
+    display: none;
+}
+.seeGameText h3 {
+    font-family: var(--secondary-font);
+    color: var(--color-red);
+}
+.seeGameText{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: var(--color-pure-white);
-}
-.game__card_miso_pasta::before{
-    content: "";
-    position: absolute;
-    background: linear-gradient(105.2deg, #E5A755 11.62%, #E5645C 97.71%);
-    border-radius: 20px;
-    z-index: -1;
-    margin-left: 0.85rem;
-    margin-top: 1.2rem;
-    width: 9.85rem;
-    height: 9.85rem;
+    gap: .15rem;
 }
 
-/** Risotto Card **/
-.game__card_risotto {
-    border-radius: 20px;
-    border: 0.15rem solid var(--color-red);
-    padding: 0.7rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-pure-white);
+/* Tutorial Button */
+.tutorial__button_container {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
-
-.game__card_risotto::before{
-    content: "";
-    position: absolute;
-    background: linear-gradient(105.2deg, #E5A755 11.62%, #E5645C 97.71%);
-    border-radius: 20px;
-    z-index: -1;
-    margin-left: 0.85rem;
-    margin-top: 1.2rem;
-    width: 9.85rem;
-    height: 9.85rem;
-}
-
-/** Tutorial Button **/
 .tutorial_button {
     display: flex;
     flex-direction: row;
@@ -232,8 +137,10 @@
 
 .footer__shapes{
     position: absolute;
-    bottom: -2.5rem;
-    z-index: -2;
+    bottom: -5px;
+    z-index: -3;
+    padding: 0;
+    /* margin-bottom: 85px; */
 }
 
 .nav__bar {
