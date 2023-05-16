@@ -260,7 +260,7 @@ export default function gameMandu() {
                 <div id="stageTwo" className="game" style={{display:"none"}}>
                     <div className={`${styles.gameLayout} ${styles.gameLayoutSecondStage}`}>
                         <div className={styles.headlines}>
-                            <p className={styles.subHealine}>Let's made:</p>
+                            <p className={styles.subHealine}>Let's make:</p>
                             <h1 className={styles.mainHeadline}>Mandu</h1>
                         </div>
                         <div>                          
