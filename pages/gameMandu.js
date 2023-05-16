@@ -217,7 +217,7 @@ export default function gameMandu() {
                             <div className={styles.ingredientsList}>
                                 {data && data.map((info, index) => {
                                     return (
-                                        <div className={styles.ingredientsSections}>
+                                        <div className={styles.ingredientsSections} key={index}>
                                             <Image
                                                 id={info.name}
                                                 className={styles.ingredientImages}
@@ -236,7 +236,7 @@ export default function gameMandu() {
                             <div className={styles.ingredientsTypes}>
                                 {rightAnswer.map((info, index) => {
                                     return (
-                                        <p id={rightAnswer[index].toLowerCase() + "_text"}>{rightAnswer[index]}</p>
+                                        <p key={index} id={rightAnswer[index].toLowerCase() + "_text"}>{rightAnswer[index]}</p>
                                     )
                                 })}
                             </div>                  
