@@ -3,9 +3,29 @@ import Image from "next/image";
 import styles from "./RecipeSwitchButton.module.css";
 // hooks
 import useRecipeSwitch from "@/hooks/recipeSwitch";
+import getAllEffects from '@/hooks/getAllEffects';
 
 export default function RecipeSwitchButton({props}) {
     const { switchTab, showIngredientList,showDirections } = useRecipeSwitch();
+    const {gameStartSound} = getAllEffects();
+
+	const savedIngredientList = () => {
+		let selected = document.getElementById("checkBox").checked;
+
+		if(selected) {
+			document.getElementById("listSaved").style.display = "flex";
+			gameStartSound();
+			setTimeout(() => {
+				document.getElementById("listSaved").style.display = "none";
+				location.reload()
+			}, 1500)
+		}
+	}
+
+	// const checkIfSelected = () => {
+	// 	selected = document.getElementById("checkBox").checked;
+	// 	console.log(selected);
+	// }
 
     return(
         <>
@@ -25,14 +45,25 @@ export default function RecipeSwitchButton({props}) {
 					>Directions</button>
 				</div>
 			</div>
+			<div id="listSaved" className={styles.savedIngredientContainer} style={{display:"none"}}>
+				<div className={styles.ingredientsListSaved}>
+					<Image
+						src={"/images/game/mascot.png"}
+						alt={""}
+						width={100}
+						height={100}
+					/>
+					<h1>Ingredient(s) Saved</h1>
+				</div>
+			</div>
 			{showIngredientList && (
 				<div className={styles.ingredients__container}>
 					<div className={styles.ingredients__upper_text}>
 						<p style={{color: "var(--color-lightgray)"}}>
 							{props.ingredients.length} items
 						</p>
-						<div className={styles.ingredients__save_to_list}>
-							<Link href="/meal-recipe">
+						<div onClick={() => savedIngredientList()}>
+							<div className={styles.ingredients__save_to_list}>
 								<p>SAVE TO LIST</p>
 								<Image
 									src={"/icons/recipe/note-icon.svg"}
@@ -40,7 +71,7 @@ export default function RecipeSwitchButton({props}) {
 									width={18}
 									height={20}
 								/>
-							</Link>
+							</div>
 						</div>
 					</div>
 					<div className={styles.ingredients__list}>
@@ -49,7 +80,7 @@ export default function RecipeSwitchButton({props}) {
 								<div key={index} className={styles.ingredients}>
 									<div className={styles.checklist__container}>
 										<label className={styles.checklist__checkbox}>
-											<input type="checkbox" />
+											<input type="checkbox" id="checkBox"/>
 											<span className={styles.checkmark}></span>
 										</label>       
 										<p className={styles.container}>

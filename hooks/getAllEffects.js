@@ -2,7 +2,7 @@ import useSound from "use-sound";
 
 
 function getAllEffects() {
-    const gameSound = gameMusic();
+    const gameStartSound = gameStart();
     const clickSound = clickEffect();
     const incorrectSound = wrongEffect();
     const correctSound = rightEffect();
@@ -10,7 +10,7 @@ function getAllEffects() {
     const pointsSound = collectPointsEffect();
 
     return {
-        gameSound,
+        gameStartSound,
         clickSound,
         correctSound,
         incorrectSound,
@@ -19,11 +19,11 @@ function getAllEffects() {
     }
 }
 
-function gameMusic() {
-    const soundUrl = '/sounds/jeopardy.mp3';
+function gameStart() {
+    const soundUrl = '/sounds/game-start.mp3';
     const [play] = useSound(
         soundUrl, 
-        { volume: 0.1,}
+        { volume: 0.3,}
     );
     
     function playAudio() {

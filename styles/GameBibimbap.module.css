@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 /* Game Over & Cleared */
@@ -50,10 +51,12 @@
 }
 
 .exitGameButton {
-    background-color: var(--color-red);
+    background-color: var(--color-orange);
+    color: var(--color-red);
     padding: 10px 20px;
     border-radius: 30px;
     font-size: var(--body-font-size-desktop);
+    font-weight: 700;
 }
 
 .exitGameLink {
@@ -61,6 +64,8 @@
     padding: 10px 20px;
     border-radius: 30px;
     font-size: var(--body-font-size-desktop);
+    color: var(--color-emerald);
+    font-weight: 700;
 }
 
 .gameOverDesc > h3 {

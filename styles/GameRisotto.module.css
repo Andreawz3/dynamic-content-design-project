@@ -6,7 +6,7 @@
 }
 
 /* Game Over & Cleared */
-.gameOver, .cleared  {
+.gameOver, .cleared, .exitGame   {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.gameOverDisplay, .clearedDisplay {
+.gameOverDisplay, .clearedDisplay, .exitGameDisplay {
     width: 100%;
     max-width: 350px;
     height: 600px;
@@ -26,22 +26,46 @@
     border-radius: 20px;
 }
 
-.gameOverDesc, .clearedDesc {
+.gameOverDesc, .clearedDesc, .exitGameInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.gameOverDesc > h1 {
+.gameOverDesc > h1, .exitGameInfo > h1  {
     padding-top: 60px;
     font-family: var(--secondary-font);
     color: var(--color-red);
 }
 
-.gameOverDesc > p, .clearedDesc > p {
+.gameOverDesc > p, .clearedDesc > p, .exitGameInfo > p{
     width: 180px;
     text-align: center;
+}
+
+.exitGameOptions {
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.exitGameButton {
+    background-color: var(--color-orange);
+    color: var(--color-red);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: var(--body-font-size-desktop);
+    font-weight: 700;
+}
+
+.exitGameLink {
+    background-color: var(--color-avocado);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: var(--body-font-size-desktop);
+    color: var(--color-emerald);
+    font-weight: 700;
 }
 
 .gameOverDesc > h3 {
@@ -87,6 +111,10 @@
     display: flex;
     justify-content: space-between;
     color: var(--color-black);
+}
+
+.backLink {
+    cursor: pointer;
 }
 
 .seeTutorial {
