@@ -1,34 +1,75 @@
 .profileContainer{
     width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
+    max-width: var(--max-width-screen);
+    background-color: var(--color-white);
+    position: absolute;
+    z-index: -1;
 }
 
 .profileInfo {
     width: 100%;
-    max-width: var(--max-width-screen);
-    height: 100vh;
-    /* margin-top: 180px;     */
+    height: 70vh;
+    margin-top: 145px;
     background-image: linear-gradient(var(--color-orange), var(--color-red));
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding-top: 200px; */
     gap: 90px;
     border-radius: 50px;
 }
 
 .profileImage {
     position: absolute;
-    top: -50px;
+    top: 25px;
     border-radius: 150px;
-    border: 10px solid var(--color-pure-white);
+    border: 10px solid var(--color-white);
 }
 
-.profileInfo > h1 {
+.editLink {
+    position: absolute;
+    right: 30px;
+    top: 220px;
+    display: flex;
+    gap: 5px;
+    color: var(--color-pure-white);
+}
+
+.userInfo {
+    padding-top: 146px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.userInfo > h1 {
     color: var(--color-white);
     font-family: var(--secondary-font);
+    text-align: center;
+    font-size: 40px;
+}
+
+.infoDescription {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.levelInfo {
+    position: absolute;
+    left: 70px;
+    top: 57px;
+    color: var(--color-emerald);
+}
+
+.generalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.infoWithIcon {
+    display: flex;
+    gap: 10px;
 }
 
 .personalInfo > p {

@@ -5,7 +5,7 @@ export const manduIngredientsList = [
     },
     {
         name: "butter",
-        image: "/images/game/ingredients/rissoto/butter.png",
+        image: "/images/game/ingredients/risotto/butter.png",
     },
     {
         name: "sauce",
