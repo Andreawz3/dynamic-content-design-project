@@ -16,6 +16,7 @@ import useNavMenu from '@/hooks/navmenu'
 import useNutritionDetails from '@/hooks/nutritionDetails'
 
 import styles from '@/styles/MealRecipe.module.css'
+import showNutritionDetails from '@/hooks/nutritionDetails'
 
 export async function getServerSideProps(context) {
 	const { params } = context;
@@ -32,7 +33,7 @@ export async function getServerSideProps(context) {
 
 export default function SlugMealRecipe({slug, recipe}) {
 	const {showMenu, setShowMenu} = useNavMenu();
-    const {showNutrition, setShowNutrition} = useNutritionDetails();
+	const {showNutrition, setShowNutrition} = showNutritionDetails();
 
     return (
         <>
@@ -96,7 +97,7 @@ export default function SlugMealRecipe({slug, recipe}) {
                 <NavMenu closeMenu={() => setShowMenu(false)}/>
             }
             {showNutrition &&
-				<NutritionDetails closeDetails={()=> setShowNutrition(false)}/>
+				<NutritionDetails closeMenu={() => setShowNutrition(false)} props={recipe}/>
 			}
         </>
     )
