@@ -14,11 +14,11 @@ import PlayGameButton from '@/components/PlayGameButton';
 import displayTutorial from '@/hooks/showTutorial';
 import useNavMenu from '@/hooks/navmenu';
 
-
 export default function Game() {
     const {showMenu, setShowMenu} = useNavMenu();
     const {showTutorial, setShowTutorial} = displayTutorial();
-    
+
+
     return (
         <>
             <Header
@@ -95,8 +95,7 @@ export default function Game() {
                                     height='65'
                                     />
                                     <PlayGameButton
-                                        href="/gameBibimbap" 
-                                    />
+                                        href="/gameBibimbap"/>
                                 </div>
                             </div>
                             <div className={styles.game__card_mandu}>
@@ -111,8 +110,7 @@ export default function Game() {
                                         height='65'
                                     />
                                     <PlayGameButton
-                                        href="/gameMandu" 
-                                    />
+                                        href="/gameMandu"/>
                                 </div>
                             </div>
 
@@ -127,9 +125,8 @@ export default function Game() {
                                     width='85'
                                     height='65'
                                         />
-                                    <PlayGameButton
-                                        href="/gameMisoPasta"
-                                    />
+                                        <PlayGameButton
+                                            href="/gameMisoPasta"/>
                                 </div>
                             </div>
 
@@ -145,8 +142,7 @@ export default function Game() {
                                     height='65'
                                     />
                                     <PlayGameButton
-                                        href="/gameRisotto"
-                                    />
+                                        href="/gameRisotto"/>
                                 </div>
                             </div>
                         </div>
@@ -177,7 +173,6 @@ export default function Game() {
                     </div>
                 </div>
                 
-                
                 {showTutorial &&
                     <GameTutorial/>
                 }
@@ -188,7 +183,6 @@ export default function Game() {
                         <NavMenu closeMenu={() => setShowMenu(false)}/>
                     }    
                 {/* </div> */}
-                
         </>
     )
 }

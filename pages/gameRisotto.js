@@ -204,7 +204,7 @@ export default function gameRissoto() {
                                 id='nextButton'
                                 className={styles.next__button} 
                                 onClick={() => Next("stageTwo")}
-                                style={{visibility:"visible"}} //hidden visible
+                                style={{visibility:"hidden"}} //hidden visible
                             >
                                 <Button                      
                                     href="#"
