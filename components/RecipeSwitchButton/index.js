@@ -32,7 +32,7 @@ export default function RecipeSwitchButton({props}) {
 							{props.ingredients.length} items
 						</p>
 						<div className={styles.ingredients__save_to_list}>
-							<Link href="/meal-recipe">
+							<Link href={`/meal-recipe/${props.slug}`}>
 								<p>SAVE TO LIST</p>
 								<Image
 									src={"/icons/recipe/note-icon.svg"}
