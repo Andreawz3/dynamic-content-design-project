@@ -59,8 +59,8 @@ export default function Landing() {
 						<Image 
 							src={"/images/landing-animation.gif"}
 							alt={"langding page image"}
-							width={332}
-							height={382}
+							width={330}
+							height={380}
 							className={styles.landing__img}
 							priority
 						/>
