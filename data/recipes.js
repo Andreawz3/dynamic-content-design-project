@@ -448,7 +448,7 @@ export const inventory = {
             difficulty: "easy",
             ingredients: [
                 {
-                    ingredientName: "large eggplants",
+                    ingredientName: "large plantain",
                     measurementType:"2"                       
                 }, 
                 {
