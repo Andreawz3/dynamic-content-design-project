@@ -22,11 +22,6 @@ export default function RecipeSwitchButton({props}) {
 		}
 	}
 
-	// const checkIfSelected = () => {
-	// 	selected = document.getElementById("checkBox").checked;
-	// 	console.log(selected);
-	// }
-
     return(
         <>
 			<div className={styles.recipe__button_container}>
