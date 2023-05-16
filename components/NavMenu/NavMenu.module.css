@@ -4,7 +4,7 @@
     position: absolute;
     background-color: rgba(0,0,0,.5);
     backdrop-filter: blur(1px);
-    max-width: 900px;
+    max-width: var(--max-width-screen);
     top: 0;
     z-index: 5;
 }
