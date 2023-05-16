@@ -113,8 +113,8 @@ export default function gameRissoto() {
     return (
         <>
             <Header
-                title={'Miso Pasta Game'}
-                metaTitle={'Miso Pasta Game'}
+                title={'Risotto Game'}
+                metaTitle={'Risotto Game'}
             />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             <main className={styles.playGame__page}>
@@ -212,7 +212,7 @@ export default function gameRissoto() {
                             </div>
                             <div className={styles.headlines}>
                                 <p className={styles.subHealine}>Pick your ingredients for:</p>
-                                <h1 className={styles.mainHeadline}>Miso Pasta</h1>
+                                <h1 className={styles.mainHeadline}>Risotto</h1>
                             </div>
                             <div className={styles.containerPickIngredients}>
                                 <div className={styles.ingredientsList}>
@@ -262,7 +262,7 @@ export default function gameRissoto() {
                         <div className={`${styles.gameLayout} ${styles.gameLayoutSecondStage}`}>
                             <div className={styles.headlines}>
                                 <p className={styles.subHealine}>Let's make:</p>
-                                <h1 className={styles.mainHeadline}>Miso Pasta</h1>
+                                <h1 className={styles.mainHeadline}>Risotto</h1>
                             </div>
                             <div>                          
                                 <Image
@@ -329,7 +329,7 @@ export default function gameRissoto() {
                         <div className={`${styles.gameLayout} ${styles.gameLayoutThirdStage}`}>
                             <div className={styles.headlines}>
                                 <p className={styles.subHealine}>Well done! You made:</p>
-                                <h1 className={styles.mainHeadline}>Miso Pasta</h1>
+                                <h1 className={styles.mainHeadline}>Risotto</h1>
                             </div>
                             <div className={styles.thirdStageImages}>
                                 <Image
