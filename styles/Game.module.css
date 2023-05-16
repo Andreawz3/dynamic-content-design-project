@@ -23,12 +23,6 @@
     align-items: center;
     position: relative;
     width: 100%;
-
-    /* background: linear-gradient(180deg, rgba(229, 100, 92, 0.56) 0%, rgba(236, 198, 79, 0.29) 100%);
-    border-radius: 15px;
-    width: 335px;
-    height: 164px;
-    margin-top: 2rem; */
 }
 .game__header_img:first-child {
     width: 100%;
@@ -87,6 +81,7 @@
     align-items: center;
     justify-content: center;
     background: var(--color-pure-white);
+    min-height: 9.85rem;
 }
 
 .game__card_bibimbap::before,
@@ -105,9 +100,11 @@
 }
 
 .seeGameText > p {
-    font-family: var(--secondary-font);
+    font-family: var(--primary-font);
+    font-weight: 700;
     color: var(--color-light-green);
-    font-size: 12px;
+    font-size: 14px;
+    display: none;
 }
 .seeGameText h3 {
     font-family: var(--secondary-font);

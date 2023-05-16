@@ -69,29 +69,37 @@ export default function GameTutorial(){
                                             <div>                                              
                                                 <Image
                                                     className={styles.wrong_ingredient}
-                                                    src = "/images/game/ingredients/tomato.jpeg"
+                                                    src = "/images/game/ingredients/tomato.png"
                                                     alt="tomato"
                                                     width="80"
                                                     height="80"
                                                 />
                                                 
                                             </div>
-                                            <div className={styles.arrowIconTop}>
+                                            <div className={styles.arrowIcon}>
                                                 <i class="fa fa-long-arrow-right"></i>
                                             </div>
-                                            <p>Carrot</p>
+                                            <div className={styles.rightPick}>
+                                                <Image
+                                                    src = "/images/game/wrong.png"
+                                                    alt="wrong"
+                                                    width="30"
+                                                    height="30"
+                                                />
+                                                <p>Carrot</p>    
+                                            </div>
                                         </div>
                                         <div className={styles.findIngredientSample}>
                                             <div>
                                                 <Image
                                                     className={styles.correct_ingredient}
-                                                    src = "/images/game/ingredients/carrot.jpeg"
+                                                    src = "/images/game/ingredients/carrot.png"
                                                     alt="carrot"
                                                     width="80"
                                                     height="80"
                                                 />
                                             </div>
-                                            <div className={styles.arrowIconBottom}>
+                                            <div className={styles.arrowIcon}>
                                                 <i class="fa fa-long-arrow-right"></i>
                                             </div>
                                             <div className={styles.rightPick}>

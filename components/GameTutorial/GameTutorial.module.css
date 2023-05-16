@@ -2,8 +2,10 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    z-index: 1;
-    background-color: #034806bf;
+    z-index: 5;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(1px);
     width: 100vw;
     height: 100vh;
     align-items: center;
@@ -137,19 +139,16 @@
 .wrong_ingredient {
     border: 2px solid var(--color-red);
     border-radius: 5px;
+    background-color: var(--color-red);
 }
 
 .correct_ingredient {
     border: 2px solid var(--color-avocado);
     border-radius: 5px;
+    background-color: var(--color-avocado);
 }
 
-.arrowIconTop {
-    padding-right: 30px;
-    font-size: 40px;
-}
-
-.arrowIconBottom {
+.arrowIcon{
     font-size: 40px;
 }
 

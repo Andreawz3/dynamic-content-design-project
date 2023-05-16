@@ -116,10 +116,10 @@ export default function Game() {
                                     alt='risotto-img'
                                     width='85'
                                     height='65'
-                                />
-                                <PlayGameButton
-                                    href="/gameRissoto"
-                                />
+                                    />
+                                    <PlayGameButton
+                                        href="/gameRisotto"
+                                    />
                             </div>
                         </div>
                     </div>
@@ -139,15 +139,15 @@ export default function Game() {
                                 SEE TUTORIAL
                             </Link>      
                     </div>                
-                <Image
-                    className={styles.footer__shapes}
-                    src={'/logos/deco-shapes.svg'}
-                    alt={'deco-shapes'}
-                    width={445}
-                    height={115}
-                />
+                    <Image
+                        className={styles.footer__shapes}
+                        src={'/logos/deco-shapes.svg'}
+                        alt={'deco-shapes'}
+                        width={445}
+                        height={115}
+                    />
                 </div>
-            </main>  
+            </main>
             {showTutorial &&
                 <GameTutorial/>
             }
