@@ -4,15 +4,15 @@ import styles from "./RecipeSwitchButton.module.css";
 // hooks
 import useRecipeSwitch from "@/hooks/recipeSwitch";
 import getAllEffects from '@/hooks/getAllEffects';
+import useCheckList from '@/hooks/checkList'
 
 export default function RecipeSwitchButton({props}) {
     const { switchTab, showIngredientList,showDirections } = useRecipeSwitch();
     const {gameStartSound} = getAllEffects();
+    const {checked, handleCheckedItems} = useCheckList();
 
 	const savedIngredientList = () => {
-		let selected = document.getElementById("checkBox").checked;
-
-		if(selected) {
+		if(checked.length >= 1) {
 			document.getElementById("listSaved").style.display = "flex";
 			gameStartSound();
 			setTimeout(() => {
@@ -40,15 +40,17 @@ export default function RecipeSwitchButton({props}) {
 					>Directions</button>
 				</div>
 			</div>
-			<div id="listSaved" className={styles.savedIngredientContainer} style={{display:"none"}}>
-				<div className={styles.ingredientsListSaved}>
-					<Image
-						src={"/images/game/mascot.png"}
-						alt={""}
-						width={100}
-						height={100}
-					/>
-					<h1>Ingredient(s) Saved</h1>
+			<div id="listSaved" style={{display:"none"}} className={styles.listSavedContainer}>
+				<div className={styles.savedIngredientDisplay}>
+					<div className={styles.ingredientsListSaved}>
+						<Image
+							src={"/images/game/mascot.png"}
+							alt={""}
+							width={100}
+							height={100}
+						/>
+						<h1>Ingredient(s) Saved</h1>
+					</div>
 				</div>
 			</div>
 			{showIngredientList && (
@@ -75,7 +77,7 @@ export default function RecipeSwitchButton({props}) {
 								<div key={index} className={styles.ingredients}>
 									<div className={styles.checklist__container}>
 										<label className={styles.checklist__checkbox}>
-											<input type="checkbox" id="checkBox"/>
+											<input type="checkbox" onChange={() => handleCheckedItems(index)}/>
 											<span className={styles.checkmark}></span>
 										</label>       
 										<p className={styles.container}>
