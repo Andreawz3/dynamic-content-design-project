@@ -13,12 +13,13 @@ import PlayGameButton from '@/components/PlayGameButton';
 // Hooks
 import displayTutorial from '@/hooks/showTutorial';
 import useNavMenu from '@/hooks/navmenu';
-
+import getAllEffects from '@/hooks/getAllEffects';
 
 export default function Game() {
     const {showMenu, setShowMenu} = useNavMenu();
     const {showTutorial, setShowTutorial} = displayTutorial();
-    
+    const {gameStartSound} = getAllEffects();
+
     return (
         <>
             <Header
@@ -69,9 +70,11 @@ export default function Game() {
                                     width='85'
                                     height='65'
                                 />
-                                <PlayGameButton
-                                    href="/gameBibimbap" 
-                                />
+                                <div onClick={() => gameStartSound()}>
+                                    <PlayGameButton
+                                        href="/gameBibimbap" 
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div className={styles.game__card_mandu}>
@@ -85,9 +88,11 @@ export default function Game() {
                                     width='85'
                                     height='65'
                                 />
-                                <PlayGameButton
-                                    href="/gameMandu" 
-                                />
+                                <div onClick={() => gameStartSound()}>
+                                    <PlayGameButton
+                                        href="/gameMandu" 
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div className={styles.game__card_miso_pasta}>
@@ -100,10 +105,12 @@ export default function Game() {
                                     alt='miso-pasta-img'
                                     width='85'
                                     height='65'
-                                    />
-                                <PlayGameButton
-                                    href="/gameMisoPasta"
                                 />
+                                <div onClick={() => gameStartSound()}>
+                                    <PlayGameButton
+                                        href="/gameMisoPasta"
+                                    />
+                                </div>
                             </div>
                         </div>
                         <div className={styles.game__card_risotto}>
@@ -116,10 +123,12 @@ export default function Game() {
                                     alt='risotto-img'
                                     width='85'
                                     height='65'
-                                    />
+                                />
+                                <div onClick={() => gameStartSound()}>
                                     <PlayGameButton
                                         href="/gameRisotto"
                                     />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -154,7 +163,7 @@ export default function Game() {
             <NavBar/> 
             {showMenu && 
                 <NavMenu closeMenu={() => setShowMenu(false)}/>
-            }       
+            }
         </>
     )
 }

@@ -20,7 +20,7 @@ export const manduIngredientsList = [
     },
     {
         name: "water",
-        image: "/images/game/ingredients/rissoto/water.png",
+        image: "/images/game/ingredients/risotto/water.png",
     },
     {
         name: "chocolate",
