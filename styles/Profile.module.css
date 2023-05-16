@@ -1,5 +1,6 @@
 .profileContainer{
     width: 100%;
+    height: -webkit-fill-available;
     max-width: var(--max-width-screen);
     background-color: var(--color-white);
     position: absolute;
@@ -8,7 +9,7 @@
 
 .profileInfo {
     width: 100%;
-    height: 70vh;
+    height: inherit;
     margin-top: 145px;
     background-image: linear-gradient(var(--color-orange), var(--color-red));
     display: flex;
