@@ -10,8 +10,10 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    z-index: 1;
-    background-color: #034806bf;
+    z-index: 5;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(1px);
+    max-width: var(--max-width-screen);
     width: 100vw;
     height: 100vh;
     align-items: center;

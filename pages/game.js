@@ -13,11 +13,12 @@ import PlayGameButton from '@/components/PlayGameButton';
 // Hooks
 import displayTutorial from '@/hooks/showTutorial';
 import useNavMenu from '@/hooks/navmenu';
+import getAllEffects from '@/hooks/getAllEffects';
 
 export default function Game() {
     const {showMenu, setShowMenu} = useNavMenu();
     const {showTutorial, setShowTutorial} = displayTutorial();
-
+    const {gameStartSound} = getAllEffects();
 
     return (
         <>
@@ -94,8 +95,11 @@ export default function Game() {
                                     width='85'
                                     height='65'
                                     />
+                                    <div onClick={() => gameStartSound()}>
                                     <PlayGameButton
-                                        href="/gameBibimbap"/>
+                                        href="/gameBibimbap"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                             <div className={styles.game__card_mandu}>
@@ -109,8 +113,10 @@ export default function Game() {
                                         width='85'
                                         height='65'
                                     />
-                                    <PlayGameButton
-                                        href="/gameMandu"/>
+                                    <div onClick={() => gameStartSound()}>
+                                        <PlayGameButton
+                                            href="/gameMandu"/>
+                                    </div>
                                 </div>
                             </div>
 
@@ -125,8 +131,10 @@ export default function Game() {
                                     width='85'
                                     height='65'
                                         />
-                                        <PlayGameButton
-                                            href="/gameMisoPasta"/>
+                                        <div onClick={() => gameStartSound()}>
+                                            <PlayGameButton
+                                                href="/gameMisoPasta"/>
+                                        </div>
                                 </div>
                             </div>
 
@@ -141,8 +149,10 @@ export default function Game() {
                                     width='85'
                                     height='65'
                                     />
-                                    <PlayGameButton
-                                        href="/gameRisotto"/>
+                                    <div onClick={() => gameStartSound()}>
+                                        <PlayGameButton
+                                            href="/gameRisotto"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
