@@ -1,16 +1,15 @@
 import Image from 'next/image'
 import styles from './NutritionButton.module.css'
-import showNutritionDetails from '@/hooks/nutritionDetails';
 
-export default function NutritionButton() {
-
-    const {showNutrition, setShowNutrition} = showNutritionDetails();
+export default function NutritionButton({
+    openDetails
+}) {
 
     return (
         <>
             <div
                 className={styles.nutrition}
-                onClick={()=>{setShowNutrition(!showNutrition)}}
+                onClick={openDetails}
             >
                 <button className={styles.nutrition__button}> 
                     <span> NUTRITION DETAILS </span>

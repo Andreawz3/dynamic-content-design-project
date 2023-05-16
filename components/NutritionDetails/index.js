@@ -6,25 +6,21 @@ import { CloseIcon } from '@/public/icons/icons'
 import NutritionChart from '@/components/NutritionChart'
 
 export default function NutritionDetails({
-    closeMenu
+    closeMenu, props
 }) {
     return (
         <>
             <div className={styles.overlay__background}>
                 <div className={styles.overlay__container}>
-                {/* <div className={styles.skipTutorials__link} onClick={() => setShowTutorial(false)}>
-                                    Skip tutorial 
-                                    <i class="fa fa-angle-double-right"></i>
-                                </div> */}
                     <button 
                         className={styles.overlay__close_button} 
                         onClick={closeMenu}
                     >
-                        <CloseIcon/>
+                        <CloseIcon stroke='var(--color-black)'/>
                     </button>
                     <h1>Nutritional Value</h1>
                     <div className={styles.nutrition__container}>
-                        <NutritionChart/>
+                        <NutritionChart props={props}/>
                     </div>
                 </div>
             </div>

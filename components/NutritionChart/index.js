@@ -7,21 +7,20 @@ import { inventory } from "@/data/recipes";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export default function NutritionChart() {
+export default function NutritionChart({props}) {
     const recipeData = inventory.recipe[1];
     const [chartData, setChartData] = useState({
         datasets: []
     })
     const [chartOptions, setChartOptions] = useState({})
 
-    // console.log("carb", recipeData.carb);
     useEffect(() => {
         setChartData({
             labels: ['Carbs', 'Protein', 'Fat', 'Fiber', 'Calcium', 'Iron'],
             datasets: [
                 {
                     label: '',
-                    data: [recipeData.carbGram, recipeData.proteinGram, recipeData.fatGram, recipeData.fiberGram, recipeData.calciumGram, recipeData.ironGram],
+                    data: [props.carbGram, props.proteinGram, props.fatGram, props.fiberGram, props.calciumGram, props.ironGram],
                     backgroundColor: [
                       'rgb(229,100,92)',
                       'rgb(90,140,50)',
@@ -32,6 +31,7 @@ export default function NutritionChart() {
                       'rgb(162,190,82)'
                     ],
                     borderColor: 'transparent'
+                    
                 },
             ]
         })
@@ -53,7 +53,7 @@ export default function NutritionChart() {
             <div className={styles.container}>
                 <Doughnut data={chartData} options={chartOptions} />
             </div>
-            <span className={styles.label}>{recipeData.dishName} <p className={styles.p__text}>(measured in grams)</p></span>
+            <span className={styles.label}>{props.dishName} <p className={styles.p__text}>(measured in grams)</p></span>
         </>
     )
 }

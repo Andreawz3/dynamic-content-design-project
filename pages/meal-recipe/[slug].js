@@ -53,23 +53,7 @@ export default function SlugMealRecipe({slug, recipe}) {
 						/>
 						<p className={styles.back__text}>Back</p>
 					</Link>
-					{/* <NutritionButton openDetails={()=> setShowNutrition(true)}/> */}
-					<div className={styles.nutrition__link}>
-					<Link 
-						href="#" 
-						className={styles.nutrition__button_container}
-						onClick={() => setShowNutrition(true)}
-					> 
-							NUTRITION DETAILS
-							<Image
-								className={styles.apple__icon}
-								src={"/icons/recipe/apple.svg"}
-								alt={"apple-icon"}
-								height={20}
-								width={20}
-							/>
-					</Link> 
-					</div>
+					<NutritionButton openDetails={()=> setShowNutrition(true)}/>
 				</div>
 				<div className={styles.meal__details_container}>
 					<div className={styles.meal__image_container}>
@@ -113,7 +97,7 @@ export default function SlugMealRecipe({slug, recipe}) {
                 <NavMenu closeMenu={() => setShowMenu(false)}/>
             }
             {showNutrition &&
-				<NutritionDetails closeMenu={() => setShowNutrition(false)}/>
+				<NutritionDetails closeMenu={() => setShowNutrition(false)} props={recipe}/>
 			}
         </>
     )
