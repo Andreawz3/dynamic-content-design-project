@@ -57,7 +57,7 @@ export default function Landing() {
 				<main className={styles.landing_page}>
 					<div className={styles.landing_page__container}>
 						<Image 
-							src={"/images/landing-animation.gif"}
+							src={"/images/home/landing-animation.gif"}
 							alt={"langding page image"}
 							width={330}
 							height={380}
